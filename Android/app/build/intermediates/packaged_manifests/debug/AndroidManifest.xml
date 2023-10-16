@@ -40,10 +40,7 @@
             android:name="com.example.hamsapplication.patientRegister"
             android:exported="false" />
         <activity
-            android:name="com.example.hamsapplication.register"
-            android:exported="false" />
-        <activity
-            android:name="com.example.hamsapplication.MainActivity"
+            android:name="com.example.hamsapplication.login"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

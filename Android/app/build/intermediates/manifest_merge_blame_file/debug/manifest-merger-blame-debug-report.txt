@@ -20,7 +20,7 @@
 15-->[androidx.core:core:1.9.0] C:\Users\wajee\.gradle\caches\transforms-3\28a7af075d5af218c19b63a2f54b1523\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 16
 17    <application
-17-->C:\Users\wajee\Java Projects\project-project-group-23\Android\app\src\main\AndroidManifest.xml:5:5-39:19
+17-->C:\Users\wajee\Java Projects\project-project-group-23\Android\app\src\main\AndroidManifest.xml:5:5-36:19
 18        android:allowBackup="true"
 18-->C:\Users\wajee\Java Projects\project-project-group-23\Android\app\src\main\AndroidManifest.xml:6:9-35
 19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -67,50 +67,44 @@
 41            android:exported="false" />
 41-->C:\Users\wajee\Java Projects\project-project-group-23\Android\app\src\main\AndroidManifest.xml:26:13-37
 42        <activity
-42-->C:\Users\wajee\Java Projects\project-project-group-23\Android\app\src\main\AndroidManifest.xml:27:9-29:40
-43            android:name="com.example.hamsapplication.register"
-43-->C:\Users\wajee\Java Projects\project-project-group-23\Android\app\src\main\AndroidManifest.xml:28:13-37
-44            android:exported="false" />
-44-->C:\Users\wajee\Java Projects\project-project-group-23\Android\app\src\main\AndroidManifest.xml:29:13-37
-45        <activity
-45-->C:\Users\wajee\Java Projects\project-project-group-23\Android\app\src\main\AndroidManifest.xml:30:9-38:20
-46            android:name="com.example.hamsapplication.MainActivity"
-46-->C:\Users\wajee\Java Projects\project-project-group-23\Android\app\src\main\AndroidManifest.xml:31:13-41
-47            android:exported="true" >
-47-->C:\Users\wajee\Java Projects\project-project-group-23\Android\app\src\main\AndroidManifest.xml:32:13-36
-48            <intent-filter>
-48-->C:\Users\wajee\Java Projects\project-project-group-23\Android\app\src\main\AndroidManifest.xml:33:13-37:29
-49                <action android:name="android.intent.action.MAIN" />
-49-->C:\Users\wajee\Java Projects\project-project-group-23\Android\app\src\main\AndroidManifest.xml:34:17-69
-49-->C:\Users\wajee\Java Projects\project-project-group-23\Android\app\src\main\AndroidManifest.xml:34:25-66
-50
-51                <category android:name="android.intent.category.LAUNCHER" />
-51-->C:\Users\wajee\Java Projects\project-project-group-23\Android\app\src\main\AndroidManifest.xml:36:17-77
-51-->C:\Users\wajee\Java Projects\project-project-group-23\Android\app\src\main\AndroidManifest.xml:36:27-74
-52            </intent-filter>
-53        </activity>
-54
-55        <provider
-55-->[androidx.emoji2:emoji2:1.2.0] C:\Users\wajee\.gradle\caches\transforms-3\9ec162b5cb5dad7a953e18733a42dbca\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-56            android:name="androidx.startup.InitializationProvider"
-56-->[androidx.emoji2:emoji2:1.2.0] C:\Users\wajee\.gradle\caches\transforms-3\9ec162b5cb5dad7a953e18733a42dbca\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-57            android:authorities="com.example.hamsapplication.androidx-startup"
-57-->[androidx.emoji2:emoji2:1.2.0] C:\Users\wajee\.gradle\caches\transforms-3\9ec162b5cb5dad7a953e18733a42dbca\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-58            android:exported="false" >
-58-->[androidx.emoji2:emoji2:1.2.0] C:\Users\wajee\.gradle\caches\transforms-3\9ec162b5cb5dad7a953e18733a42dbca\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+42-->C:\Users\wajee\Java Projects\project-project-group-23\Android\app\src\main\AndroidManifest.xml:27:9-35:20
+43            android:name="com.example.hamsapplication.login"
+43-->C:\Users\wajee\Java Projects\project-project-group-23\Android\app\src\main\AndroidManifest.xml:28:13-34
+44            android:exported="true" >
+44-->C:\Users\wajee\Java Projects\project-project-group-23\Android\app\src\main\AndroidManifest.xml:29:13-36
+45            <intent-filter>
+45-->C:\Users\wajee\Java Projects\project-project-group-23\Android\app\src\main\AndroidManifest.xml:30:13-34:29
+46                <action android:name="android.intent.action.MAIN" />
+46-->C:\Users\wajee\Java Projects\project-project-group-23\Android\app\src\main\AndroidManifest.xml:31:17-69
+46-->C:\Users\wajee\Java Projects\project-project-group-23\Android\app\src\main\AndroidManifest.xml:31:25-66
+47
+48                <category android:name="android.intent.category.LAUNCHER" />
+48-->C:\Users\wajee\Java Projects\project-project-group-23\Android\app\src\main\AndroidManifest.xml:33:17-77
+48-->C:\Users\wajee\Java Projects\project-project-group-23\Android\app\src\main\AndroidManifest.xml:33:27-74
+49            </intent-filter>
+50        </activity>
+51
+52        <provider
+52-->[androidx.emoji2:emoji2:1.2.0] C:\Users\wajee\.gradle\caches\transforms-3\9ec162b5cb5dad7a953e18733a42dbca\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+53            android:name="androidx.startup.InitializationProvider"
+53-->[androidx.emoji2:emoji2:1.2.0] C:\Users\wajee\.gradle\caches\transforms-3\9ec162b5cb5dad7a953e18733a42dbca\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+54            android:authorities="com.example.hamsapplication.androidx-startup"
+54-->[androidx.emoji2:emoji2:1.2.0] C:\Users\wajee\.gradle\caches\transforms-3\9ec162b5cb5dad7a953e18733a42dbca\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+55            android:exported="false" >
+55-->[androidx.emoji2:emoji2:1.2.0] C:\Users\wajee\.gradle\caches\transforms-3\9ec162b5cb5dad7a953e18733a42dbca\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+56            <meta-data
+56-->[androidx.emoji2:emoji2:1.2.0] C:\Users\wajee\.gradle\caches\transforms-3\9ec162b5cb5dad7a953e18733a42dbca\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+57                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+57-->[androidx.emoji2:emoji2:1.2.0] C:\Users\wajee\.gradle\caches\transforms-3\9ec162b5cb5dad7a953e18733a42dbca\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+58                android:value="androidx.startup" />
+58-->[androidx.emoji2:emoji2:1.2.0] C:\Users\wajee\.gradle\caches\transforms-3\9ec162b5cb5dad7a953e18733a42dbca\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
 59            <meta-data
-59-->[androidx.emoji2:emoji2:1.2.0] C:\Users\wajee\.gradle\caches\transforms-3\9ec162b5cb5dad7a953e18733a42dbca\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-60                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-60-->[androidx.emoji2:emoji2:1.2.0] C:\Users\wajee\.gradle\caches\transforms-3\9ec162b5cb5dad7a953e18733a42dbca\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+59-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\wajee\.gradle\caches\transforms-3\4eb4b953398cff91e70e367f7f0f5a04\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+60                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+60-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\wajee\.gradle\caches\transforms-3\4eb4b953398cff91e70e367f7f0f5a04\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
 61                android:value="androidx.startup" />
-61-->[androidx.emoji2:emoji2:1.2.0] C:\Users\wajee\.gradle\caches\transforms-3\9ec162b5cb5dad7a953e18733a42dbca\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
-62            <meta-data
-62-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\wajee\.gradle\caches\transforms-3\4eb4b953398cff91e70e367f7f0f5a04\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-63                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-63-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\wajee\.gradle\caches\transforms-3\4eb4b953398cff91e70e367f7f0f5a04\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-64                android:value="androidx.startup" />
-64-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\wajee\.gradle\caches\transforms-3\4eb4b953398cff91e70e367f7f0f5a04\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-65        </provider>
-66    </application>
-67
-68</manifest>
+61-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\wajee\.gradle\caches\transforms-3\4eb4b953398cff91e70e367f7f0f5a04\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+62        </provider>
+63    </application>
+64
+65</manifest>

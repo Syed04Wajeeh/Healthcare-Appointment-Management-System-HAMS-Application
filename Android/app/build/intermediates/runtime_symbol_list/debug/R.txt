@@ -2895,6 +2895,7 @@ int id bounce 0x7f08005e
 int id bounceBoth 0x7f08005f
 int id bounceEnd 0x7f080060
 int id bounceStart 0x7f080061
+int id button 0x7f0801fb
 int id buttonPanel 0x7f080062
 int id cache_measures 0x7f080063
 int id callMeasure 0x7f080064
@@ -2954,6 +2955,7 @@ int id disableIntraAutoTransition 0x7f080099
 int id disablePostScroll 0x7f08009a
 int id disableScroll 0x7f08009b
 int id disjoint 0x7f08009c
+int id doctorRegisterButton 0x7f0801fc
 int id dragAnticlockwise 0x7f08009d
 int id dragClockwise 0x7f08009e
 int id dragDown 0x7f08009f
@@ -2967,7 +2969,6 @@ int id easeIn 0x7f0800a6
 int id easeInOut 0x7f0800a7
 int id easeOut 0x7f0800a8
 int id east 0x7f0800a9
-int id editTextTextPassword 0x7f0801f6
 int id edit_query 0x7f0800aa
 int id elastic 0x7f0800ab
 int id embed 0x7f0800ac
@@ -3126,9 +3127,11 @@ int id parent 0x7f080143
 int id parentPanel 0x7f080144
 int id parentRelative 0x7f080145
 int id parent_matrix 0x7f080146
+int id password 0x7f080147
 int id password_toggle 0x7f080148
 int id path 0x7f080149
 int id pathRelative 0x7f08014a
+int id patientRegisterButton 0x7f0801fd
 int id peekHeight 0x7f08014b
 int id percent 0x7f08014c
 int id pin 0x7f08014d
@@ -3140,7 +3143,6 @@ int id progress_horizontal 0x7f080152
 int id radio 0x7f080153
 int id ratio 0x7f080154
 int id rectangles 0x7f080155
-int id registerPageButton 0x7f0801f9
 int id reverseSawtooth 0x7f080157
 int id right 0x7f080158
 int id rightToLeft 0x7f080159
@@ -3247,6 +3249,7 @@ int id textTop 0x7f0801be
 int id textView 0x7f0801bf
 int id textView2 0x7f0801c0
 int id textView4 0x7f0801f7
+int id textView5 0x7f0801fe
 int id text_input_end_icon 0x7f0801c2
 int id text_input_error_icon 0x7f0801c3
 int id text_input_start_icon 0x7f0801c4
@@ -3405,7 +3408,6 @@ int layout abc_tooltip 0x7f0b001b
 int layout activity_created_account 0x7f0b001c
 int layout activity_doctor_register 0x7f0b001d
 int layout activity_patient_register 0x7f0b001e
-int layout activity_register 0x7f0b001f
 int layout activity_welcome_screen 0x7f0b0020
 int layout custom_dialog 0x7f0b0021
 int layout design_bottom_navigation_item 0x7f0b0022

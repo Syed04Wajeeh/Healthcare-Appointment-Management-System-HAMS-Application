@@ -2896,6 +2896,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id button
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -2955,6 +2956,7 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
+id doctorRegisterButton
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -2968,7 +2970,6 @@ id easeIn
 id easeInOut
 id easeOut
 id east
-id editTextTextPassword
 id edit_query
 id elastic
 id embed
@@ -3127,9 +3128,11 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
+id password
 id password_toggle
 id path
 id pathRelative
+id patientRegisterButton
 id peekHeight
 id percent
 id pin
@@ -3141,7 +3144,6 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
-id registerPageButton
 id reverseSawtooth
 id right
 id rightToLeft
@@ -3248,6 +3250,7 @@ id textTop
 id textView
 id textView2
 id textView4
+id textView5
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3406,7 +3409,6 @@ layout abc_tooltip
 layout activity_created_account
 layout activity_doctor_register
 layout activity_patient_register
-layout activity_register
 layout activity_welcome_screen
 layout custom_dialog
 layout design_bottom_navigation_item
