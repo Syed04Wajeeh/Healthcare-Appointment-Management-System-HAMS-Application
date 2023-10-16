@@ -1,0 +1,26 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id editTextTextPassword
+id loginButton
+id registerPageButton
+id textView
+id textView2
+id textView4
+id usernameInput
+layout activity_created_account
+layout activity_doctor_register
+layout activity_patient_register
+layout activity_register
+layout activity_welcome_screen
+layout login
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.HAMSApplication
+style Theme.HAMSApplication
+xml backup_rules
+xml data_extraction_rules
