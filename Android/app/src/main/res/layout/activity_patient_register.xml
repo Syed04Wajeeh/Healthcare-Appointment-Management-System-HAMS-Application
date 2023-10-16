@@ -121,6 +121,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="284dp"
         android:layout_height="65dp"
         android:orientation="horizontal"
