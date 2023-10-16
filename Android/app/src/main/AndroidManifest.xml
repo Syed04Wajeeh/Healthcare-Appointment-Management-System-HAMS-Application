@@ -13,6 +13,21 @@
         android:theme="@style/Theme.HAMSApplication"
         tools:targetApi="31">
         <activity
+            android:name=".welcomeScreen"
+            android:exported="false" />
+        <activity
+            android:name=".createdAccount"
+            android:exported="false" />
+        <activity
+            android:name=".doctorRegister"
+            android:exported="false" />
+        <activity
+            android:name=".patientRegister"
+            android:exported="false" />
+        <activity
+            android:name=".register"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
