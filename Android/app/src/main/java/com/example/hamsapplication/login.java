@@ -39,7 +39,9 @@ public class login extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-
+                for(int i = 0; i < generalInformation.collection.size(); i ++){
+                    Log.e("iter", generalInformation.collection.get(i).username);
+                }
                 String usernameField = username.getText().toString();
                 String passwordField = password.getText().toString();
 
