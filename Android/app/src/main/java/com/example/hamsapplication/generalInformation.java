@@ -2,6 +2,8 @@ package com.example.hamsapplication;
 import java.util.ArrayList;
 public class generalInformation {
     protected static ArrayList<generalInformation> collection = new ArrayList<>();
+    public static int currentTypeOf;
+    //0 = admin, 1 = patient, 2 = doctor
     protected String username;
     protected String password;
     protected String firstName;
@@ -24,7 +26,7 @@ public class generalInformation {
         boolean result = false;
         if (!collection.isEmpty()) {
             for (int i = 0; i < collection.size(); i++) {
-                if (collection.get(i).username == user) {
+                if (collection.get(i).username.equals(user)) {
                     result = true;
                     break;
                 } else {
@@ -40,9 +42,9 @@ public class generalInformation {
         collection.add(information);
     }
     static public generalInformation searchForAccount(String username) {
-        if (!collection.isEmpty() && username != null) {
+        if (!collection.isEmpty() && !username.equals(null)) {
             for (int i = 0; i < collection.size(); i++) {
-                if (collection.get(i).username == username) {
+                if (collection.get(i).username.equals(username)) {
                     return collection.get(i);
                 }
             }

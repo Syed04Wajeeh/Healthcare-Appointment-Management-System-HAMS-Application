@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class doctorRegister extends AppCompatActivity {
+public class doctorRegister extends AppCompatActivity{
 
     private EditText firstName;
     private EditText lastName;
@@ -50,8 +50,7 @@ public class doctorRegister extends AppCompatActivity {
                 String userEmployeeNumber = address.getText().toString();
                 String userSpecialties = address.getText().toString();
 
-                doctorInformation doctor = new doctorInformation(userFirstName, userLastName, userEmail,
-                        userPassword, userPhoneNumber, userAddress, userEmployeeNumber, userSpecialties);
+                doctorInformation doctor = new doctorInformation(userEmail, userPassword, userFirstName, userLastName, userPhoneNumber, userAddress, userEmployeeNumber, userSpecialties);
                 generalInformation.addToCollection(doctor);
                 Intent intent = new Intent(doctorRegister.this, createdAccount.class);
                 startActivity(intent);
