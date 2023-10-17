@@ -46,8 +46,8 @@ public class patientRegister extends AppCompatActivity {
                 String userAddress = address.getText().toString();
                 String userHealthCardNumber = healthCardNumber.getText().toString();
 
-                patientInformation patient = new patientInformation(userFirstName, userLastName, userEmail,
-                        userPassword, userPhoneNumber, userAddress, userHealthCardNumber);
+                patientInformation patient = new patientInformation(userEmail, userPassword, userFirstName,
+                        userLastName, userPhoneNumber, userAddress, userHealthCardNumber);
                 generalInformation.addToCollection(patient);
                 Intent intent = new Intent(patientRegister.this, createdAccount.class);
                 startActivity(intent);
