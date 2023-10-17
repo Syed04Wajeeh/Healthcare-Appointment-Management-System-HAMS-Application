@@ -2,6 +2,7 @@ package com.example.hamsapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -52,6 +53,8 @@ public class doctorRegister extends AppCompatActivity {
                 doctorInformation doctor = new doctorInformation(userFirstName, userLastName, userEmail,
                         userPassword, userPhoneNumber, userAddress, userEmployeeNumber, userSpecialties);
                 generalInformation.addToCollection(doctor);
+                Intent intent = new Intent(doctorRegister.this, createdAccount.class);
+                startActivity(intent);
             }
         });
     }
