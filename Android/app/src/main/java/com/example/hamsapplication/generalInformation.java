@@ -22,7 +22,7 @@ public class generalInformation {
         collection.add(this);
     }
 
-    static boolean hasAccount(String user){
+    static public boolean hasAccount(String user){
         boolean result = false;
         if (!collection.isEmpty()) {
             for (int i = 0; i < collection.size(); i++) {
