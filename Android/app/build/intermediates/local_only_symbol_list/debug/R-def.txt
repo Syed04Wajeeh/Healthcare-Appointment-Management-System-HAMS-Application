@@ -5,7 +5,6 @@ color white
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 id GetStarted
-id button
 id button2
 id doctorAccountPassword
 id doctorAddress
@@ -20,10 +19,11 @@ id doctorLayout5
 id doctorLayout6
 id doctorLayout7
 id doctorLayout8
+id doctorNumber
 id doctorPhoneNumber
 id doctorRegisterButton
 id doctorSpecialty
-id employeeNumber
+id homeButton
 id linearLayout
 id linearLayout10
 id linearLayout11
@@ -31,6 +31,7 @@ id linearLayout12
 id linearLayout2
 id linearLayout3
 id linearLayout4
+id linearLayout5
 id linearLayout6
 id linearLayout7
 id linearLayout8

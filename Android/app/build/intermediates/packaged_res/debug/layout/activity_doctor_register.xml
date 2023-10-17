@@ -173,7 +173,7 @@
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_marginStart="50dp"
-        android:text="Employee Number"
+        android:text="Doctor Specialty"
         app:layout_constraintBottom_toTopOf="@+id/doctorLayout8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -300,7 +300,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <EditText
-            android:id="@+id/employeeNumber"
+            android:id="@+id/doctorNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

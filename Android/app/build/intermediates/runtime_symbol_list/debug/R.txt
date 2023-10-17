@@ -2896,7 +2896,6 @@ int id bounce 0x7f08005e
 int id bounceBoth 0x7f08005f
 int id bounceEnd 0x7f080060
 int id bounceStart 0x7f080061
-int id button 0x7f0801fb
 int id button2 0x7f08021e
 int id buttonPanel 0x7f080062
 int id cache_measures 0x7f080063
@@ -2970,6 +2969,7 @@ int id doctorLayout5 0x7f080228
 int id doctorLayout6 0x7f080229
 int id doctorLayout7 0x7f08022a
 int id doctorLayout8 0x7f08022b
+int id doctorNumber 0x7f08023a
 int id doctorPhoneNumber 0x7f08022c
 int id doctorRegisterButton 0x7f0801fc
 int id doctorSpecialty 0x7f08022d
@@ -2989,7 +2989,6 @@ int id east 0x7f0800a9
 int id edit_query 0x7f0800aa
 int id elastic 0x7f0800ab
 int id embed 0x7f0800ac
-int id employeeNumber 0x7f08022e
 int id end 0x7f0800ad
 int id endToStart 0x7f0800ae
 int id enterAlways 0x7f0800af
@@ -3026,6 +3025,7 @@ int id header_title 0x7f0800cd
 int id hideable 0x7f0800ce
 int id home 0x7f0800cf
 int id homeAsUp 0x7f0800d0
+int id homeButton 0x7f08023b
 int id honorRequest 0x7f0800d1
 int id horizontal_only 0x7f0800d2
 int id icon 0x7f0800d3
@@ -3059,6 +3059,7 @@ int id linearLayout12 0x7f080202
 int id linearLayout2 0x7f08022f
 int id linearLayout3 0x7f080230
 int id linearLayout4 0x7f080231
+int id linearLayout5 0x7f08023c
 int id linearLayout6 0x7f080203
 int id linearLayout7 0x7f080204
 int id linearLayout8 0x7f080205
