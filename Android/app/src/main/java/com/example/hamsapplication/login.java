@@ -45,7 +45,6 @@ public class login extends AppCompatActivity{
                 String usernameField = username.getText().toString();
                 String passwordField = password.getText().toString();
                 for(int i = 0; i < generalInformation.collection.size(); i++){
-                    Log.e("AHHHHHHHHHH", generalInformation.collection.get(i).username);
                 }
 
                 if (generalInformation.hasAccount(usernameField)) {
