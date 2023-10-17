@@ -1,33 +1,35 @@
 package com.example.hamsapplication;
-
+import android.util.Log;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
+import android.widget.TextView;
 public class login extends AppCompatActivity {
 
-    private EditText username;
-    private EditText password;
-    private Button login;
-    private Button patientRegister;
-    private Button doctorRegister;
-    private String adminUser = "admin";
-    private String adminPass = "password";
+    EditText username;
+    TextView result;
+    EditText password;
+    Button login;
+    Button patientRegister;
+    Button doctorRegister;
+    String adminUser = "admin";
+    String adminPass = "password";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-        username = findViewById(R.id.usernameInput);
-        password = findViewById(R.id.passwordInput);
+        username = (EditText) findViewById(R.id.usernameInput);
+        password = (EditText) findViewById(R.id.passwordInput);
 
         login = (Button) findViewById(R.id.loginButton);
         patientRegister = (Button)findViewById(R.id.patientRegisterButton);
         doctorRegister = (Button) findViewById(R.id.doctorRegisterButton);
+
+        result = (TextView)findViewById(R.id.textView5);
 
         if (!generalInformation.hasAccount("admin")) {
             generalInformation admin = new generalInformation("admin", "pass", null, null, null, null);
@@ -38,14 +40,29 @@ public class login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String usernameField = username.getText().toString().toLowerCase();
+                String usernameField = username.getText().toString();
                 String passwordField = password.getText().toString();
+
+                //if (!generalInformation.collection.isEmpty()){
+                    //result.setText("woooo");
+                //}
                 if (generalInformation.hasAccount(usernameField)){
+                    Log.e("myTag", usernameField);
+                    Log.e("myTag", "admin");
+                }else{
+                    Log.e("urTag", usernameField);
+                    Log.e("urTag", "admin");
+                }
+
+
+                if (generalInformation.hasAccount(usernameField)) {
+                    result.setText("weee");
                     generalInformation currentAccount = generalInformation.searchForAccount(usernameField);
-                    if (currentAccount.username == usernameField && currentAccount.password == passwordField){
-                        Intent intent = new Intent(login.this, welcomeScreen.class);
-                        startActivity(intent);
-                    }
+                }
+                if (  usernameField == "admin" &&  passwordField == "pass"){
+                    result.setText("wahhhh");
+                    Intent intent = new Intent(login.this, welcomeScreen.class);
+                    startActivity(intent);
                 }
 
             }
