@@ -7,7 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-public class login extends AppCompatActivity {
+public class login extends AppCompatActivity{
+
 
     EditText username;
     TextView result;
@@ -32,40 +33,39 @@ public class login extends AppCompatActivity {
         result = (TextView)findViewById(R.id.textView5);
 
         if (!generalInformation.hasAccount("admin")) {
-            generalInformation admin = new generalInformation("admin", "pass", null, null, null, null);
+            adminInformation admin = new adminInformation("admin", "pass", null, null, null, null);
             generalInformation.addToCollection(admin);
         }
 
         login.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                for(int i = 0; i < generalInformation.collection.size(); i ++){
-                    Log.e("iter", generalInformation.collection.get(i).username);
-                }
+
+
                 String usernameField = username.getText().toString();
                 String passwordField = password.getText().toString();
-
-                //if (!generalInformation.collection.isEmpty()){
-                    //result.setText("woooo");
-                //}
-                if (generalInformation.hasAccount(usernameField)){
-                    Log.e("myTag", usernameField);
-                    Log.e("myTag", "admin");
-                }else{
-                    Log.e("urTag", usernameField);
-                    Log.e("urTag", "admin");
+                for(int i = 0; i < generalInformation.collection.size(); i++){
+                    Log.e("AHHHHHHHHHH", generalInformation.collection.get(i).username);
                 }
-
 
                 if (generalInformation.hasAccount(usernameField)) {
-                    result.setText("weee");
                     generalInformation currentAccount = generalInformation.searchForAccount(usernameField);
+                    if (currentAccount instanceof adminInformation){
+                        generalInformation.currentTypeOf = 0;
+                    }else if(currentAccount instanceof patientInformation){
+                        generalInformation.currentTypeOf = 1;
+                    } else if (currentAccount instanceof doctorInformation) {
+                        generalInformation.currentTypeOf = 2;
+                    }
+
+                    if (!currentAccount.password.equals(null)){
+                        if (  usernameField.equals(currentAccount.username)  &&  passwordField.equals(currentAccount.password)) {
+                            Intent intent = new Intent(login.this, welcomeScreen.class);
+                            startActivity(intent);
+                        }
+                    }
                 }
-                if (  usernameField == "admin" &&  passwordField == "pass"){
-                    result.setText("wahhhh");
-                    Intent intent = new Intent(login.this, welcomeScreen.class);
-                    startActivity(intent);
-                }
+
 
             }
         });

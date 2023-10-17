@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class patientRegister extends AppCompatActivity {
+public class patientRegister extends AppCompatActivity{
 
     private EditText firstName;
     private EditText lastName;
@@ -46,9 +46,10 @@ public class patientRegister extends AppCompatActivity {
                 String userAddress = address.getText().toString();
                 String userHealthCardNumber = healthCardNumber.getText().toString();
 
-                patientInformation patient = new patientInformation(userEmail, userPassword, userFirstName,
-                        userLastName, userPhoneNumber, userAddress, userHealthCardNumber);
+                patientInformation patient = new patientInformation(userEmail, userPassword, userFirstName, userLastName, userPhoneNumber, userAddress, userHealthCardNumber);
                 generalInformation.addToCollection(patient);
+                //patientInformation patient = new patientInformation("patient", "pass", null, null, null, null, null);
+                //generalInformation.addToCollection(patient);
                 Intent intent = new Intent(patientRegister.this, createdAccount.class);
                 startActivity(intent);
             }
