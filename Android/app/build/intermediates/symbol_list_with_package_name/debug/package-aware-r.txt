@@ -2897,7 +2897,6 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-id button
 id button2
 id buttonPanel
 id cache_measures
@@ -2971,6 +2970,7 @@ id doctorLayout5
 id doctorLayout6
 id doctorLayout7
 id doctorLayout8
+id doctorNumber
 id doctorPhoneNumber
 id doctorRegisterButton
 id doctorSpecialty
@@ -2990,7 +2990,6 @@ id east
 id edit_query
 id elastic
 id embed
-id employeeNumber
 id end
 id endToStart
 id enterAlways
@@ -3027,6 +3026,7 @@ id header_title
 id hideable
 id home
 id homeAsUp
+id homeButton
 id honorRequest
 id horizontal_only
 id icon
@@ -3060,6 +3060,7 @@ id linearLayout12
 id linearLayout2
 id linearLayout3
 id linearLayout4
+id linearLayout5
 id linearLayout6
 id linearLayout7
 id linearLayout8
