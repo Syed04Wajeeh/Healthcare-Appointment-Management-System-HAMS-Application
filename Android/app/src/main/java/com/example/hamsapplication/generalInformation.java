@@ -10,7 +10,7 @@ public class generalInformation {
     protected String lastName;
     protected String phoneNumber;
     protected String address;
-    protected int registrationStatus;
+    private int registrationStatus;
     // 0 is not processed, 1 is accepted, 2 is rejected
 
     protected generalInformation(String username, String password, String firstName, String lastName, String phoneNumber, String address, int registrationStatus){
@@ -23,6 +23,14 @@ public class generalInformation {
         this.registrationStatus = registrationStatus;
 
         collection.add(this);
+    }
+
+    public void setStatus(int newStatus){
+        this.registrationStatus = newStatus;
+    }
+
+    public int getStatus(){
+        return this.registrationStatus;
     }
 
     static public boolean hasAccount(String user){

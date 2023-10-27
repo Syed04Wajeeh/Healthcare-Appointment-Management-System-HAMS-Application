@@ -1,5 +1,4 @@
 package com.example.hamsapplication;
-import android.util.Log;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -34,7 +33,7 @@ public class login extends AppCompatActivity{
         rejected = (TextView)findViewById(R.id.rejectedPopup);
 
         if (!generalInformation.hasAccount("admin")) {
-            adminInformation admin = new adminInformation("admin", "pass", null, null, null, null, 2);
+            adminInformation admin = new adminInformation("admin", "pass", null, null, null, null, 1);
             generalInformation.addToCollection(admin);
         }
 
@@ -60,12 +59,12 @@ public class login extends AppCompatActivity{
 
                     if (!currentAccount.password.equals(null)){
                         if (  usernameField.equals(currentAccount.username)  &&  passwordField.equals(currentAccount.password)) {
-                            if (currentAccount.registrationStatus == 0){
+                            if (currentAccount.getStatus() == 0){
                                 Toast.makeText(getApplicationContext(),"Your registration has not been approved yet, please wait",Toast.LENGTH_SHORT).show();
-                            } else if (currentAccount.registrationStatus == 2){
+                            } else if (currentAccount.getStatus() == 2){
                                 Toast.makeText(getApplicationContext(),"Your registration has been denied, please contact the admin at 613-XXX-XXXX",Toast.LENGTH_SHORT).show();
-                            } else if (currentAccount.registrationStatus == 1) {
-                                Intent intent = new Intent(login.this, welcomeScreen.class);
+                            } else if (currentAccount.getStatus() == 1) {
+                                Intent intent = new Intent(login.this, welcomeScreenAdmin.class);
                                 startActivity(intent);
                             }
                         }
