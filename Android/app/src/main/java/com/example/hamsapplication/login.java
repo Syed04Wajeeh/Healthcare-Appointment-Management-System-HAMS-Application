@@ -7,11 +7,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 public class login extends AppCompatActivity{
 
 
     EditText username;
-    TextView result;
+    TextView rejected;
     EditText password;
     Button login;
     Button patientRegister;
@@ -30,10 +31,10 @@ public class login extends AppCompatActivity{
         patientRegister = (Button)findViewById(R.id.patientRegisterButton);
         doctorRegister = (Button) findViewById(R.id.doctorRegisterButton);
 
-        result = (TextView)findViewById(R.id.textView5);
+        rejected = (TextView)findViewById(R.id.rejectedPopup);
 
         if (!generalInformation.hasAccount("admin")) {
-            adminInformation admin = new adminInformation("admin", "pass", null, null, null, null);
+            adminInformation admin = new adminInformation("admin", "pass", null, null, null, null, 2);
             generalInformation.addToCollection(admin);
         }
 
@@ -59,10 +60,18 @@ public class login extends AppCompatActivity{
 
                     if (!currentAccount.password.equals(null)){
                         if (  usernameField.equals(currentAccount.username)  &&  passwordField.equals(currentAccount.password)) {
-                            Intent intent = new Intent(login.this, welcomeScreen.class);
-                            startActivity(intent);
+                            if (currentAccount.registrationStatus == 0){
+                                Toast.makeText(getApplicationContext(),"Your registration has not been approved yet, please wait",Toast.LENGTH_SHORT).show();
+                            } else if (currentAccount.registrationStatus == 2){
+                                Toast.makeText(getApplicationContext(),"Your registration has been denied, please contact the admin at 613-XXX-XXXX",Toast.LENGTH_SHORT).show();
+                            } else if (currentAccount.registrationStatus == 1) {
+                                Intent intent = new Intent(login.this, welcomeScreen.class);
+                                startActivity(intent);
+                            }
                         }
                     }
+                }else{
+                    Toast.makeText(getApplicationContext(),"Unable to find an email\n registered with this username",Toast.LENGTH_SHORT).show();
                 }
 
 
@@ -82,5 +91,6 @@ public class login extends AppCompatActivity{
                 startActivity(intent);
             }
         });
+
     }
 }

@@ -45,6 +45,7 @@ id patientLastName
 id patientPhoneNumber
 id patientRegisterButton
 id register
+id rejectedPopup
 id textView
 id textView10
 id textView11

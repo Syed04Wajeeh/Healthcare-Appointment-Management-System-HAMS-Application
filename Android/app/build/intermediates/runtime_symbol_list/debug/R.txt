@@ -3179,6 +3179,7 @@ int id radio 0x7f08017a
 int id ratio 0x7f08017b
 int id rectangles 0x7f08017c
 int id register 0x7f08017d
+int id rejectedPopup 0x7f08022b
 int id reverseSawtooth 0x7f08017e
 int id right 0x7f08017f
 int id rightToLeft 0x7f080180
