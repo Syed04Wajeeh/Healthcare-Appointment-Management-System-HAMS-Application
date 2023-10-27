@@ -11,14 +11,17 @@ public class generalInformation {
     protected String lastName;
     protected String phoneNumber;
     protected String address;
+    protected int registrationStatus;
+    // 0 is not processed, 1 is accepted, 2 is rejected
 
-    protected generalInformation(String username, String password, String firstName, String lastName, String phoneNumber, String address){
+    protected generalInformation(String username, String password, String firstName, String lastName, String phoneNumber, String address, int registrationStatus){
         this.username = username.toLowerCase();
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
         this.address = address;
+        this.registrationStatus = registrationStatus;
 
         collection.add(this);
     }

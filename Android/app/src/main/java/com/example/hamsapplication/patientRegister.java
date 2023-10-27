@@ -46,7 +46,7 @@ public class patientRegister extends AppCompatActivity{
                 String userAddress = address.getText().toString();
                 String userHealthCardNumber = healthCardNumber.getText().toString();
 
-                patientInformation patient = new patientInformation(userEmail, userPassword, userFirstName, userLastName, userPhoneNumber, userAddress, userHealthCardNumber);
+                patientInformation patient = new patientInformation(userEmail, userPassword, userFirstName, userLastName, userPhoneNumber, userAddress, userHealthCardNumber, 0);
                 generalInformation.addToCollection(patient);
                 //patientInformation patient = new patientInformation("patient", "pass", null, null, null, null, null);
                 //generalInformation.addToCollection(patient);
