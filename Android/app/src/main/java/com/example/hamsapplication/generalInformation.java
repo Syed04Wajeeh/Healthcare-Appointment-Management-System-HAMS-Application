@@ -4,7 +4,6 @@ public class generalInformation {
     protected static ArrayList<generalInformation> collection = new ArrayList<>();
     public static int currentTypeOf;
     //0 = admin, 1 = patient, 2 = doctor
-    //testing
     protected String username;
     protected String password;
     protected String firstName;
