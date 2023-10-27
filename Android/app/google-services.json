@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "473877052864",
+    "firebase_url": "https://group-23-heath-app-seg2105-default-rtdb.firebaseio.com",
+    "project_id": "group-23-heath-app-seg2105",
+    "storage_bucket": "group-23-heath-app-seg2105.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:473877052864:android:fb1e3009f3cfb12e8d5c25",
+        "android_client_info": {
+          "package_name": "com.example.hamsapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCd_epi2Vu3B6GEkrTxwUHuHZCo8fPXABk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
