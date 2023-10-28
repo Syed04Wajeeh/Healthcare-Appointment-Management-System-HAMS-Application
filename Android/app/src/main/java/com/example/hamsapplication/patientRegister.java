@@ -1,13 +1,19 @@
 package com.example.hamsapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
 
+import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Base64;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+
+
 
 public class patientRegister extends AppCompatActivity{
 
@@ -19,6 +25,7 @@ public class patientRegister extends AppCompatActivity{
     private EditText address;
     private EditText healthCardNumber;
     private Button registerButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +42,10 @@ public class patientRegister extends AppCompatActivity{
         address = (EditText) findViewById(R.id.patientAddress);
         healthCardNumber = (EditText) findViewById(R.id.patientHealthCardNumber);
 
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("Users");
+
+
         registerButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -47,18 +58,25 @@ public class patientRegister extends AppCompatActivity{
                 String userAddress = address.getText().toString();
                 String userHealthCardNumber = healthCardNumber.getText().toString();
 
-                if (userEmail.equals("") || userFirstName.equals("") || userLastName.equals("") || userPassword.equals("") || userPhoneNumber.equals("") || userAddress.equals("") || userHealthCardNumber.equals("")) {
-                    Toast.makeText(getApplicationContext(), "Please complete all fields", Toast.LENGTH_SHORT).show();
-                    return;
-                }
                 patientInformation patient = new patientInformation(userEmail, userPassword, userFirstName, userLastName, userPhoneNumber, userAddress, userHealthCardNumber, 0);
                 generalInformation.addToCollection(patient);
-                //patientInformation patient = new patientInformation("patient", "pass", null, null, null, null, null);
-                //generalInformation.addToCollection(patient);
                 Intent intent = new Intent(patientRegister.this, createdAccount.class);
                 startActivity(intent);
-                registerButton.setEnabled(false);
+
+                AESCrypt crypt = new AESCrypt();
+                try {
+                    String encrypted = crypt.encrypt(userPassword);
+                    patient.password = encrypted;
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
+
+
+                String patientId = myRef.push().getKey(); // Generate a unique key for the patient
+                myRef.child(patientId).setValue(patient);
+
             }
+
         });
     }
 }

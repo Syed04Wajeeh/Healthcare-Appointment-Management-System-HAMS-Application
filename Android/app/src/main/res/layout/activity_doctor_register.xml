@@ -9,8 +9,8 @@
     <LinearLayout
         android:id="@+id/doctorLayout1"
         android:layout_width="376dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="30dp"
         android:orientation="horizontal"
@@ -42,8 +42,8 @@
     <LinearLayout
         android:id="@+id/doctorLayout6"
         android:layout_width="376dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="30dp"
         android:orientation="horizontal"
@@ -76,8 +76,8 @@
     <LinearLayout
         android:id="@+id/doctorLayout8"
         android:layout_width="376dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="64dp"
         android:orientation="horizontal"
@@ -101,6 +101,7 @@
         android:layout_height="30dp"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="314dp"
+        android:layout_marginBottom="4dp"
         android:text="First Name"
         app:layout_constraintBottom_toTopOf="@+id/doctorLayout1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -117,7 +118,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
-            android:id="@+id/register"
+            android:id="@+id/registerDoctor"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -127,8 +128,8 @@
     <LinearLayout
         android:id="@+id/doctorLayout3"
         android:layout_width="376dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="30dp"
         android:orientation="horizontal"
@@ -149,8 +150,8 @@
     <LinearLayout
         android:id="@+id/doctorLayout4"
         android:layout_width="376dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="30dp"
         android:orientation="horizontal"
@@ -216,8 +217,8 @@
     <LinearLayout
         android:id="@+id/doctorLayout2"
         android:layout_width="376dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="30dp"
         android:orientation="horizontal"
@@ -256,8 +257,8 @@
     <LinearLayout
         android:id="@+id/doctorLayout5"
         android:layout_width="376dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="30dp"
         android:orientation="horizontal"
@@ -278,8 +279,8 @@
     <TextView
         android:id="@+id/textView26"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginStart="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
         android:text="Employee Number"
         app:layout_constraintBottom_toTopOf="@+id/doctorLayout7"
         app:layout_constraintEnd_toEndOf="parent"
@@ -290,7 +291,7 @@
         android:id="@+id/doctorLayout7"
         android:layout_width="376dp"
         android:layout_height="30dp"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="30dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="30dp"
         android:orientation="horizontal"

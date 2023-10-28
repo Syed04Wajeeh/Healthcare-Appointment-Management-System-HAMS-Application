@@ -7,7 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class doctorRegister extends AppCompatActivity{
 
@@ -37,6 +39,8 @@ public class doctorRegister extends AppCompatActivity{
         employeeNumber = (EditText) findViewById(R.id.doctorNumber);
         specialties = (EditText) findViewById(R.id.doctorSpecialty);
 
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("Users");
 
         registerButton.setOnClickListener(new View.OnClickListener() {
 
@@ -51,17 +55,22 @@ public class doctorRegister extends AppCompatActivity{
                 String userEmployeeNumber = address.getText().toString();
                 String userSpecialties = address.getText().toString();
 
-                if (userEmail.equals("") || userFirstName.equals("") || userLastName.equals("") || userPassword.equals("") || userPhoneNumber.equals("") || userAddress.equals("") || userEmployeeNumber.equals("") || userSpecialties.equals("")) {
-                    Toast.makeText(getApplicationContext(), "Please complete all fields", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
                 doctorInformation doctor = new doctorInformation(userEmail, userPassword, userFirstName, userLastName, userPhoneNumber, userAddress, userEmployeeNumber, userSpecialties, 0);
                 generalInformation.addToCollection(doctor);
                 Intent intent = new Intent(doctorRegister.this, createdAccount.class);
                 startActivity(intent);
-                registerButton.setEnabled(false);
 
+                AESCrypt crypt = new AESCrypt();
+                try {
+                    String encrypted = crypt.encrypt(userPassword);
+                    doctor.password = encrypted;
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
+
+
+                String patientId = myRef.push().getKey(); // Generate a unique key for the patient
+                myRef.child(patientId).setValue(doctor);
             }
         });
     }

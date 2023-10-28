@@ -6,13 +6,13 @@ public class generalInformation {
     protected static ArrayList<generalInformation> collection = new ArrayList<>();
     public static int currentTypeOf;
     //0 = admin, 1 = patient, 2 = doctor
-    protected String username;
-    protected String password;
-    protected String firstName;
-    protected String lastName;
-    protected String phoneNumber;
-    protected String address;
-    private int registrationStatus;
+    public String username;
+    public String password;
+    public String firstName;
+    public String lastName;
+    public String phoneNumber;
+    public String address;
+    public int registrationStatus;
     // 0 is not processed, 1 is accepted, 2 is rejected
 
     protected generalInformation(String username, String password, String firstName, String lastName, String phoneNumber, String address, int registrationStatus){
