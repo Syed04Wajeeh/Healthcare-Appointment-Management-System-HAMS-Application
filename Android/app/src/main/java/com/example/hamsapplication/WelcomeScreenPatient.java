@@ -14,9 +14,9 @@ public class WelcomeScreenPatient extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_welcome_screen_admin);
+        setContentView(R.layout.activity_welcome_screen_patient);
 
-        logOut = (Button) findViewById(R.id.logOff);
+        logOut = (Button) findViewById(R.id.logOff2);
 
 
         logOut.setOnClickListener(new View.OnClickListener() {

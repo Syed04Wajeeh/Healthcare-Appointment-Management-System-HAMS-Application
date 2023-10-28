@@ -3112,6 +3112,7 @@ id linearLayout9
 id listMode
 id list_item
 id logOff
+id logOff2
 id loginButton
 id m3_side_sheet
 id marquee
@@ -3351,6 +3352,7 @@ id textView4
 id textView5
 id textView6
 id textView7
+id textView8
 id textView9
 id text_input_end_icon
 id text_input_error_icon
@@ -3403,6 +3405,7 @@ id wrap_content_constrained
 id x_left
 id x_right
 id youAreText
+id youAreText2
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
 integer app_bar_elevation_anim_duration

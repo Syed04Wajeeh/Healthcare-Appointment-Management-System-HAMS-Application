@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -55,22 +57,25 @@ public class doctorRegister extends AppCompatActivity{
                 String userEmployeeNumber = address.getText().toString();
                 String userSpecialties = address.getText().toString();
 
-                doctorInformation doctor = new doctorInformation(userEmail, userPassword, userFirstName, userLastName, userPhoneNumber, userAddress, userEmployeeNumber, userSpecialties, 0, 2);
-                generalInformation.addToCollection(doctor);
-                Intent intent = new Intent(doctorRegister.this, createdAccount.class);
-                startActivity(intent);
-
-                AESCrypt crypt = new AESCrypt();
-                try {
-                    String encrypted = crypt.encrypt(userPassword);
-                    doctor.password = encrypted;
-                } catch (Exception e) {
-                    throw new RuntimeException(e);
+                if (userEmail.equals("") || userFirstName.equals("") || userLastName.equals("") || userPassword.equals("") || userPhoneNumber.equals("") || userAddress.equals("") || userEmployeeNumber.equals("") || userSpecialties.equals("")) {
+                    Toast.makeText(getApplicationContext(), "Please complete all fields", Toast.LENGTH_SHORT).show();
+                    return;
                 }
-
-
-                String doctorId = myRef.push().getKey(); // Generate a unique key for the patient
-                myRef.child(doctorId).setValue(doctor);
+                generalInformation.hasAccount(userEmail, new generalInformation.AccountCheckCallback() {
+                    @Override
+                    public void onAccountCheckResult(boolean accountExists) {
+                        if (accountExists){
+                            Log.d("Account exists", "true");
+                            Toast.makeText(getApplicationContext(), "This email is already in use", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Log.d("Account does not exist", "false");
+                            doctorInformation doctor = new doctorInformation(userEmail, userPassword, userFirstName, userLastName, userPhoneNumber, userAddress, userEmployeeNumber, userSpecialties, 0, 3);
+                            doctor.addToCollection();
+                            Intent intent = new Intent(doctorRegister.this, createdAccount.class);
+                            startActivity(intent);
+                        }
+                    }
+                });
             }
         });
     }

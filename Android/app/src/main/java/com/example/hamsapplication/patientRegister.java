@@ -4,9 +4,11 @@ package com.example.hamsapplication;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -16,14 +18,14 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class patientRegister extends AppCompatActivity{
 
-    private EditText firstName;
-    private EditText lastName;
-    private EditText email;
-    private EditText password;
-    private EditText phoneNumber;
-    private EditText address;
-    private EditText healthCardNumber;
-    private Button registerButton;
+    public EditText firstName;
+    public EditText lastName;
+    public EditText email;
+    public EditText password;
+    public EditText phoneNumber;
+    public EditText address;
+    public EditText healthCardNumber;
+    public Button registerButton;
 
 
     @Override
@@ -57,25 +59,27 @@ public class patientRegister extends AppCompatActivity{
                 String userAddress = address.getText().toString();
                 String userHealthCardNumber = healthCardNumber.getText().toString();
 
-                patientInformation patient = new patientInformation(userEmail, userPassword, userFirstName, userLastName, userPhoneNumber, userAddress, userHealthCardNumber, 0, 1);
-                generalInformation.addToCollection(patient);
-                Intent intent = new Intent(patientRegister.this, createdAccount.class);
-                startActivity(intent);
-
-                AESCrypt crypt = new AESCrypt();
-                try {
-                    String encrypted = crypt.encrypt(userPassword);
-                    patient.password = encrypted;
-                } catch (Exception e) {
-                    throw new RuntimeException(e);
+                if (userEmail.equals("") || userFirstName.equals("") || userLastName.equals("") || userPassword.equals("") || userPhoneNumber.equals("") || userAddress.equals("") || userHealthCardNumber.equals("")) {
+                    Toast.makeText(getApplicationContext(), "Please complete all fields", Toast.LENGTH_SHORT).show();
+                    return;
                 }
 
-
-                String patientId = myRef.push().getKey(); // Generate a unique key for the patient
-                myRef.child(patientId).setValue(patient);
-
+                generalInformation.hasAccount(userEmail, new generalInformation.AccountCheckCallback() {
+                    @Override
+                    public void onAccountCheckResult(boolean accountExists) {
+                        if (accountExists){
+                            Log.d("Account exists", "true");
+                            Toast.makeText(getApplicationContext(), "This email is already in use", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Log.d("Account does not exist", "false");
+                            patientInformation patient = new patientInformation(userEmail, userPassword, userFirstName, userLastName, userPhoneNumber, userAddress, userHealthCardNumber, 0, 2);
+                            patient.addToCollection();
+                            Intent intent = new Intent(patientRegister.this, createdAccount.class);
+                            startActivity(intent);
+                        }
+                    }
+                });
             }
-
         });
     }
 }

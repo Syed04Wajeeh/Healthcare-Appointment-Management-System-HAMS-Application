@@ -1,6 +1,8 @@
 package com.example.hamsapplication;
 import android.util.Log;
 
+import androidx.annotation.NonNull;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -9,6 +11,15 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 public class generalInformation {
+
+    public interface AccountCheckCallback {
+        void onAccountCheckResult(boolean accountExists);
+    }
+
+    public interface AccountSearchCallback {
+        void onAccountSearchResult(generalInformation user);
+    }
+
     protected static ArrayList<generalInformation> collection = new ArrayList<>();
     public static int currentTypeOf;
     //0 = admin, 1 = patient, 2 = doctor
@@ -20,12 +31,6 @@ public class generalInformation {
     public String address;
     public int registrationStatus;
     public int accountType;
-
-    // 0 is not processed, 1 is accepted, 2 is rejected
-
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference myRef = database.getReference("Users");
-
     public  generalInformation(){
     }
     public generalInformation(String username, String password, String firstName, String lastName, String phoneNumber, String address, int registrationStatus, int accountType){
@@ -36,54 +41,81 @@ public class generalInformation {
         this.phoneNumber = phoneNumber;
         this.address = address;
         this.registrationStatus = registrationStatus;
-        this.accountType = accountType;
+        this.accountType = accountType; //1 is admin, 2 is patient, 3 is doctor
+
+
     }
 
-    public void setStatus(int newStatus){
-        this.registrationStatus = newStatus;
+    static public void hasAccount(final String desiredUsername, final AccountCheckCallback callback){
+        final boolean[] accountExists = {false};
+
+        FirebaseDatabase.getInstance().getReference().child("Users").addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                            generalInformation user = snapshot.getValue(generalInformation.class);
+                            if (user != null && user.username.equals(desiredUsername)) {
+                                // Username exists in the database
+                                accountExists[0] = true;
+                                break; // Exit the loop since the account has been found
+                            }
+                        }
+                        callback.onAccountCheckResult(accountExists[0]);
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                        callback.onAccountCheckResult(false);
+                    }
+                });
+
     }
 
-    public int getStatus(){
-        return this.registrationStatus;
-    }
-
-    public String getUsername(){return this.username; }
-
-    static public boolean hasAccount(String user){
 
 
-
-        boolean result = false;
-        if (!collection.isEmpty()) {
-            for (generalInformation users : collection) {
-                if (users.username.equals(user)) {
-                    result = true;
-                    break;
-                } else {
-                    result = false;
+    static public void searchForAccount(final String desiredUsername, final AccountSearchCallback callback) {
+        FirebaseDatabase.getInstance().getReference().child("Users").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    generalInformation user = snapshot.getValue(generalInformation.class);
+                    if (user != null && user.username.equals(desiredUsername)) {
+                        // User with the desired username was found
+                        callback.onAccountSearchResult(user);
+                        return; // Exit the loop since the account has been found
+                    }
                 }
+                // User with the desired username was not found
+                callback.onAccountSearchResult(null);
             }
-        } else {
-            result = false;
-        }
-        return result;
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                callback.onAccountSearchResult(null);
+            }
+        });
     }
 
 
-    static public void addToCollection(generalInformation information){
-        if (!hasAccount(information.username)){
-            collection.add(information);
+    public void addToCollection(){
+    } //MAKE THIS ABSTRACT LATER BTW
+
+    public void encryptPassword(){
+        AESCrypt crypt = new AESCrypt();
+        try {
+            String encrypted = crypt.encrypt(this.password);
+            this.password = encrypted;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
     }
 
-    static public generalInformation searchForAccount(String username) {
-        if (!collection.isEmpty() && !username.equals(null)) {
-            for (generalInformation users : collection) {
-                if (users.username.equals(username)) {
-                    return users;
-                }
-            }
+    public String decryptPassword(){
+        AESCrypt crypt = new AESCrypt();
+        try {
+            return crypt.decrypt(this.password);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
-        return null;
     }
 }

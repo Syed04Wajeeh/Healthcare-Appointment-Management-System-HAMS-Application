@@ -49,7 +49,7 @@ public class Inbox extends AppCompatActivity {
         layoutRej.addView(newRowr);
 
         for (generalInformation info : generalInformation.collection) {
-            if (info.getStatus() == 0){
+            if (info.registrationStatus == 0){
 
                 TableRow row = new TableRow(this);
                 TextView text = new TextView(this);
@@ -72,7 +72,7 @@ public class Inbox extends AppCompatActivity {
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        info.setStatus(2);
+                        info.registrationStatus = 2;
                         button.setEnabled(false);
                         button1.setEnabled(false);
                     }
@@ -80,7 +80,7 @@ public class Inbox extends AppCompatActivity {
                 button1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        info.setStatus(1);
+                        info.registrationStatus = 1;
                         button.setEnabled(false);
                         button1.setEnabled(false);
                     }
@@ -92,7 +92,7 @@ public class Inbox extends AppCompatActivity {
                 row.addView(button1);
                 layout.addView(row);
 
-            }else if (info.getStatus() == 2){
+            }else if (info.registrationStatus == 2){
                 TableRow row = new TableRow(this);
                 TextView text = new TextView(this);
                 Button button = new Button(this);
@@ -109,7 +109,7 @@ public class Inbox extends AppCompatActivity {
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        info.setStatus(1);
+                        info.registrationStatus = 1;
                         button.setEnabled(false);
                     }
                 });

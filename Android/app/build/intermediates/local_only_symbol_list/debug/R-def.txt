@@ -38,6 +38,7 @@ id linearLayout7
 id linearLayout8
 id linearLayout9
 id logOff
+id logOff2
 id loginButton
 id passwordInput
 id patientAccountPassword
@@ -70,9 +71,11 @@ id textView4
 id textView5
 id textView6
 id textView7
+id textView8
 id textView9
 id usernameInput
 id youAreText
+id youAreText2
 layout activity_created_account
 layout activity_doctor_register
 layout activity_inbox
