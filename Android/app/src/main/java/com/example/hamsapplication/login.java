@@ -39,7 +39,7 @@ public class login extends AppCompatActivity{
             @Override
             public void onClick(View view) {
 
-
+                int currentType = 0;
                 String usernameField = username.getText().toString();
                 String passwordField = password.getText().toString();
                 for(int i = 0; i < generalInformation.collection.size(); i++){
@@ -48,27 +48,37 @@ public class login extends AppCompatActivity{
                 if (generalInformation.hasAccount(usernameField)) {
                     generalInformation currentAccount = generalInformation.searchForAccount(usernameField);
                     if (currentAccount instanceof adminInformation){
-                        generalInformation.currentTypeOf = 0;
+                        currentType = 0;
                     }else if(currentAccount instanceof patientInformation){
-                        generalInformation.currentTypeOf = 1;
+                        currentType = 1;
                     } else if (currentAccount instanceof doctorInformation) {
-                        generalInformation.currentTypeOf = 2;
+                        currentType = 2;
                     }
 
                     if (!currentAccount.password.equals(null)){
                         if (  usernameField.equals(currentAccount.username)  &&  passwordField.equals(currentAccount.password)) {
                             if (currentAccount.getStatus() == 0){
                                 Toast.makeText(getApplicationContext(),"Your registration has not been approved yet, please wait",Toast.LENGTH_SHORT).show();
+                                return;
                             } else if (currentAccount.getStatus() == 2){
                                 Toast.makeText(getApplicationContext(),"Your registration has been denied, please contact the admin at 613-XXX-XXXX",Toast.LENGTH_SHORT).show();
+                                return;
                             } else if (currentAccount.getStatus() == 1) {
-                                Intent intent = new Intent(login.this, welcomeScreenAdmin.class);
-                                startActivity(intent);
+                                if (currentType == 0){
+                                    Intent intent = new Intent(login.this, welcomeScreenAdmin.class);
+                                    startActivity(intent);
+                                }else if(currentType == 1){
+                                    Intent intent = new Intent(login.this, WelcomeScreenPatient.class);
+                                    startActivity(intent);
+                                }else if(currentType == 2){
+                                    Intent intent = new Intent(login.this, WelcomeScreenDoctor.class);
+                                    startActivity(intent);
+                                }
                             }
                         }
                     }
                 }else{
-                    Toast.makeText(getApplicationContext(),"Unable to find an email\n registered with this username",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Unable to find an account\n registered with this username",Toast.LENGTH_SHORT).show();
                 }
 
                 login.setEnabled(false);

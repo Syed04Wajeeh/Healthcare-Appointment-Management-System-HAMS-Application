@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class doctorRegister extends AppCompatActivity{
 
@@ -49,6 +50,11 @@ public class doctorRegister extends AppCompatActivity{
                 String userAddress = address.getText().toString();
                 String userEmployeeNumber = address.getText().toString();
                 String userSpecialties = address.getText().toString();
+
+                if (userEmail.equals("") || userFirstName.equals("") || userLastName.equals("") || userPassword.equals("") || userPhoneNumber.equals("") || userAddress.equals("") || userEmployeeNumber.equals("") || userSpecialties.equals("")) {
+                    Toast.makeText(getApplicationContext(), "Please complete all fields", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 doctorInformation doctor = new doctorInformation(userEmail, userPassword, userFirstName, userLastName, userPhoneNumber, userAddress, userEmployeeNumber, userSpecialties, 0);
                 generalInformation.addToCollection(doctor);
