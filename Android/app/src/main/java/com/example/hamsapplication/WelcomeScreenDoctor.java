@@ -24,6 +24,7 @@ public class WelcomeScreenDoctor extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(WelcomeScreenDoctor.this, login.class);
                 startActivity(intent);
+                logOut.setEnabled(false);
             }
         });
     }

@@ -32,10 +32,8 @@ public class login extends AppCompatActivity{
 
         rejected = (TextView)findViewById(R.id.rejectedPopup);
 
-        if (!generalInformation.hasAccount("admin")) {
-            adminInformation admin = new adminInformation("admin", "pass", null, null, null, null, 1);
-            generalInformation.addToCollection(admin);
-        }
+        generalInformation.addToCollection(new adminInformation("admin", "pass", null, null, null, null, 1));
+
 
         login.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -73,7 +71,7 @@ public class login extends AppCompatActivity{
                     Toast.makeText(getApplicationContext(),"Unable to find an email\n registered with this username",Toast.LENGTH_SHORT).show();
                 }
 
-
+                login.setEnabled(false);
             }
         });
         patientRegister.setOnClickListener(new View.OnClickListener(){
@@ -81,6 +79,7 @@ public class login extends AppCompatActivity{
             public void onClick(View view) {
                 Intent intent = new Intent(login.this, patientRegister.class);
                 startActivity(intent);
+                patientRegister.setEnabled(false);
             }
         });
         doctorRegister.setOnClickListener(new View.OnClickListener(){
@@ -88,6 +87,7 @@ public class login extends AppCompatActivity{
             public void onClick(View view) {
                 Intent intent = new Intent(login.this, doctorRegister.class);
                 startActivity(intent);
+                doctorRegister.setEnabled(false);
             }
         });
 

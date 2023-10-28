@@ -24,6 +24,7 @@ public class welcomeScreenAdmin extends AppCompatActivity{
             public void onClick(View view) {
                 Intent intent = new Intent(welcomeScreenAdmin.this, login.class);
                 startActivity(intent);
+                logOut.setEnabled(false);
             }
         });
         inbox.setOnClickListener(new View.OnClickListener() {
@@ -31,6 +32,7 @@ public class welcomeScreenAdmin extends AppCompatActivity{
             public void onClick(View view) {
                 Intent intent = new Intent(welcomeScreenAdmin.this, Inbox.class);
                 startActivity(intent);
+                inbox.setEnabled(false);
             }
         });
     }

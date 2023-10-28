@@ -2938,6 +2938,8 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id buttonContainerRej
+id buttonContainerReq
 id buttonPanel
 id cache_measures
 id callMeasure

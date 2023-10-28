@@ -24,6 +24,7 @@ public class WelcomeScreenPatient extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(WelcomeScreenPatient.this, login.class);
                 startActivity(intent);
+                logOut.setEnabled(false);
             }
         });
     }
