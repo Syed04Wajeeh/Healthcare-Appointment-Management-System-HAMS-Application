@@ -48,8 +48,8 @@ id patientHealthCardNumber
 id patientLastName
 id patientPhoneNumber
 id patientRegisterButton
-id register
 id registerDoctor
+id registerPatient
 id rejectedPopup
 id textView
 id textView10

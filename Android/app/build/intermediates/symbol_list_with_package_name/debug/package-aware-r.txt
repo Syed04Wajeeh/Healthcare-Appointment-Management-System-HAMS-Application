@@ -3226,8 +3226,8 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
-id register
 id registerDoctor
+id registerPatient
 id rejectedPopup
 id reverseSawtooth
 id right

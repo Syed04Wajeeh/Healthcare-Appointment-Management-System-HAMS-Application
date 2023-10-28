@@ -3225,8 +3225,8 @@ int id progress_horizontal 0x7f08017f
 int id radio 0x7f080180
 int id ratio 0x7f080181
 int id rectangles 0x7f080182
-int id register 0x7f080183
 int id registerDoctor 0x7f080237
+int id registerPatient 0x7f080238
 int id rejectedPopup 0x7f080184
 int id reverseSawtooth 0x7f080185
 int id right 0x7f080186

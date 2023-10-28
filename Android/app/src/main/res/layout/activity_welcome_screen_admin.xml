@@ -50,7 +50,8 @@
         android:layout_height="wrap_content"
         android:text="inbox"
         app:layout_constraintBottom_toTopOf="@+id/logOff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/youAreText"
-        app:layout_constraintVertical_bias="0.937"
-        tools:layout_editor_absoluteX="156dp" />
+        app:layout_constraintVertical_bias="0.937" />
 </androidx.constraintlayout.widget.ConstraintLayout>

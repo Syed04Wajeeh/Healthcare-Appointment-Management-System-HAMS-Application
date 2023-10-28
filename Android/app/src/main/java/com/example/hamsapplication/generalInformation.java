@@ -1,6 +1,12 @@
 package com.example.hamsapplication;
 import android.util.Log;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 public class generalInformation {
     protected static ArrayList<generalInformation> collection = new ArrayList<>();
@@ -17,7 +23,12 @@ public class generalInformation {
 
     // 0 is not processed, 1 is accepted, 2 is rejected
 
-    protected generalInformation(String username, String password, String firstName, String lastName, String phoneNumber, String address, int registrationStatus, int accountType){
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference("Users");
+
+    public  generalInformation(){
+    }
+    public generalInformation(String username, String password, String firstName, String lastName, String phoneNumber, String address, int registrationStatus, int accountType){
         this.username = username.toLowerCase();
         this.password = password;
         this.firstName = firstName;
@@ -36,7 +47,12 @@ public class generalInformation {
         return this.registrationStatus;
     }
 
+    public String getUsername(){return this.username; }
+
     static public boolean hasAccount(String user){
+
+
+
         boolean result = false;
         if (!collection.isEmpty()) {
             for (generalInformation users : collection) {
@@ -52,6 +68,8 @@ public class generalInformation {
         }
         return result;
     }
+
+
     static public void addToCollection(generalInformation information){
         if (!hasAccount(information.username)){
             collection.add(information);

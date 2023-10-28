@@ -28,7 +28,7 @@ public class doctorRegister extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_register);
 
-        registerButton = (Button) findViewById(R.id.register);
+        registerButton = (Button) findViewById(R.id.registerDoctor);
 
         firstName = (EditText) findViewById(R.id.doctorFirstName);
         lastName = (EditText) findViewById(R.id.doctorLastName);
@@ -69,8 +69,8 @@ public class doctorRegister extends AppCompatActivity{
                 }
 
 
-                String patientId = myRef.push().getKey(); // Generate a unique key for the patient
-                myRef.child(patientId).setValue(doctor);
+                String doctorId = myRef.push().getKey(); // Generate a unique key for the patient
+                myRef.child(doctorId).setValue(doctor);
             }
         });
     }
