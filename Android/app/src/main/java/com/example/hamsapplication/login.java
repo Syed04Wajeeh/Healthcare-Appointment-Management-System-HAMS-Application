@@ -32,7 +32,7 @@ public class login extends AppCompatActivity{
 
         rejected = (TextView)findViewById(R.id.rejectedPopup);
 
-        generalInformation.addToCollection(new adminInformation("admin", "pass", null, null, null, null, 1));
+        generalInformation.addToCollection(new adminInformation("admin", "pass", null, null, null, null, 1, 2));
 
 
         login.setOnClickListener(new View.OnClickListener(){
@@ -80,8 +80,6 @@ public class login extends AppCompatActivity{
                 }else{
                     Toast.makeText(getApplicationContext(),"Unable to find an account\n registered with this username",Toast.LENGTH_SHORT).show();
                 }
-
-                login.setEnabled(false);
             }
         });
         patientRegister.setOnClickListener(new View.OnClickListener(){

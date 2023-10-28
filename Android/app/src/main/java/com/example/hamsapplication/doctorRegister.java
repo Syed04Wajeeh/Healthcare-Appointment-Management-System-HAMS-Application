@@ -55,7 +55,7 @@ public class doctorRegister extends AppCompatActivity{
                 String userEmployeeNumber = address.getText().toString();
                 String userSpecialties = address.getText().toString();
 
-                doctorInformation doctor = new doctorInformation(userEmail, userPassword, userFirstName, userLastName, userPhoneNumber, userAddress, userEmployeeNumber, userSpecialties, 0);
+                doctorInformation doctor = new doctorInformation(userEmail, userPassword, userFirstName, userLastName, userPhoneNumber, userAddress, userEmployeeNumber, userSpecialties, 0, 2);
                 generalInformation.addToCollection(doctor);
                 Intent intent = new Intent(doctorRegister.this, createdAccount.class);
                 startActivity(intent);

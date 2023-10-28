@@ -13,9 +13,11 @@ public class generalInformation {
     public String phoneNumber;
     public String address;
     public int registrationStatus;
+    public int accountType;
+
     // 0 is not processed, 1 is accepted, 2 is rejected
 
-    protected generalInformation(String username, String password, String firstName, String lastName, String phoneNumber, String address, int registrationStatus){
+    protected generalInformation(String username, String password, String firstName, String lastName, String phoneNumber, String address, int registrationStatus, int accountType){
         this.username = username.toLowerCase();
         this.password = password;
         this.firstName = firstName;
@@ -23,6 +25,7 @@ public class generalInformation {
         this.phoneNumber = phoneNumber;
         this.address = address;
         this.registrationStatus = registrationStatus;
+        this.accountType = accountType;
     }
 
     public void setStatus(int newStatus){
