@@ -13,7 +13,16 @@
         android:theme="@style/Theme.HAMSApplication"
         tools:targetApi="31">
         <activity
-            android:name=".welcomeScreen"
+            android:name=".Inbox"
+            android:exported="false" />
+        <activity
+            android:name=".WelcomeScreenPatient"
+            android:exported="false" />
+        <activity
+            android:name=".WelcomeScreenDoctor"
+            android:exported="false" />
+        <activity
+            android:name=".welcomeScreenAdmin"
             android:exported="false" />
         <activity
             android:name=".createdAccount"

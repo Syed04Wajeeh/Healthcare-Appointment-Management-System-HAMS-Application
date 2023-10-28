@@ -52,6 +52,7 @@ public class patientRegister extends AppCompatActivity{
                 //generalInformation.addToCollection(patient);
                 Intent intent = new Intent(patientRegister.this, createdAccount.class);
                 startActivity(intent);
+                registerButton.setEnabled(false);
             }
         });
     }

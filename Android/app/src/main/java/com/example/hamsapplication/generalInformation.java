@@ -1,4 +1,6 @@
 package com.example.hamsapplication;
+import android.util.Log;
+
 import java.util.ArrayList;
 public class generalInformation {
     protected static ArrayList<generalInformation> collection = new ArrayList<>();
@@ -10,7 +12,7 @@ public class generalInformation {
     protected String lastName;
     protected String phoneNumber;
     protected String address;
-    protected int registrationStatus;
+    private int registrationStatus;
     // 0 is not processed, 1 is accepted, 2 is rejected
 
     protected generalInformation(String username, String password, String firstName, String lastName, String phoneNumber, String address, int registrationStatus){
@@ -21,15 +23,21 @@ public class generalInformation {
         this.phoneNumber = phoneNumber;
         this.address = address;
         this.registrationStatus = registrationStatus;
+    }
 
-        collection.add(this);
+    public void setStatus(int newStatus){
+        this.registrationStatus = newStatus;
+    }
+
+    public int getStatus(){
+        return this.registrationStatus;
     }
 
     static public boolean hasAccount(String user){
         boolean result = false;
         if (!collection.isEmpty()) {
-            for (int i = 0; i < collection.size(); i++) {
-                if (collection.get(i).username.equals(user)) {
+            for (generalInformation users : collection) {
+                if (users.username.equals(user)) {
                     result = true;
                     break;
                 } else {
@@ -42,13 +50,16 @@ public class generalInformation {
         return result;
     }
     static public void addToCollection(generalInformation information){
-        collection.add(information);
+        if (!hasAccount(information.username)){
+            collection.add(information);
+        }
     }
+
     static public generalInformation searchForAccount(String username) {
         if (!collection.isEmpty() && !username.equals(null)) {
-            for (int i = 0; i < collection.size(); i++) {
-                if (collection.get(i).username.equals(username)) {
-                    return collection.get(i);
+            for (generalInformation users : collection) {
+                if (users.username.equals(username)) {
+                    return users;
                 }
             }
         }
