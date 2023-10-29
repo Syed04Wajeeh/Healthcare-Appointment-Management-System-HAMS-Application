@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\wajeeh syed\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-merged_res-32:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\wajeeh syed\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-main-34:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
-    },
-    {
         "merged": "C:\\Users\\wajeeh syed\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-merged_res-32:\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\wajeeh syed\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-main-34:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\wajeeh syed\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-merged_res-32:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\wajeeh syed\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-main-34:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
         "merged": "C:\\Users\\wajeeh syed\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-merged_res-32:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
@@ -14,6 +14,10 @@
     {
         "merged": "C:\\Users\\wajeeh syed\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-merged_res-32:\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\wajeeh syed\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-main-34:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.hamsapplication.app-merged_res-32:/layout_activity_inbox.xml.flat",
+        "source": "com.example.hamsapplication.app-main-34:/layout/activity_inbox.xml"
     },
     {
         "merged": "C:\\Users\\wajeeh syed\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-merged_res-32:\\layout_activity_patient_register.xml.flat",
@@ -74,10 +78,6 @@
     {
         "merged": "C:\\Users\\wajeeh syed\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-merged_res-32:\\layout_activity_welcome_screen_admin.xml.flat",
         "source": "C:\\Users\\wajeeh syed\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-main-34:\\layout\\activity_welcome_screen_admin.xml"
-    },
-    {
-        "merged": "com.example.hamsapplication.app-merged_res-32:/layout_activity_welcome_screen_patient.xml.flat",
-        "source": "com.example.hamsapplication.app-main-34:/layout/activity_welcome_screen_patient.xml"
     },
     {
         "merged": "C:\\Users\\wajeeh syed\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-merged_res-32:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",

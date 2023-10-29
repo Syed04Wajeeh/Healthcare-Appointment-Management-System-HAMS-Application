@@ -5,6 +5,7 @@ color white
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 id GetStarted
+id RefreshInbox
 id backButton
 id buttonContainerRej
 id buttonContainerReq

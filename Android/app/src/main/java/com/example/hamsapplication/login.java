@@ -39,9 +39,6 @@ public class login extends AppCompatActivity{
         doctorRegister = (Button) findViewById(R.id.doctorRegisterButton);
 
 
-
-        //adminInformation admin = new adminInformation("admin", "pass", null, null, null, null, 1, 0);
-
         //FirebaseDatabase database = FirebaseDatabase.getInstance();
         //DatabaseReference myRef = database.getReference("Users");
         /*
