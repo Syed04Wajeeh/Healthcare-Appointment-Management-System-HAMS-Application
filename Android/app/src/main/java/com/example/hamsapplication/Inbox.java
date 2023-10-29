@@ -29,14 +29,17 @@ public class Inbox extends AppCompatActivity {
     Button refresh;
     TableLayout layout;
     TableLayout layoutRej;
-    ArrayList<ArrayList<String>> masterInformation = populateArray();
     public ArrayList<ArrayList<String>> populateArray(){
+        Log.d("1", "111111111111111111111111111111111111111111111111111111111111111111111111111");
         ArrayList<ArrayList<String>> allInformation = new ArrayList<>();
         FirebaseDatabase.getInstance().getReference().child("Users").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                Log.d("2", "22222222222222222222222222222222222222222222222222222222222222222222");
+                ArrayList<ArrayList<String>> allInformation = new ArrayList<>();
                 int i = 0; // Initialize the outer list index
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    Log.d("3", "2333333333333333333333333333333333333333333333333333333333333333333333333333");
                     String uniqueID = snapshot.getKey(); // Get the Firebase ID
                     generalInformation user = snapshot.getValue(generalInformation.class);
                     allInformation.add(new ArrayList<String>());
@@ -70,6 +73,8 @@ public class Inbox extends AppCompatActivity {
                     }
                     i++; // Move to the next row in the ArrayList
                 }
+                Log.d("2", "444444444444444444444444444444444444444444444444444444444444444444444");
+                populateTable(allInformation, layout, layoutRej);
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
@@ -79,8 +84,7 @@ public class Inbox extends AppCompatActivity {
     }
 
     public void populateTable(ArrayList<ArrayList<String>> masterInformation, TableLayout layout, TableLayout layoutRej){
-
-        masterInformation = populateArray();
+        Log.d("2", "2453452345234624565475675678697857696879624755367356735663576456456");
         Log.d("LOGGIN" , String.valueOf(masterInformation.size()));
         layout.removeAllViews();
         layoutRej.removeAllViews();
@@ -98,90 +102,89 @@ public class Inbox extends AppCompatActivity {
         layoutRej.addView(newRowR);
 
         for (ArrayList<String> list: masterInformation) {
+            if(list.size() > 1) {
+                Log.d("list size", String.valueOf(list.size()));
+                Log.d("iD", list.get(0));
+                String concat = "";
+                for (int i = 3; i < list.size(); i++) {
+                    concat = concat + list.get(i) + " ";
 
-            String concat = "";
-            for(int i = 3; i < list.size(); i++){
-                concat = concat + list.get(i) + "\n";
+                }
+                Log.d("TABLE POP", concat);
+                if (list.get(1).equals("0")) {
 
+                    TableRow row = new TableRow(this);
+                    TextView text = new TextView(this);
+                    Button button = new Button(this);
+                    Button button1 = new Button(this);
+
+
+                    text.setText(concat);
+                    //TableLayout.LayoutParams params = new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.MATCH_PARENT);
+                    //text.setLayoutParams(params);
+                    button.setText("REJECT");
+                    button.setBackgroundColor(Color.RED);
+                    button1.setText("ACCEPT");
+                    button1.setBackgroundColor(Color.GREEN);
+
+                    row.addView(button);
+                    row.addView(button1);
+                    row.addView(text);
+                    layout.addView(row);
+
+                    button.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            //info.registrationStatus = 2;
+                            button.setEnabled(false);
+                            button1.setEnabled(false);
+                            layout.removeView(row);
+                        }
+                    });
+                    button1.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            //info.registrationStatus = 1;
+                            button.setEnabled(false);
+                            button1.setEnabled(false);
+                            layout.removeView(row);
+                        }
+                    });
+
+                    // Add the button to the container
+
+
+                } else if (list.get(1).equals("2")) {
+
+                    TableRow row = new TableRow(this);
+                    TextView text = new TextView(this);
+                    Button button = new Button(this);
+                    text.setText(concat);
+
+                    button.setText("ACCEPT");
+                    button.setBackgroundColor(Color.GREEN);
+
+                    row.addView(text);
+                    text.setId(View.generateViewId());
+                    button.setId(View.generateViewId());
+
+                    row.addView(button);
+                    layoutRej.addView(row);
+
+                    button.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            //info.registrationStatus = 1;
+                            button.setEnabled(false);
+                            layoutRej.removeView(row);
+                        }
+                    });
+
+                    // Add the button to the container
+
+
+                }
             }
-            Log.d("TABLE POP", concat);
-
-            if (list.get(1).equals("0")){
-
-                TableRow row = new TableRow(this);
-                TextView text = new TextView(this);
-                Button button = new Button(this);
-                Button button1 = new Button(this);
-
-
-
-                text.setText(concat);
-                //TableLayout.LayoutParams params = new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.MATCH_PARENT);
-                //text.setLayoutParams(params);
-                button.setText("REJECT");
-                button.setBackgroundColor(Color.RED);
-                button1.setText("ACCEPT");
-                button1.setBackgroundColor(Color.GREEN);
-
-                row.addView(text);
-                row.addView(button);
-                row.addView(button1);
-                layout.addView(row);
-
-                button.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        //info.registrationStatus = 2;
-                        button.setEnabled(false);
-                        button1.setEnabled(false);
-                        layout.removeView(row);
-                    }
-                });
-                button1.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        //info.registrationStatus = 1;
-                        button.setEnabled(false);
-                        button1.setEnabled(false);
-                        layout.removeView(row);
-                    }
-                });
-
-                // Add the button to the container
-
-
-
-            }else if (list.get(1).equals("2")){
-
-                TableRow row = new TableRow(this);
-                TextView text = new TextView(this);
-                Button button = new Button(this);
-                text.setText(concat);
-
-                button.setText("ACCEPT");
-                button.setBackgroundColor(Color.GREEN);
-
-                row.addView(text);
-                text.setId(View.generateViewId());
-                button.setId(View.generateViewId());
-
-                row.addView(button);
-                layoutRej.addView(row);
-
-                button.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        //info.registrationStatus = 1;
-                        button.setEnabled(false);
-                        layoutRej.removeView(row);
-                    }
-                });
-
-                // Add the button to the container
-
-
-            }
-
         }
 
 
@@ -197,7 +200,7 @@ public class Inbox extends AppCompatActivity {
         back = (Button) findViewById(R.id.backButton);
         refresh = (Button)findViewById(R.id.RefreshInbox);
 
-        populateTable(masterInformation, layout, layoutRej);
+        populateArray();
 
         back.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -210,8 +213,8 @@ public class Inbox extends AppCompatActivity {
         refresh.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-
-                populateTable(masterInformation, layout, layoutRej);
+                Log.d("2", "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+                populateArray();
 
             }
         });
