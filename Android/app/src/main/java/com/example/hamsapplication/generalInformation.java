@@ -19,10 +19,6 @@ public class generalInformation {
     public interface AccountSearchCallback {
         void onAccountSearchResult(generalInformation user);
     }
-
-    protected static ArrayList<generalInformation> collection = new ArrayList<>();
-    public static int currentTypeOf;
-    //0 = admin, 1 = patient, 2 = doctor
     public String username;
     public String password;
     public String firstName;

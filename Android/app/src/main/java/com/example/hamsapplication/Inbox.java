@@ -30,22 +30,19 @@ public class Inbox extends AppCompatActivity {
     TableLayout layout;
     TableLayout layoutRej;
     public ArrayList<ArrayList<String>> populateArray(){
-        Log.d("1", "111111111111111111111111111111111111111111111111111111111111111111111111111");
+
         ArrayList<ArrayList<String>> allInformation = new ArrayList<>();
         FirebaseDatabase.getInstance().getReference().child("Users").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                Log.d("2", "22222222222222222222222222222222222222222222222222222222222222222222");
                 ArrayList<ArrayList<String>> allInformation = new ArrayList<>();
                 int i = 0; // Initialize the outer list index
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    Log.d("3", "2333333333333333333333333333333333333333333333333333333333333333333333333333");
                     String uniqueID = snapshot.getKey(); // Get the Firebase ID
                     generalInformation user = snapshot.getValue(generalInformation.class);
                     allInformation.add(new ArrayList<String>());
                     allInformation.get(i).add(0, uniqueID);
                     if (user.accountType == 3) {
-                        Log.d("doctor", "DOCTOR");
                         doctorInformation docUser = snapshot.getValue((doctorInformation.class));
                         allInformation.get(i).add(String.valueOf(docUser.registrationStatus)); //index [i][1]
                         allInformation.get(i).add(String.valueOf(docUser.accountType)); // index [i][2]
@@ -58,7 +55,6 @@ public class Inbox extends AppCompatActivity {
                         allInformation.get(i).add(docUser.specialties);
 
                     } else if (user.accountType == 2) {
-                        Log.d("patient", "aptient");
                         patientInformation patUser = snapshot.getValue((patientInformation.class));
                         allInformation.get(i).add(String.valueOf(patUser.registrationStatus));//index [i][1]
                         allInformation.get(i).add(String.valueOf(patUser.accountType));// index [i][2]
@@ -73,7 +69,6 @@ public class Inbox extends AppCompatActivity {
                     }
                     i++; // Move to the next row in the ArrayList
                 }
-                Log.d("2", "444444444444444444444444444444444444444444444444444444444444444444444");
                 populateTable(allInformation, layout, layoutRej);
             }
             @Override
@@ -84,8 +79,6 @@ public class Inbox extends AppCompatActivity {
     }
 
     public void populateTable(ArrayList<ArrayList<String>> masterInformation, TableLayout layout, TableLayout layoutRej){
-        Log.d("2", "2453452345234624565475675678697857696879624755367356735663576456456");
-        Log.d("LOGGIN" , String.valueOf(masterInformation.size()));
         layout.removeAllViews();
         layoutRej.removeAllViews();
 
@@ -103,14 +96,11 @@ public class Inbox extends AppCompatActivity {
 
         for (ArrayList<String> list: masterInformation) {
             if(list.size() > 1) {
-                Log.d("list size", String.valueOf(list.size()));
-                Log.d("iD", list.get(0));
                 String concat = "";
                 for (int i = 3; i < list.size(); i++) {
                     concat = concat + list.get(i) + " ";
 
                 }
-                Log.d("TABLE POP", concat);
                 if (list.get(1).equals("0")) {
 
                     TableRow row = new TableRow(this);
@@ -120,8 +110,6 @@ public class Inbox extends AppCompatActivity {
 
 
                     text.setText(concat);
-                    //TableLayout.LayoutParams params = new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.MATCH_PARENT);
-                    //text.setLayoutParams(params);
                     button.setText("REJECT");
                     button.setBackgroundColor(Color.RED);
                     button1.setText("ACCEPT");
@@ -179,7 +167,9 @@ public class Inbox extends AppCompatActivity {
                     button.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            //info.registrationStatus = 1;
+                            String userId = list.get(0);
+                            DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("Users").child(userId);
+                            userRef.child("registrationStatus").setValue(1);
                             button.setEnabled(false);
                             layoutRej.removeView(row);
                         }
@@ -218,7 +208,6 @@ public class Inbox extends AppCompatActivity {
         refresh.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Log.d("2", "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
                 populateArray();
 
             }

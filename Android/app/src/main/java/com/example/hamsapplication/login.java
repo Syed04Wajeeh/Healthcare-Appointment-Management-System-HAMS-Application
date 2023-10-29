@@ -25,7 +25,7 @@ public class login extends AppCompatActivity{
     Button patientRegister;
     Button doctorRegister;
     String adminUser = "admin";
-    String adminPass = "password";
+    String adminPass = "pass";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,38 +38,16 @@ public class login extends AppCompatActivity{
         patientRegister = (Button)findViewById(R.id.patientRegisterButton);
         doctorRegister = (Button) findViewById(R.id.doctorRegisterButton);
 
+        generalInformation.hasAccount(adminUser, new generalInformation.AccountCheckCallback() {
+            @Override
+            public void onAccountCheckResult(boolean accountExists) {
+                if (!accountExists){
+                    adminInformation admin = new adminInformation(adminUser, adminPass, null, null, null, null, 1, 1);
 
-        //FirebaseDatabase database = FirebaseDatabase.getInstance();
-        //DatabaseReference myRef = database.getReference("Users");
-        /*
-        FirebaseDatabase.getInstance().getReference().child("Users")
-
-                .addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                            generalInformation user = snapshot.getValue(generalInformation.class);
-                            Log.d("TESTING", String.valueOf(user.username));
-                        }
-                    }
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-                    }
-                });
-
-        AESCrypt crypt = new AESCrypt();
-        try {
-
-        String encrypted = crypt.encrypt(admin.password);
-            admin.password = encrypted;
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-
-        String doctorId = myRef.push().getKey(); // Generate a unique key for the patient
-        myRef.child(doctorId).setValue(admin);
-        */
-
+                    admin.addToCollection();
+                }
+            }
+        });
         login.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {

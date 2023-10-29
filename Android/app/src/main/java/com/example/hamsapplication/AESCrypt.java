@@ -1,6 +1,6 @@
-//the whole class information is taken from https://gist.github.com/MartynClark/125c0e3bc436ac259a1e9a3d20f5d854
-//this is due to importing issues that the group was having for encryption
-//we are sorry and we hope you will take this without plagiarising
+
+//AUTHOR: MartynClark on Github Profile: https://gist.github.com/MartynClark
+//Encryptor class link: https://gist.github.com/MartynClark/125c0e3bc436ac259a1e9a3d20f5d854
 
 package com.example.hamsapplication;
 
