@@ -15,13 +15,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ScrollView
         android:id="@+id/layout"
-        android:layout_width="345dp"
+        android:layout_width="match_parent"
         android:layout_height="348dp"
         android:fillViewport="true"
         android:scrollbarStyle="outsideInset"
@@ -33,16 +31,16 @@
 
         <HorizontalScrollView
             android:id="@+id/horizontalView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dip"
             android:scrollbars="horizontal|vertical">
 
             <TableLayout
+                android:layout_marginTop="50dp"
                 android:id="@+id/buttonContainerReq"
-                android:layout_width="366dp"
-                android:layout_height="321dp"
-                app:layout_constraintBottom_toTopOf="@+id/buttonContainerRej"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.488"
                 app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +53,7 @@
     <ScrollView
         android:id="@+id/layoutRej"
         android:layout_width="match_parent"
-        android:layout_height="294dp"
+        android:layout_height="330dp"
         android:fillViewport="true"
         android:scrollbarStyle="outsideInset"
         android:scrollbars="horizontal|vertical"
@@ -67,15 +65,13 @@
             android:id="@+id/horizontalViewRej"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dip"
             android:scrollbars="horizontal|vertical">
 
             <TableLayout
                 android:id="@+id/buttonContainerRej"
                 android:layout_width="wrap_content"
-                android:layout_height="263dp"
-                android:layout_marginBottom="20dp"
-                app:layout_constraintBottom_toTopOf="@+id/backButton"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"/>
         </HorizontalScrollView>
@@ -91,7 +87,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.579"
         app:layout_constraintStart_toEndOf="@+id/backButton"
-        app:layout_constraintTop_toBottomOf="@+id/buttonContainerRej"
         app:layout_constraintVertical_bias="0.111" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
