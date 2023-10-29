@@ -27,7 +27,11 @@ id doctorPhoneNumber
 id doctorRegisterButton
 id doctorSpecialty
 id homeButton
+id horizontalView
+id horizontalViewRej
 id inbox
+id layout
+id layoutRej
 id linearLayout
 id linearLayout10
 id linearLayout11

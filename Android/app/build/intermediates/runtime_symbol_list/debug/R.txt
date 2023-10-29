@@ -3071,6 +3071,8 @@ int id home 0x7f0800e8
 int id homeAsUp 0x7f0800e9
 int id homeButton 0x7f0800ea
 int id honorRequest 0x7f0800eb
+int id horizontalView 0x7f08023d
+int id horizontalViewRej 0x7f08023e
 int id horizontal_only 0x7f0800ec
 int id icon 0x7f0800ed
 int id icon_group 0x7f0800ee
@@ -3092,6 +3094,7 @@ int id jumpToEnd 0x7f0800fd
 int id jumpToStart 0x7f0800fe
 int id labeled 0x7f0800ff
 int id layout 0x7f080100
+int id layoutRej 0x7f08023f
 int id left 0x7f080101
 int id leftToRight 0x7f080102
 int id legacy 0x7f080103

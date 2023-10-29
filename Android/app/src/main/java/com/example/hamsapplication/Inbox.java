@@ -164,11 +164,12 @@ public class Inbox extends AppCompatActivity {
                     button.setText("ACCEPT");
                     button.setBackgroundColor(Color.GREEN);
 
-                    row.addView(text);
+
                     text.setId(View.generateViewId());
                     button.setId(View.generateViewId());
 
                     row.addView(button);
+                    row.addView(text);
                     layoutRej.addView(row);
 
                     button.setOnClickListener(new View.OnClickListener() {

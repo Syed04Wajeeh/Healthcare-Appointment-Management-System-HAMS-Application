@@ -3072,6 +3072,8 @@ id home
 id homeAsUp
 id homeButton
 id honorRequest
+id horizontalView
+id horizontalViewRej
 id horizontal_only
 id icon
 id icon_group
@@ -3093,6 +3095,7 @@ id jumpToEnd
 id jumpToStart
 id labeled
 id layout
+id layoutRej
 id left
 id leftToRight
 id legacy
