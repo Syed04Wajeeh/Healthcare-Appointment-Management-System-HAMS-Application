@@ -4,7 +4,7 @@
             "outputFile": "com.example.hamsapplication.app-mergeDebugResources-30:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\wajee\\.gradle\\caches\\transforms-3\\856a884124d6e089223487ce304a26f5\\transformed\\core-1.9.0\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\jaack\\.gradle\\caches\\transforms-3\\45dba061abe1e5d647d9f295032bd2d4\\transformed\\core-1.9.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\wajee\\.gradle\\caches\\transforms-3\\986d40ec9e622783b8bb05f7a0a6d7a4\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\jaack\\.gradle\\caches\\transforms-3\\ff92050ab482929c4d0f044d21af76fb\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

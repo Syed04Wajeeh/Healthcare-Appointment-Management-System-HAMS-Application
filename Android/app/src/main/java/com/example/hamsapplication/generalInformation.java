@@ -29,7 +29,7 @@ public class generalInformation {
     public String lastName;
     public String phoneNumber;
     public String address;
-    public int registrationStatus;
+    public int registrationStatus; //0(not looked at), 1(accepted), 2(denied)
     public int accountType;
     public  generalInformation(){
     }

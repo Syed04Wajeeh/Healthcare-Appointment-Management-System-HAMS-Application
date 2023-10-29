@@ -1,35 +1,35 @@
-com.example.hamsapplication.app-firebase-common-20.4.2-0 C:\Users\wajee\.gradle\caches\transforms-3\09e0b5cf6a380329d410b84a5bd1f9bd\transformed\firebase-common-20.4.2\res
-com.example.hamsapplication.app-activity-1.6.0-1 C:\Users\wajee\.gradle\caches\transforms-3\0dcdf42a8af5841450a835bd35da06ab\transformed\activity-1.6.0\res
-com.example.hamsapplication.app-play-services-basement-18.1.0-2 C:\Users\wajee\.gradle\caches\transforms-3\11f5931a97fb253b3aa5ce8e0f2f12a9\transformed\play-services-basement-18.1.0\res
-com.example.hamsapplication.app-lifecycle-process-2.4.1-3 C:\Users\wajee\.gradle\caches\transforms-3\1fe8031ca857315df42272aa81e69804\transformed\lifecycle-process-2.4.1\res
-com.example.hamsapplication.app-savedstate-1.2.0-4 C:\Users\wajee\.gradle\caches\transforms-3\23541c8f16dd1f57b52bfe7aae25a2f2\transformed\savedstate-1.2.0\res
-com.example.hamsapplication.app-constraintlayout-2.1.4-5 C:\Users\wajee\.gradle\caches\transforms-3\30ac672d16482f8c9d5ece0ada73a713\transformed\constraintlayout-2.1.4\res
-com.example.hamsapplication.app-appcompat-resources-1.6.1-6 C:\Users\wajee\.gradle\caches\transforms-3\37d33cb9f99f3a30506f6f787eb261eb\transformed\appcompat-resources-1.6.1\res
-com.example.hamsapplication.app-cardview-1.0.0-7 C:\Users\wajee\.gradle\caches\transforms-3\467d7f83eae42f77d5b44c9507fc375d\transformed\cardview-1.0.0\res
-com.example.hamsapplication.app-fragment-1.3.6-8 C:\Users\wajee\.gradle\caches\transforms-3\52bc0c712a998b3e26dd2413844f8439\transformed\fragment-1.3.6\res
-com.example.hamsapplication.app-lifecycle-viewmodel-savedstate-2.5.1-9 C:\Users\wajee\.gradle\caches\transforms-3\728711a8151ed85f3ae0ac54b5d23533\transformed\lifecycle-viewmodel-savedstate-2.5.1\res
-com.example.hamsapplication.app-emoji2-views-helper-1.2.0-10 C:\Users\wajee\.gradle\caches\transforms-3\781f9ed0521d2ec8daebca6963e51fa9\transformed\emoji2-views-helper-1.2.0\res
-com.example.hamsapplication.app-coordinatorlayout-1.1.0-11 C:\Users\wajee\.gradle\caches\transforms-3\8095f6528b090a9ebee2c14eaa3d2509\transformed\coordinatorlayout-1.1.0\res
-com.example.hamsapplication.app-core-1.9.0-12 C:\Users\wajee\.gradle\caches\transforms-3\856a884124d6e089223487ce304a26f5\transformed\core-1.9.0\res
-com.example.hamsapplication.app-drawerlayout-1.1.1-13 C:\Users\wajee\.gradle\caches\transforms-3\86cf6b670be4925b03a7ccdf12dc4b90\transformed\drawerlayout-1.1.1\res
-com.example.hamsapplication.app-annotation-experimental-1.3.0-14 C:\Users\wajee\.gradle\caches\transforms-3\889129ef48220fed89a0026c9724d8b7\transformed\annotation-experimental-1.3.0\res
-com.example.hamsapplication.app-transition-1.2.0-15 C:\Users\wajee\.gradle\caches\transforms-3\982e6f14f8f01f16aacac71889513525\transformed\transition-1.2.0\res
-com.example.hamsapplication.app-appcompat-1.6.1-16 C:\Users\wajee\.gradle\caches\transforms-3\986d40ec9e622783b8bb05f7a0a6d7a4\transformed\appcompat-1.6.1\res
-com.example.hamsapplication.app-viewpager2-1.0.0-17 C:\Users\wajee\.gradle\caches\transforms-3\98f4692f040175d7f64a53faf37c90b8\transformed\viewpager2-1.0.0\res
-com.example.hamsapplication.app-play-services-base-18.1.0-18 C:\Users\wajee\.gradle\caches\transforms-3\a20986474e613a87ca4fdd07c7579ebb\transformed\play-services-base-18.1.0\res
-com.example.hamsapplication.app-material-1.8.0-19 C:\Users\wajee\.gradle\caches\transforms-3\a6f1dc00c2038ae75b1ed2039baaf538\transformed\material-1.8.0\res
-com.example.hamsapplication.app-lifecycle-livedata-core-2.5.1-20 C:\Users\wajee\.gradle\caches\transforms-3\a9d57be170660b73660019515a595478\transformed\lifecycle-livedata-core-2.5.1\res
-com.example.hamsapplication.app-lifecycle-runtime-2.5.1-21 C:\Users\wajee\.gradle\caches\transforms-3\b420e4a1fd8da5c0fa6802a487bdb82b\transformed\lifecycle-runtime-2.5.1\res
-com.example.hamsapplication.app-emoji2-1.2.0-22 C:\Users\wajee\.gradle\caches\transforms-3\bc0689a2d6048ef76c23ed0858268d96\transformed\emoji2-1.2.0\res
-com.example.hamsapplication.app-lifecycle-viewmodel-2.5.1-23 C:\Users\wajee\.gradle\caches\transforms-3\c1f46c9936b8657c8daaa4b006f94494\transformed\lifecycle-viewmodel-2.5.1\res
-com.example.hamsapplication.app-recyclerview-1.1.0-24 C:\Users\wajee\.gradle\caches\transforms-3\d924dccf1bd7808bc0e9ec9637d48523\transformed\recyclerview-1.1.0\res
-com.example.hamsapplication.app-startup-runtime-1.1.1-25 C:\Users\wajee\.gradle\caches\transforms-3\e53ece91628784374d95c0d8726363c3\transformed\startup-runtime-1.1.1\res
-com.example.hamsapplication.app-core-ktx-1.9.0-26 C:\Users\wajee\.gradle\caches\transforms-3\f6ae9441afdf9c4e5f8cfe7c71ce1544\transformed\core-ktx-1.9.0\res
-com.example.hamsapplication.app-pngs-27 C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\build\generated\res\pngs\debug
-com.example.hamsapplication.app-res-28 C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\build\generated\res\processDebugGoogleServices
-com.example.hamsapplication.app-resValues-29 C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\build\generated\res\resValues\debug
-com.example.hamsapplication.app-packageDebugResources-30 C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.example.hamsapplication.app-packageDebugResources-31 C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.example.hamsapplication.app-merged_res-32 C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\build\intermediates\merged_res\debug
-com.example.hamsapplication.app-debug-33 C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\debug\res
-com.example.hamsapplication.app-main-34 C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\res
+com.example.hamsapplication.app-drawerlayout-1.1.1-0 C:\Users\jaack\.gradle\caches\transforms-3\1ece04c10ef16be1dd8718a86089949e\transformed\drawerlayout-1.1.1\res
+com.example.hamsapplication.app-coordinatorlayout-1.1.0-1 C:\Users\jaack\.gradle\caches\transforms-3\38d95bbd76e210d69a2063c7df92a5ef\transformed\coordinatorlayout-1.1.0\res
+com.example.hamsapplication.app-material-1.8.0-2 C:\Users\jaack\.gradle\caches\transforms-3\3a9a84ecc0b1e326653f7ce8ca4e15d0\transformed\material-1.8.0\res
+com.example.hamsapplication.app-core-1.9.0-3 C:\Users\jaack\.gradle\caches\transforms-3\45dba061abe1e5d647d9f295032bd2d4\transformed\core-1.9.0\res
+com.example.hamsapplication.app-lifecycle-viewmodel-savedstate-2.5.1-4 C:\Users\jaack\.gradle\caches\transforms-3\48b20728429c9e9ae2283907ec10d13a\transformed\lifecycle-viewmodel-savedstate-2.5.1\res
+com.example.hamsapplication.app-cardview-1.0.0-5 C:\Users\jaack\.gradle\caches\transforms-3\50786544954b7496b0a92ded292da342\transformed\cardview-1.0.0\res
+com.example.hamsapplication.app-firebase-common-20.4.2-6 C:\Users\jaack\.gradle\caches\transforms-3\51eb42b334691e771d1e321cb2b4384a\transformed\firebase-common-20.4.2\res
+com.example.hamsapplication.app-core-ktx-1.9.0-7 C:\Users\jaack\.gradle\caches\transforms-3\6a342e5e47c9d3bf4c63699f4a7a9ef7\transformed\core-ktx-1.9.0\res
+com.example.hamsapplication.app-viewpager2-1.0.0-8 C:\Users\jaack\.gradle\caches\transforms-3\6ff2bbe3027cc3763276705eea50cf36\transformed\viewpager2-1.0.0\res
+com.example.hamsapplication.app-startup-runtime-1.1.1-9 C:\Users\jaack\.gradle\caches\transforms-3\726546bace9bbe385c0d8cd4ec26ef9b\transformed\startup-runtime-1.1.1\res
+com.example.hamsapplication.app-lifecycle-viewmodel-2.5.1-10 C:\Users\jaack\.gradle\caches\transforms-3\76b47f2e71a56f9334d304ecc1c0f597\transformed\lifecycle-viewmodel-2.5.1\res
+com.example.hamsapplication.app-annotation-experimental-1.3.0-11 C:\Users\jaack\.gradle\caches\transforms-3\817a250b4cb62a6b2705197541445128\transformed\annotation-experimental-1.3.0\res
+com.example.hamsapplication.app-emoji2-views-helper-1.2.0-12 C:\Users\jaack\.gradle\caches\transforms-3\82696d9bf3ca8b7115ec04c3ff0bbc05\transformed\emoji2-views-helper-1.2.0\res
+com.example.hamsapplication.app-recyclerview-1.1.0-13 C:\Users\jaack\.gradle\caches\transforms-3\a2d9b89bbe85c344a44871c27394f1d4\transformed\recyclerview-1.1.0\res
+com.example.hamsapplication.app-lifecycle-runtime-2.5.1-14 C:\Users\jaack\.gradle\caches\transforms-3\a6332d775f60c3ba7a7b41646b61d7c4\transformed\lifecycle-runtime-2.5.1\res
+com.example.hamsapplication.app-appcompat-resources-1.6.1-15 C:\Users\jaack\.gradle\caches\transforms-3\aa077958169644c5612c6abffae10edf\transformed\appcompat-resources-1.6.1\res
+com.example.hamsapplication.app-constraintlayout-2.1.4-16 C:\Users\jaack\.gradle\caches\transforms-3\afb5814eccbd68069e5bd6389ce2ce7a\transformed\constraintlayout-2.1.4\res
+com.example.hamsapplication.app-savedstate-1.2.0-17 C:\Users\jaack\.gradle\caches\transforms-3\b85d069fa0a3f80250b057840c3489b5\transformed\savedstate-1.2.0\res
+com.example.hamsapplication.app-lifecycle-process-2.4.1-18 C:\Users\jaack\.gradle\caches\transforms-3\bd7f4f3b79a25f5f5137cb231240dbd2\transformed\lifecycle-process-2.4.1\res
+com.example.hamsapplication.app-emoji2-1.2.0-19 C:\Users\jaack\.gradle\caches\transforms-3\cda509cc96bd5991df7deaeed19a12fa\transformed\emoji2-1.2.0\res
+com.example.hamsapplication.app-fragment-1.3.6-20 C:\Users\jaack\.gradle\caches\transforms-3\d1fa2bdfc0f541cff2934caffb6ce993\transformed\fragment-1.3.6\res
+com.example.hamsapplication.app-play-services-basement-18.1.0-21 C:\Users\jaack\.gradle\caches\transforms-3\e69ddfd2048d62e013e1c084a9c6ef14\transformed\play-services-basement-18.1.0\res
+com.example.hamsapplication.app-play-services-base-18.1.0-22 C:\Users\jaack\.gradle\caches\transforms-3\ea1d2155169063a3e7b8f244bebaf5b6\transformed\play-services-base-18.1.0\res
+com.example.hamsapplication.app-activity-1.6.0-23 C:\Users\jaack\.gradle\caches\transforms-3\eaf9c9cfcea4bd17f0ee0cbb29f889db\transformed\activity-1.6.0\res
+com.example.hamsapplication.app-transition-1.2.0-24 C:\Users\jaack\.gradle\caches\transforms-3\eddd9c9e8f959dfee1e18f72aa466843\transformed\transition-1.2.0\res
+com.example.hamsapplication.app-lifecycle-livedata-core-2.5.1-25 C:\Users\jaack\.gradle\caches\transforms-3\fad2bebfcedd1097a8b4d3b5a8c3cd8a\transformed\lifecycle-livedata-core-2.5.1\res
+com.example.hamsapplication.app-appcompat-1.6.1-26 C:\Users\jaack\.gradle\caches\transforms-3\ff92050ab482929c4d0f044d21af76fb\transformed\appcompat-1.6.1\res
+com.example.hamsapplication.app-pngs-27 C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\project-project-group-23\Android\app\build\generated\res\pngs\debug
+com.example.hamsapplication.app-res-28 C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\project-project-group-23\Android\app\build\generated\res\processDebugGoogleServices
+com.example.hamsapplication.app-resValues-29 C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\project-project-group-23\Android\app\build\generated\res\resValues\debug
+com.example.hamsapplication.app-packageDebugResources-30 C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\project-project-group-23\Android\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.hamsapplication.app-packageDebugResources-31 C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\project-project-group-23\Android\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.hamsapplication.app-merged_res-32 C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\project-project-group-23\Android\app\build\intermediates\merged_res\debug
+com.example.hamsapplication.app-debug-33 C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\project-project-group-23\Android\app\src\debug\res
+com.example.hamsapplication.app-main-34 C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\project-project-group-23\Android\app\src\main\res

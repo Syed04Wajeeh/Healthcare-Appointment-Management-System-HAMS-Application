@@ -132,19 +132,23 @@ public class Inbox extends AppCompatActivity {
                     row.addView(text);
                     layout.addView(row);
 
-                    button.setOnClickListener(new View.OnClickListener() {
+                    button.setOnClickListener(new View.OnClickListener() { //reject
                         @Override
-                        public void onClick(View view) {
-                            //info.registrationStatus = 2;
+                        public void onClick(View view) { //accept
+                            String userId = list.get(0);
+                            DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("Users").child(userId);
+                            userRef.child("registrationStatus").setValue(2);
                             button.setEnabled(false);
                             button1.setEnabled(false);
                             layout.removeView(row);
                         }
                     });
-                    button1.setOnClickListener(new View.OnClickListener() {
+                    button1.setOnClickListener(new View.OnClickListener() { //accept
                         @Override
                         public void onClick(View view) {
-                            //info.registrationStatus = 1;
+                            String userId = list.get(0);
+                            DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("Users").child(userId);
+                            userRef.child("registrationStatus").setValue(1);
                             button.setEnabled(false);
                             button1.setEnabled(false);
                             layout.removeView(row);
