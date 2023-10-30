@@ -73,19 +73,19 @@ public class generalInformation {
 
 
 
-    static public void searchForAccount(final String desiredUsername, final AccountSearchCallback callback) {
+    static public void searchForAccount(final String desiredUsername, final AccountSearchCallback callback) { // returns a generalinformation object with the same name as desiredUsername
         FirebaseDatabase.getInstance().getReference().child("Users").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     generalInformation user = snapshot.getValue(generalInformation.class);
                     if (user != null && user.username.equals(desiredUsername)) {
-                        // User with the desired username was found
+                        // Username was found
                         callback.onAccountSearchResult(user);
-                        return; // Exit the loop since the account has been found
+                        return;
                     }
                 }
-                // User with the desired username was not found
+                // User was not found, callback null
                 callback.onAccountSearchResult(null);
             }
 
@@ -97,10 +97,10 @@ public class generalInformation {
     }
 
 
-    public void addToCollection(){
+    public void addToCollection(){ //method to be overridden by subclasses
     }
 
-    public void encryptPassword(){
+    public void encryptPassword(){ //encrypts the password of the object called upon
         AESCrypt crypt = new AESCrypt();
         try {
             String encrypted = crypt.encrypt(this.password);
@@ -110,7 +110,7 @@ public class generalInformation {
         }
     }
 
-    public String decryptPassword(){
+    public String decryptPassword(){//decrypts and returns password of object called upon
         AESCrypt crypt = new AESCrypt();
         try {
             return crypt.decrypt(this.password);
