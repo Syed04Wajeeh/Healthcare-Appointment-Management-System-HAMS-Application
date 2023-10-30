@@ -50,7 +50,7 @@ public class patientRegister extends AppCompatActivity{
         registerButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) { //storing the information in all the fields
                 String userFirstName = firstName.getText().toString();
                 String userLastName = lastName.getText().toString();
                 String userEmail = email.getText().toString();
@@ -59,18 +59,19 @@ public class patientRegister extends AppCompatActivity{
                 String userAddress = address.getText().toString();
                 String userHealthCardNumber = healthCardNumber.getText().toString();
 
+                //checking if the fields are blank or not
                 if (userEmail.equals("") || userFirstName.equals("") || userLastName.equals("") || userPassword.equals("") || userPhoneNumber.equals("") || userAddress.equals("") || userHealthCardNumber.equals("")) {
                     Toast.makeText(getApplicationContext(), "Please complete all fields", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                generalInformation.hasAccount(userEmail, new generalInformation.AccountCheckCallback() {
+                generalInformation.hasAccount(userEmail, new generalInformation.AccountCheckCallback() { //checking if an accounts exists with the email/username
                     @Override
                     public void onAccountCheckResult(boolean accountExists) {
-                        if (accountExists){
+                        if (accountExists){ //letting the user know the account is in use
                             Log.d("Account exists", "true");
                             Toast.makeText(getApplicationContext(), "This email is already in use", Toast.LENGTH_SHORT).show();
-                        } else {
+                        } else { //creating the account
                             Log.d("Account does not exist", "false");
                             patientInformation patient = new patientInformation(userEmail, userPassword, userFirstName, userLastName, userPhoneNumber, userAddress, userHealthCardNumber, 0, 2);
                             patient.addToCollection();

@@ -40,7 +40,7 @@ public class login extends AppCompatActivity{
 
         generalInformation.hasAccount(adminUser, new generalInformation.AccountCheckCallback() {
             @Override
-            public void onAccountCheckResult(boolean accountExists) {
+            public void onAccountCheckResult(boolean accountExists) { //creating the admin account immediately if there isnt one that exists in the database
                 if (!accountExists){
                     adminInformation admin = new adminInformation(adminUser, adminPass, null, null, null, null, 1, 1);
 
@@ -48,18 +48,20 @@ public class login extends AppCompatActivity{
                 }
             }
         });
-        login.setOnClickListener(new View.OnClickListener(){
+        login.setOnClickListener(new View.OnClickListener(){ //login button
             @Override
             public void onClick(View view) {
 
                 String usernameField = username.getText().toString();
                 String passwordField = password.getText().toString();
 
+                //checking the username and the password is blank
                 if (usernameField.equals("") || passwordField.equals("")){
                     Toast.makeText(getApplicationContext(),"Please enter username and password",Toast.LENGTH_SHORT).show();
                     return;
                 }
 
+                //checking if the account exists or not
                 generalInformation.hasAccount(usernameField, new generalInformation.AccountCheckCallback() {
                     @Override
                     public void onAccountCheckResult(boolean accountExists) {
@@ -67,42 +69,46 @@ public class login extends AppCompatActivity{
                             generalInformation.searchForAccount(usernameField, new generalInformation.AccountSearchCallback() {
                                 @Override
                                 public void onAccountSearchResult(generalInformation user) {
+                                    //checking if the user field is empty
                                     if (user != null) {
+                                        //checking the username and the decrypted password matches with anything in the database
                                         if (user.username.equals(usernameField) && user.decryptPassword().equals(passwordField)) {
-                                            Log.d("user and password match", "");
+                                            //telling the user that their account has not been approved by the admin
                                             if (user.registrationStatus == 0) {
-                                                Log.d("registration not approved", "");
                                                 Toast.makeText(getApplicationContext(), "Your registration has not been approved yet, please wait", Toast.LENGTH_SHORT).show();
                                                 return;
+                                                //telling the user that their account has been denied by the admin
                                             } else if (user.registrationStatus == 2) {
-                                                Log.d("registration denied", "");
                                                 Toast.makeText(getApplicationContext(), "Your registration has been denied, please contact the admin at 613-XXX-XXXX", Toast.LENGTH_SHORT).show();
                                                 return;
+                                            //telling the user that their account has not been approved by the admin
                                             } else if (user.registrationStatus == 1) {
-                                                Log.d("reg approved", "");
+                                                //setting the account as an admin account
                                                 if (user.accountType == 1) {
-                                                    Log.d("instance of admin", "");
                                                     Intent intent = new Intent(login.this, welcomeScreenAdmin.class);
                                                     startActivity(intent);
+                                                    //setting the account as an patient account
                                                 } else if (user.accountType == 2) {
-                                                    Log.d("instance of patient", "");
                                                     Intent intent = new Intent(login.this, WelcomeScreenPatient.class);
                                                     startActivity(intent);
+                                                    //setting the account as an doctor account
                                                 } else if (user.accountType == 3) {
-                                                    Log.d("instance of doctor", "");
                                                     Intent intent = new Intent(login.this, WelcomeScreenDoctor.class);
                                                     startActivity(intent);
                                                 }
                                             }
                                         }else{
+                                            //telling the user that their account password is incorrect
                                             Toast.makeText(getApplicationContext(), "incorrect password", Toast.LENGTH_SHORT).show();
                                         }
                                     } else {
+                                        //telling the user that the inputted username is not in the database
                                         Toast.makeText(getApplicationContext(), "An account with this username could not be found", Toast.LENGTH_SHORT).show();
                                     }
                                 }
                             });
                         } else {
+                            //telling the user that the inputted username is not in the database
                             Toast.makeText(getApplicationContext(), "An account with this username could not be found", Toast.LENGTH_SHORT).show();
                         }
                     }
@@ -110,7 +116,7 @@ public class login extends AppCompatActivity{
             }
 
         });
-        patientRegister.setOnClickListener(new View.OnClickListener(){
+        patientRegister.setOnClickListener(new View.OnClickListener(){ //taking the user to the doctor patient page
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(login.this, patientRegister.class);
@@ -118,7 +124,7 @@ public class login extends AppCompatActivity{
                 patientRegister.setEnabled(false);
             }
         });
-        doctorRegister.setOnClickListener(new View.OnClickListener(){
+        doctorRegister.setOnClickListener(new View.OnClickListener(){ //taking the user to the doctor register page
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(login.this, doctorRegister.class);

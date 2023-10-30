@@ -14,14 +14,14 @@ public class WelcomeScreenPatient extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_welcome_screen_patient);
+        setContentView(R.layout.activity_welcome_screen_patient); //setting layout for the patient screen
 
         logOut = (Button) findViewById(R.id.logOff2);
 
 
         logOut.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) { //logout button that takes you to the login page
                 Intent intent = new Intent(WelcomeScreenPatient.this, login.class);
                 startActivity(intent);
                 logOut.setEnabled(false);

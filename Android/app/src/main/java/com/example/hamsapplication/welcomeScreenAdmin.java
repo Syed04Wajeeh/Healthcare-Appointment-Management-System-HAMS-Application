@@ -15,13 +15,13 @@ public class welcomeScreenAdmin extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_welcome_screen_admin);
+        setContentView(R.layout.activity_welcome_screen_admin); //setting layout for the admin screen
 
         logOut = (Button) findViewById(R.id.logOff);
         inbox = (Button) findViewById(R.id.inbox);
         logOut.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) { //logout button that takes you to the login page
                 Intent intent = new Intent(welcomeScreenAdmin.this, login.class);
                 startActivity(intent);
                 logOut.setEnabled(false);
@@ -29,7 +29,7 @@ public class welcomeScreenAdmin extends AppCompatActivity{
         });
         inbox.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) { //inbox button that takes you to the inbox page
                 Intent intent = new Intent(welcomeScreenAdmin.this, Inbox.class);
                 startActivity(intent);
                 inbox.setEnabled(false);
