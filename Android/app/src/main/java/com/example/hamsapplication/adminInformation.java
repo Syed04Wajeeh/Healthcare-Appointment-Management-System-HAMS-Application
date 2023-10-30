@@ -17,7 +17,8 @@ public class adminInformation extends generalInformation {
 
         this.encryptPassword();
 
-        String adminId = myRef.push().getKey(); // Generate a unique key for the patient
+        //push admin object to database
+        String adminId = myRef.push().getKey();
         myRef.child(adminId).setValue(this);
     }
 }

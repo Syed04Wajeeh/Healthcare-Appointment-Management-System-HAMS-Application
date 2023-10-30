@@ -15,14 +15,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class doctorRegister extends AppCompatActivity{
 
-    private EditText firstName;
-    private EditText lastName;
-    private EditText email;
-    private EditText password;
-    private EditText phoneNumber;
-    private EditText address;
-    private EditText employeeNumber;
-    private EditText specialties;
+    private EditText firstName, lastName, email, password, phoneNumber, address, employeeNumber, specialties;
     private Button registerButton;
 
     @Override
@@ -47,7 +40,7 @@ public class doctorRegister extends AppCompatActivity{
         registerButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) { //stores all information in fields
                 String userFirstName = firstName.getText().toString();
                 String userLastName = lastName.getText().toString();
                 String userEmail = email.getText().toString();
@@ -57,17 +50,18 @@ public class doctorRegister extends AppCompatActivity{
                 String userEmployeeNumber = address.getText().toString();
                 String userSpecialties = address.getText().toString();
 
+                //verifies fields to be not blank
                 if (userEmail.equals("") || userFirstName.equals("") || userLastName.equals("") || userPassword.equals("") || userPhoneNumber.equals("") || userAddress.equals("") || userEmployeeNumber.equals("") || userSpecialties.equals("")) {
                     Toast.makeText(getApplicationContext(), "Please complete all fields", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                generalInformation.hasAccount(userEmail, new generalInformation.AccountCheckCallback() {
+                generalInformation.hasAccount(userEmail, new generalInformation.AccountCheckCallback() {//checks if an account already exists with username
                     @Override
                     public void onAccountCheckResult(boolean accountExists) {
                         if (accountExists){
                             Log.d("Account exists", "true");
                             Toast.makeText(getApplicationContext(), "This email is already in use", Toast.LENGTH_SHORT).show();
-                        } else {
+                        } else { //if account does not exist, create and send to database
                             Log.d("Account does not exist", "false");
                             doctorInformation doctor = new doctorInformation(userEmail, userPassword, userFirstName, userLastName, userPhoneNumber, userAddress, userEmployeeNumber, userSpecialties, 0, 3);
                             doctor.addToCollection();

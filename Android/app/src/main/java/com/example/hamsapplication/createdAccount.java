@@ -18,7 +18,7 @@ public class createdAccount extends AppCompatActivity {
 
 
 
-        homeButton.setOnClickListener(new View.OnClickListener(){
+        homeButton.setOnClickListener(new View.OnClickListener(){ // button to go back to login
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(createdAccount.this, login.class);

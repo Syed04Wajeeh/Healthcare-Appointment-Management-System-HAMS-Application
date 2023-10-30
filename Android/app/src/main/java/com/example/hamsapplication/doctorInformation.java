@@ -23,7 +23,7 @@ public class doctorInformation extends generalInformation {
         this.encryptPassword();
 
 
-        String doctorId = myRef.push().getKey(); // Generate a unique key for the patient
+        String doctorId = myRef.push().getKey(); // pushes doctor object to database
         myRef.child(doctorId).setValue(this);
     }
 }

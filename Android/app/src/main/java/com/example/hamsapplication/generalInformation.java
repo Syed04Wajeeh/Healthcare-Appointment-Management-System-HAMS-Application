@@ -12,13 +12,18 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 public class generalInformation {
 
+    //nested interface callback to ensure asynchronous data retrieval from database was completed
+    //this nested interface is used to check if an account exists
     public interface AccountCheckCallback {
         void onAccountCheckResult(boolean accountExists);
     }
 
+    //nested interface callback to ensure asynchronous data retrieval from database was completed
+    //this nested interface is used to return the generalinformation object stored in the database with the correlating username
     public interface AccountSearchCallback {
         void onAccountSearchResult(generalInformation user);
     }
+
     public String username;
     public String password;
     public String firstName;
@@ -27,8 +32,9 @@ public class generalInformation {
     public String address;
     public int registrationStatus; //0(not looked at), 1(accepted), 2(denied)
     public int accountType;
-    public  generalInformation(){
+    public  generalInformation(){ //empty constructor
     }
+
     public generalInformation(String username, String password, String firstName, String lastName, String phoneNumber, String address, int registrationStatus, int accountType){
         this.username = username.toLowerCase();
         this.password = password;
@@ -40,12 +46,12 @@ public class generalInformation {
         this.accountType = accountType; //1 is admin, 2 is patient, 3 is doctor
     }
 
-    static public void hasAccount(final String desiredUsername, final AccountCheckCallback callback){
+    static public void hasAccount(final String desiredUsername, final AccountCheckCallback callback){ // if an account exists with the desiredUsername, accountExists = true
         final boolean[] accountExists = {false};
 
         FirebaseDatabase.getInstance().getReference().child("Users").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
+                    public void onDataChange(DataSnapshot dataSnapshot) { // looping through database
                         for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                             generalInformation user = snapshot.getValue(generalInformation.class);
                             if (user != null && user.username.equals(desiredUsername)) {
