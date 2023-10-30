@@ -38,8 +38,6 @@ public class generalInformation {
         this.address = address;
         this.registrationStatus = registrationStatus;
         this.accountType = accountType; //1 is admin, 2 is patient, 3 is doctor
-
-
     }
 
     static public void hasAccount(final String desiredUsername, final AccountCheckCallback callback){
@@ -94,7 +92,7 @@ public class generalInformation {
 
 
     public void addToCollection(){
-    } //MAKE THIS ABSTRACT LATER BTW
+    }
 
     public void encryptPassword(){
         AESCrypt crypt = new AESCrypt();
