@@ -21,7 +21,6 @@ import java.util.ArrayList;
 
 public class PastAppointment extends AppCompatActivity {
     Button back;
-    Button refresh;
     TableLayout layout;
 
     // this method loops through the database and creates
