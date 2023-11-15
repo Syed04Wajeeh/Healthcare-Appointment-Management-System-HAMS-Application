@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 public class WelcomeScreenDoctor extends AppCompatActivity {
 
@@ -35,7 +34,7 @@ public class WelcomeScreenDoctor extends AppCompatActivity {
         shift.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { //button that takes you to the shifts page
-                Intent intent = new Intent(WelcomeScreenDoctor.this, Shifts.class);
+                Intent intent = new Intent(WelcomeScreenDoctor.this, ShiftPage.class);
                 startActivity(intent);
                 shift.setEnabled(false);
             }

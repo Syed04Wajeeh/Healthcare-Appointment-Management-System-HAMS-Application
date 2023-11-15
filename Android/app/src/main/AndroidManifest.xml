@@ -19,7 +19,7 @@
             android:name=".PastAppointment"
             android:exported="false" />
         <activity
-            android:name=".Shifts"
+            android:name=".ShiftPage"
             android:exported="false" />
         <activity
             android:name=".Inbox"

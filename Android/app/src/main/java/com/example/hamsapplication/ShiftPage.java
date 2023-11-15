@@ -3,7 +3,7 @@ package com.example.hamsapplication;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Shifts extends AppCompatActivity {
+public class ShiftPage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
