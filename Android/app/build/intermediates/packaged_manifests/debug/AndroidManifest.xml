@@ -39,7 +39,7 @@
             android:name="com.example.hamsapplication.PastAppointment"
             android:exported="false" />
         <activity
-            android:name="com.example.hamsapplication.Shifts"
+            android:name="com.example.hamsapplication.ShiftPage"
             android:exported="false" />
         <activity
             android:name="com.example.hamsapplication.Inbox"

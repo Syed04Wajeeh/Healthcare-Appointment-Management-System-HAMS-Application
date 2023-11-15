@@ -2844,12 +2844,14 @@ id FUNCTION
 id GetStarted
 id META
 id NO_DEBUG
+id PastAppointmentView
 id RefreshInbox
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
 id SHOW_PROGRESS
 id SYM
+id ScrollHorizontal
 id TOP_END
 id TOP_START
 id accelerate
@@ -3108,7 +3110,9 @@ id linearLayout
 id linearLayout10
 id linearLayout11
 id linearLayout12
+id linearLayout13
 id linearLayout2
+id linearLayout4
 id linearLayout5
 id linearLayout6
 id linearLayout7
@@ -3345,6 +3349,7 @@ id textView10
 id textView11
 id textView12
 id textView13
+id textView14
 id textView19
 id textView2
 id textView20

@@ -5,7 +5,9 @@ color white
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 id GetStarted
+id PastAppointmentView
 id RefreshInbox
+id ScrollHorizontal
 id backButton
 id buttonContainerRej
 id buttonContainerReq
@@ -37,7 +39,9 @@ id linearLayout
 id linearLayout10
 id linearLayout11
 id linearLayout12
+id linearLayout13
 id linearLayout2
+id linearLayout4
 id linearLayout5
 id linearLayout6
 id linearLayout7
@@ -65,6 +69,7 @@ id textView10
 id textView11
 id textView12
 id textView13
+id textView14
 id textView19
 id textView2
 id textView20
