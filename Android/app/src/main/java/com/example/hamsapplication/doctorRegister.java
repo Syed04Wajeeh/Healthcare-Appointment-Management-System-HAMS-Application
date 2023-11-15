@@ -47,8 +47,8 @@ public class doctorRegister extends AppCompatActivity{
                 String userPassword = password.getText().toString();
                 String userPhoneNumber = phoneNumber.getText().toString();
                 String userAddress = address.getText().toString();
-                String userEmployeeNumber = address.getText().toString();
-                String userSpecialties = address.getText().toString();
+                String userEmployeeNumber = employeeNumber.getText().toString();
+                String userSpecialties = specialties.getText().toString();
 
                 //verifies fields to be not blank
                 if (userEmail.equals("") || userFirstName.equals("") || userLastName.equals("") || userPassword.equals("") || userPhoneNumber.equals("") || userAddress.equals("") || userEmployeeNumber.equals("") || userSpecialties.equals("")) {

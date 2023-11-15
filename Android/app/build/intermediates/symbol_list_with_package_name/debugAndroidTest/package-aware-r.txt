@@ -1,0 +1,3 @@
+com.example.hamsapplication.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme
