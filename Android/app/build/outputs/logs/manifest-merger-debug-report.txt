@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:2:1-47:12
-INJECTED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:2:1-47:12
-INJECTED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:2:1-47:12
-INJECTED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:2:1-47:12
+ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:2:1-56:12
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\wajee\.gradle\caches\transforms-3\3a9a84ecc0b1e326653f7ce8ca4e15d0\transformed\material-1.8.0\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\wajee\.gradle\caches\transforms-3\afb5814eccbd68069e5bd6389ce2ce7a\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\wajee\.gradle\caches\transforms-3\aa077958169644c5612c6abffae10edf\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
@@ -65,8 +65,8 @@ MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\wajee\.
 	xmlns:android
 		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:5:5-45:19
-INJECTED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:5:5-45:19
+ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:5:5-54:19
+INJECTED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:5:5-54:19
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\wajee\.gradle\caches\transforms-3\3a9a84ecc0b1e326653f7ce8ca4e15d0\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\wajee\.gradle\caches\transforms-3\3a9a84ecc0b1e326653f7ce8ca4e15d0\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\wajee\.gradle\caches\transforms-3\afb5814eccbd68069e5bd6389ce2ce7a\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -119,64 +119,82 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\wa
 		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:13:9-53
 	android:dataExtractionRules
 		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:7:9-65
-activity#com.example.hamsapplication.Inbox
+activity#com.example.hamsapplication.ComingAppointment
 ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:15:9-17:40
 	android:exported
 		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:17:13-37
 	android:name
-		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:16:13-34
-activity#com.example.hamsapplication.WelcomeScreenPatient
+		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:16:13-46
+activity#com.example.hamsapplication.PastAppointment
 ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:18:9-20:40
 	android:exported
 		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:20:13-37
 	android:name
-		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:19:13-49
-activity#com.example.hamsapplication.WelcomeScreenDoctor
+		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:19:13-44
+activity#com.example.hamsapplication.Shifts
 ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:21:9-23:40
 	android:exported
 		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:23:13-37
 	android:name
-		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:22:13-48
-activity#com.example.hamsapplication.welcomeScreenAdmin
+		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:22:13-35
+activity#com.example.hamsapplication.Inbox
 ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:24:9-26:40
 	android:exported
 		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:26:13-37
 	android:name
-		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:25:13-47
-activity#com.example.hamsapplication.createdAccount
+		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:25:13-34
+activity#com.example.hamsapplication.WelcomeScreenPatient
 ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:27:9-29:40
 	android:exported
 		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:29:13-37
 	android:name
-		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:28:13-43
-activity#com.example.hamsapplication.doctorRegister
+		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:28:13-49
+activity#com.example.hamsapplication.WelcomeScreenDoctor
 ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:30:9-32:40
 	android:exported
 		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:32:13-37
 	android:name
-		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:31:13-43
-activity#com.example.hamsapplication.patientRegister
+		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:31:13-48
+activity#com.example.hamsapplication.welcomeScreenAdmin
 ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:33:9-35:40
 	android:exported
 		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:35:13-37
 	android:name
-		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:34:13-44
-activity#com.example.hamsapplication.login
-ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:36:9-44:20
+		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:34:13-47
+activity#com.example.hamsapplication.createdAccount
+ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:36:9-38:40
 	android:exported
-		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:38:13-36
+		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:38:13-37
 	android:name
-		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:37:13-34
+		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:37:13-43
+activity#com.example.hamsapplication.doctorRegister
+ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:39:9-41:40
+	android:exported
+		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:41:13-37
+	android:name
+		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:40:13-43
+activity#com.example.hamsapplication.patientRegister
+ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:42:9-44:40
+	android:exported
+		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:44:13-37
+	android:name
+		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:43:13-44
+activity#com.example.hamsapplication.login
+ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:45:9-53:20
+	android:exported
+		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:47:13-36
+	android:name
+		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:46:13-34
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:39:13-43:29
+ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:48:13-52:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:40:17-69
+ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:49:17-69
 	android:name
-		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:40:25-66
+		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:49:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:42:17-77
+ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:51:17-77
 	android:name
-		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:42:27-74
+		ADDED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:51:27-74
 uses-sdk
 INJECTED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml

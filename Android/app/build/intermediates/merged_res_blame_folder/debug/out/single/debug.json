@@ -1,5 +1,9 @@
 [
     {
+        "merged": "com.example.hamsapplication.app-merged_res-32:/layout_activity_past_appointment.xml.flat",
+        "source": "com.example.hamsapplication.app-main-34:/layout/activity_past_appointment.xml"
+    },
+    {
         "merged": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-merged_res-32:\\drawable_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-main-34:\\drawable\\ic_launcher_foreground.xml"
     },
@@ -22,6 +26,10 @@
     {
         "merged": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-merged_res-32:\\layout_activity_welcome_screen_admin.xml.flat",
         "source": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-main-34:\\layout\\activity_welcome_screen_admin.xml"
+    },
+    {
+        "merged": "com.example.hamsapplication.app-merged_res-32:/layout_activity_coming_appointment.xml.flat",
+        "source": "com.example.hamsapplication.app-main-34:/layout/activity_coming_appointment.xml"
     },
     {
         "merged": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-merged_res-32:\\mipmap-xhdpi_ic_launcher.webp.flat",
@@ -56,8 +64,16 @@
         "source": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-main-34:\\layout\\activity_welcome_screen_patient.xml"
     },
     {
+        "merged": "com.example.hamsapplication.app-merged_res-32:/layout_activity_welcome_screen_doctor.xml.flat",
+        "source": "com.example.hamsapplication.app-main-34:/layout/activity_welcome_screen_doctor.xml"
+    },
+    {
         "merged": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-merged_res-32:\\layout_login.xml.flat",
         "source": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-main-34:\\layout\\login.xml"
+    },
+    {
+        "merged": "com.example.hamsapplication.app-merged_res-32:/layout_activity_shifts.xml.flat",
+        "source": "com.example.hamsapplication.app-main-34:/layout/activity_shifts.xml"
     },
     {
         "merged": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-merged_res-32:\\drawable_ic_launcher_background.xml.flat",
@@ -78,10 +94,6 @@
     {
         "merged": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-merged_res-32:\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-main-34:\\mipmap-hdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "com.example.hamsapplication.app-merged_res-32:/layout_activity_welcome_screen_patient.xml.flat",
-        "source": "com.example.hamsapplication.app-main-34:/layout/activity_welcome_screen_patient.xml"
     },
     {
         "merged": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-merged_res-32:\\layout_activity_created_account.xml.flat",

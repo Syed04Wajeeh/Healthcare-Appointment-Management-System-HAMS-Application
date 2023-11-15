@@ -33,6 +33,15 @@
         android:testOnly="true"
         android:theme="@style/Theme.HAMSApplication" >
         <activity
+            android:name="com.example.hamsapplication.ComingAppointment"
+            android:exported="false" />
+        <activity
+            android:name="com.example.hamsapplication.PastAppointment"
+            android:exported="false" />
+        <activity
+            android:name="com.example.hamsapplication.Shifts"
+            android:exported="false" />
+        <activity
             android:name="com.example.hamsapplication.Inbox"
             android:exported="false" />
         <activity

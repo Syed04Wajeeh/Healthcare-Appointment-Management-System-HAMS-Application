@@ -19,7 +19,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.148" />
+        app:layout_constraintVertical_bias="0.607" />
 
     <Button
         android:id="@+id/logOff"
@@ -37,10 +37,36 @@
         android:id="@+id/youAreText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="368dp"
+        android:layout_marginBottom="212dp"
         android:text="You are a: Doctor"
-        app:layout_constraintBottom_toTopOf="@+id/logOff"
+        app:layout_constraintBottom_toTopOf="@+id/shiftButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/pastAppointmentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Past Appointments"
+        app:layout_constraintBottom_toTopOf="@+id/logOff"
+        app:layout_constraintEnd_toStartOf="@+id/comingAppointmentButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/comingAppointmentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Coming Appointments"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="531dp" />
+
+    <Button
+        android:id="@+id/shiftButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Shifts"
+        app:layout_constraintBottom_toTopOf="@+id/pastAppointmentButton"
+        tools:layout_editor_absoluteX="159dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

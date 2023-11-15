@@ -2964,6 +2964,7 @@ id clip_vertical
 id clockwise
 id closest
 id collapseActionView
+id comingAppointmentButton
 id compress
 id confirm_button
 id constraint
@@ -3210,6 +3211,7 @@ id parentRelative
 id parent_matrix
 id passwordInput
 id password_toggle
+id pastAppointmentButton
 id path
 id pathRelative
 id patientAccountPassword
@@ -3280,6 +3282,7 @@ id selected
 id selection_type
 id sharedValueSet
 id sharedValueUnset
+id shiftButton
 id shortcut
 id showCustom
 id showHome
@@ -3517,10 +3520,13 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_coming_appointment
 layout activity_created_account
 layout activity_doctor_register
 layout activity_inbox
+layout activity_past_appointment
 layout activity_patient_register
+layout activity_shifts
 layout activity_welcome_screen_admin
 layout activity_welcome_screen_doctor
 layout activity_welcome_screen_patient
