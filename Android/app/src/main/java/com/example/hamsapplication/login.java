@@ -2,18 +2,11 @@ package com.example.hamsapplication;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 public class login extends AppCompatActivity{
 
@@ -26,11 +19,14 @@ public class login extends AppCompatActivity{
     Button doctorRegister;
     String adminUser = "admin";
     String adminPass = "pass";
+
+    CurrentUser currentUser = new CurrentUser();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
+        currentUser.setUser("");
         username = (EditText) findViewById(R.id.usernameInput);
         password = (EditText) findViewById(R.id.passwordInput);
 
@@ -81,18 +77,21 @@ public class login extends AppCompatActivity{
                                             } else if (user.registrationStatus == 2) {
                                                 Toast.makeText(getApplicationContext(), "Your registration has been denied, please contact the admin at 613-XXX-XXXX", Toast.LENGTH_SHORT).show();
                                                 return;
-                                            //telling the user that their account has not been approved by the admin
+                                                //telling the user that their account has not been approved by the admin
                                             } else if (user.registrationStatus == 1) {
                                                 //setting the account as an admin account
                                                 if (user.accountType == 1) {
+                                                    currentUser.setUser(user.username);
                                                     Intent intent = new Intent(login.this, welcomeScreenAdmin.class);
                                                     startActivity(intent);
                                                     //setting the account as an patient account
                                                 } else if (user.accountType == 2) {
+                                                    currentUser.setUser(user.username);
                                                     Intent intent = new Intent(login.this, WelcomeScreenPatient.class);
                                                     startActivity(intent);
                                                     //setting the account as an doctor account
                                                 } else if (user.accountType == 3) {
+                                                    currentUser.setUser(user.username);
                                                     Intent intent = new Intent(login.this, WelcomeScreenDoctor.class);
                                                     startActivity(intent);
                                                 }
