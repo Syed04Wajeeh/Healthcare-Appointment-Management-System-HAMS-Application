@@ -7,6 +7,7 @@ drawable ic_launcher_foreground
 id GetStarted
 id IncomingAppointmentView
 id PastAppointmentView
+id RefreshAppointment
 id RefreshInbox
 id ScrollHorizontal
 id addShift

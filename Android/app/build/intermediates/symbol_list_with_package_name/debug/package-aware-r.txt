@@ -2846,6 +2846,7 @@ id IncomingAppointmentView
 id META
 id NO_DEBUG
 id PastAppointmentView
+id RefreshAppointment
 id RefreshInbox
 id SHIFT
 id SHOW_ALL

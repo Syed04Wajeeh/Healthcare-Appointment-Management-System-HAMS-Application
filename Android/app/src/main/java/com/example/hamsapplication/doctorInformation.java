@@ -25,7 +25,7 @@ public class doctorInformation extends generalInformation {
         this.appointmentArray = new ArrayList<>();
         this.shiftArray = new ArrayList<>();
         appointmentArray.add(new Appointment(null, 0, 0, true, 0));
-        shiftArray.add(new Shift())
+        shiftArray.add(new Shift(0, 0, 0, 0, 0,0, 0));
     }
 
     @Override
@@ -52,7 +52,7 @@ public class doctorInformation extends generalInformation {
                     generalInformation user = snapshot.getValue(generalInformation.class);
                     if (user.username == CurrentUser.username){
                         uniqueID = snapshot.getKey(); // Get the Firebase ID
-                        DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child(appointmentArray);
+                        //DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child(appointmentArray);
 
                     }
 
