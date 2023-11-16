@@ -5,9 +5,11 @@ color white
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 id GetStarted
+id IncomingAppointmentView
 id PastAppointmentView
 id RefreshInbox
 id ScrollHorizontal
+id addShiftButton
 id backButton
 id buttonContainerRej
 id buttonContainerReq
@@ -64,12 +66,14 @@ id registerDoctor
 id registerPatient
 id rejectedPopup
 id shiftButton
+id shiftTable
 id textView
 id textView10
 id textView11
 id textView12
 id textView13
 id textView14
+id textView15
 id textView19
 id textView2
 id textView20
@@ -102,6 +106,7 @@ layout activity_welcome_screen_patient
 layout login
 mipmap ic_launcher
 mipmap ic_launcher_round
+string add_shift
 string app_name
 string firebase_database_url
 string gcm_defaultSenderId

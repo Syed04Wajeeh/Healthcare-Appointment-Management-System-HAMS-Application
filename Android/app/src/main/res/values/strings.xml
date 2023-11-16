@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HAMS application</string>
+    <string name="add_shift">Add Shift</string>
 </resources>

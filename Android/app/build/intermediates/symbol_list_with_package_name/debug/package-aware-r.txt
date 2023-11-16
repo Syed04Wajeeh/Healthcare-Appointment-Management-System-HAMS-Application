@@ -2842,6 +2842,7 @@ id BOTTOM_START
 id CTRL
 id FUNCTION
 id GetStarted
+id IncomingAppointmentView
 id META
 id NO_DEBUG
 id PastAppointmentView
@@ -2911,6 +2912,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addShiftButton
 id adjust_height
 id adjust_width
 id alertTitle
@@ -3287,6 +3289,7 @@ id selection_type
 id sharedValueSet
 id sharedValueUnset
 id shiftButton
+id shiftTable
 id shortcut
 id showCustom
 id showHome
@@ -3350,6 +3353,7 @@ id textView11
 id textView12
 id textView13
 id textView14
+id textView15
 id textView19
 id textView2
 id textView20
@@ -3644,6 +3648,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string add_shift
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior

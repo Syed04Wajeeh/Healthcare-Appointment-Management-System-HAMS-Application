@@ -80,7 +80,7 @@ public class ComingAppointment extends AppCompatActivity {
                     concat = concat + list.get(i) + " ";
 
                 }
-                if
+
             }
         }
     }
