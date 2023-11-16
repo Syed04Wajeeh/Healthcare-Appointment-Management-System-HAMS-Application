@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -17,7 +18,6 @@ public class WelcomeScreenDoctor extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_screen_doctor); //setting layout for the doctor screen
-
         logOut = (Button) findViewById(R.id.logOff);
         shift = (Button) findViewById(R.id.shiftButton);
         pastAppointment = (Button) findViewById(R.id.pastAppointmentButton);

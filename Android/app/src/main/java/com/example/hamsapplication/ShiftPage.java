@@ -13,13 +13,15 @@ import java.util.Locale;
 
 public class ShiftPage extends AppCompatActivity {
 
-    Button timeButton;
-    int hour, minute;
+    Button timeStartButton;
+    Button timeEndButton;
+
+    int startHour, startMinute;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shifts);
-        timeButton = (Button) findViewById(R.id.addShiftButton);
+        timeStartButton = (Button) findViewById(R.id.addShiftButton);
 
 
     }
@@ -27,15 +29,15 @@ public class ShiftPage extends AppCompatActivity {
         TimePickerDialog.OnTimeSetListener onTimeSetListener = new TimePickerDialog.OnTimeSetListener() {
             @Override
             public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
-                hour = selectedHour;
-                minute = selectedMinute;
-                timeButton.setText(String.format(Locale.getDefault(), "%02d:%02d", hour, minute));
-                Log.d("minute is", String.valueOf(minute));
+                startHour = selectedHour;
+                startMinute = selectedMinute;
+                timeStartButton.setText(String.format(Locale.getDefault(), "%02d:%02d", startHour, startMinute));
+                Log.d("minute is", String.valueOf(startMinute));
 
             }
         };
 
-        TimePickerDialog timePickerDialog = new TimePickerDialog(this, onTimeSetListener, hour, minute, true);
+        TimePickerDialog timePickerDialog = new TimePickerDialog(this, onTimeSetListener, startHour, startMinute, true);
         timePickerDialog.setTitle("Select Time");
         timePickerDialog.show();
     }
