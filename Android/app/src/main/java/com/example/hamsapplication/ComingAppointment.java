@@ -3,6 +3,7 @@ package com.example.hamsapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
@@ -78,9 +80,77 @@ public class ComingAppointment extends AppCompatActivity {
                 String concat = "";
                 for (int i = 3; i < list.size(); i++) {
                     concat = concat + list.get(i) + " ";
-
                 }
 
+                if (list.get(1).equals("0")) {//if object is of unchecked registration status (not accepted or rejected yet)
+
+                    TableRow row = new TableRow(this);
+                    TextView text = new TextView(this);
+                    Button button = new Button(this);
+                    Button button1 = new Button(this);
+
+
+                    text.setText(concat);
+                    button.setText("REJECT");
+                    button.setBackgroundColor(Color.RED);
+                    button1.setText("ACCEPT");
+                    button1.setBackgroundColor(Color.GREEN);
+
+                    //add views to row, add row to layout
+                    row.addView(button);
+                    row.addView(button1);
+                    row.addView(text);
+                    layout.addView(row);
+
+                    button.setOnClickListener(new View.OnClickListener() { //reject appointment
+                        @Override
+                        public void onClick(View view) {
+                            String userId = list.get(0);
+                            DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("Users").child(userId);
+                            userRef.child("registrationStatus").setValue(2);
+                            button.setEnabled(false);
+                            button1.setEnabled(false);
+                            layout.removeView(row);
+                        }
+                    });
+                    button1.setOnClickListener(new View.OnClickListener() { //accept appointment
+                        @Override
+                        public void onClick(View view) {
+                            String userId = list.get(0);
+                            DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("Users").child(userId);
+                            userRef.child("registrationStatus").setValue(1);
+                            button.setEnabled(false);
+                            button1.setEnabled(false);
+                            layout.removeView(row);
+                        }
+                    });
+                } else if (list.get(1).equals("1")) {// if object is already accepted
+
+                    TableRow row = new TableRow(this);
+                    TextView text = new TextView(this);
+                    Button button = new Button(this);
+                    text.setText(concat);
+
+                    button.setText("ACCEPT");
+                    button.setBackgroundColor(Color.GREEN);
+
+
+                    text.setId(View.generateViewId());
+                    button.setId(View.generateViewId());
+
+                    row.addView(button);
+                    row.addView(text);
+                    button.setOnClickListener(new View.OnClickListener() { //reject appointment
+                        @Override
+                        public void onClick(View view) {
+                            String userId = list.get(0);
+                            DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("Users").child(userId);
+                            userRef.child("registrationStatus").setValue(2);
+                            button.setEnabled(false);
+                            layout.removeView(row);
+                        }
+                    });
+                }
             }
         }
     }
@@ -92,6 +162,9 @@ public class ComingAppointment extends AppCompatActivity {
 
         layout  = (TableLayout) findViewById(R.id.PastAppointmentView);
         back = (Button) findViewById(R.id.backButton);
+
+
+
 
         populateArray(); //populate the layouts
 

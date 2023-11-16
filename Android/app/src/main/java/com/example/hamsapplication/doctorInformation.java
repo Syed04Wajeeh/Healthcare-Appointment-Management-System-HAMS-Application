@@ -30,4 +30,20 @@ public class doctorInformation extends generalInformation {
         String doctorId = myRef.push().getKey(); // pushes doctor object to database
         myRef.child(doctorId).setValue(this);
     }
+
+    public void addShift(Shift shift){
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("Users");
+
+        String doctorId = myRef.push().getKey(); // pushes doctor object to database
+        myRef.child(doctorId).setValue(shift);
+    }
+
+    public void addAppointment(Appointment appointment){
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("Users");
+
+        String doctorId = myRef.push().getKey(); // pushes doctor object to database
+        myRef.child(doctorId).setValue(appointment);
+    }
 }
