@@ -16,7 +16,7 @@ public class ShiftPage extends AppCompatActivity {
     Button timeStartButton;
     Button timeEndButton;
 
-    int startHour, startMinute;
+    int startHour, startMinute, endHour, endMinute;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

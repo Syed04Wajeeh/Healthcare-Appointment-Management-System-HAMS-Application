@@ -1,15 +1,15 @@
 package com.example.hamsapplication;
 
 public class Appointment {
-    boolean approved, past;
+    boolean past;
     String username;
-    int time, date;
+    int time, date, status; //-1 is rejected, 0 is not looked at, 1 is accepted
 
-    public Appointment(String username, int date, int time, boolean past, boolean approved){
+    public Appointment(String username, int date, int time, boolean past, int status){
         this.username = username;
         this.date = date;
         this.time = time;
         this.past = past;
-        this.approved = approved;
+        this.status = status;
     }
 }

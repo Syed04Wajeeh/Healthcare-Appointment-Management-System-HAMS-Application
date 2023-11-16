@@ -3,9 +3,13 @@ package com.example.hamsapplication;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
+
 public class doctorInformation extends generalInformation {
     public String employeeNumber;
     public String specialties;
+    public ArrayList<Appointment> appointmentArray;
+    public ArrayList<Shift> shiftArray;
     protected doctorInformation(){
 
     }
