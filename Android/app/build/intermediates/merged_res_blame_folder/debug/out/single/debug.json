@@ -28,6 +28,10 @@
         "source": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-main-34:\\layout\\activity_welcome_screen_admin.xml"
     },
     {
+        "merged": "com.example.hamsapplication.app-merged_res-32:/layout_activity_coming_appointment.xml.flat",
+        "source": "com.example.hamsapplication.app-main-34:/layout/activity_coming_appointment.xml"
+    },
+    {
         "merged": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-merged_res-32:\\mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-main-34:\\mipmap-xhdpi\\ic_launcher.webp"
     },
@@ -64,10 +68,6 @@
         "source": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-main-34:\\layout\\login.xml"
     },
     {
-        "merged": "com.example.hamsapplication.app-merged_res-32:/layout_activity_shifts.xml.flat",
-        "source": "com.example.hamsapplication.app-main-34:/layout/activity_shifts.xml"
-    },
-    {
         "merged": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-merged_res-32:\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-main-34:\\drawable\\ic_launcher_background.xml"
     },
@@ -76,12 +76,12 @@
         "source": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-main-34:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-merged_res-32:\\layout_activity_coming_appointment.xml.flat",
-        "source": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-main-34:\\layout\\activity_coming_appointment.xml"
-    },
-    {
         "merged": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-merged_res-32:\\layout_activity_shifts.xml.flat",
         "source": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-main-34:\\layout\\activity_shifts.xml"
+    },
+    {
+        "merged": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-merged_res-32:\\layout_activity_coming_appointment.xml.flat",
+        "source": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-main-34:\\layout\\activity_coming_appointment.xml"
     },
     {
         "merged": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-merged_res-32:\\xml_data_extraction_rules.xml.flat",

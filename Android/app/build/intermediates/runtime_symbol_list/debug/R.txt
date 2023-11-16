@@ -2911,6 +2911,7 @@ int id action_text 0x7f080048
 int id actions 0x7f080049
 int id activity_chooser_view_content 0x7f08004a
 int id add 0x7f08004b
+int id addShift 0x7f08024a
 int id addShiftButton 0x7f08004c
 int id adjust_height 0x7f08004d
 int id adjust_width 0x7f08004e
@@ -2985,6 +2986,7 @@ int id custom 0x7f080092
 int id customPanel 0x7f080093
 int id cut 0x7f080094
 int id dark 0x7f080095
+int id dateButton 0x7f08024b
 int id date_picker_actions 0x7f080096
 int id decelerate 0x7f080097
 int id decelerateAndComplete 0x7f080098
@@ -3039,6 +3041,8 @@ int id edit_query 0x7f0800c8
 int id elastic 0x7f0800c9
 int id embed 0x7f0800ca
 int id end 0x7f0800cb
+int id endTimeButton 0x7f08024d
+int id endTimeView 0x7f08024e
 int id endToStart 0x7f0800cc
 int id enterAlways 0x7f0800cd
 int id enterAlwaysCollapsed 0x7f0800ce
@@ -3316,6 +3320,8 @@ int id src_over 0x7f0801dd
 int id standard 0x7f0801de
 int id start 0x7f0801df
 int id startHorizontal 0x7f0801e0
+int id startTimeButton 0x7f08024f
+int id startTimeView 0x7f080250
 int id startToEnd 0x7f0801e1
 int id startVertical 0x7f0801e2
 int id staticLayout 0x7f0801e3
@@ -3362,6 +3368,7 @@ int id textView23 0x7f08020b
 int id textView24 0x7f08020c
 int id textView25 0x7f08020d
 int id textView26 0x7f08020e
+int id textView27 0x7f080251
 int id textView3 0x7f08020f
 int id textView4 0x7f080210
 int id textView5 0x7f080211

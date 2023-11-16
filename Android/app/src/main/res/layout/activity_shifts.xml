@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addShift"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ShiftPage">
+    tools:context=".ShiftPage"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="7dp">
 
 
   <TextView
@@ -15,7 +17,7 @@
       android:layout_marginTop="48dp"
       android:text="My Shifts"
       android:textSize="34sp"
-      app:layout_constraintBottom_toTopOf="@+id/addShiftButton"
+      app:layout_constraintBottom_toTopOf="@+id/startTimeButton"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.498"
       app:layout_constraintStart_toStartOf="parent"
@@ -25,16 +27,17 @@
   <ScrollView
       android:id="@+id/layout"
       android:layout_width="match_parent"
-      android:layout_height="550dp"
+      android:layout_height="430dp"
+      android:layout_marginTop="64dp"
       android:fillViewport="true"
       android:scrollbarStyle="outsideInset"
       android:scrollbars="horizontal|vertical"
-      app:layout_constraintBottom_toTopOf="@+id/addShiftButton"
+      app:layout_constraintBottom_toTopOf="@+id/endTimeButton"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="@id/textView14"
-      app:layout_constraintVertical_bias="0.797">
+      app:layout_constraintVertical_bias="0.0">
 
     <HorizontalScrollView
         android:id="@+id/horizontalView"
@@ -48,7 +51,7 @@
           android:layout_height="match_parent"
           android:layout_marginTop="50dp"
           android:layout_marginBottom="20dp"
-          app:layout_constraintBottom_toTopOf="@+id/addShiftButton"
+          app:layout_constraintBottom_toTopOf="@+id/startTimeButton"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintHorizontal_bias="0.488"
           app:layout_constraintStart_toStartOf="parent"
@@ -59,13 +62,80 @@
   </ScrollView>
 
   <Button
+      android:id="@+id/startTimeButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginBottom="8dp"
+      android:onClick="popStartTimePicker"
+      android:text="Start Time"
+      app:layout_constraintBottom_toTopOf="@+id/startTimeView"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <Button
+      android:id="@+id/endTimeButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:layout_marginBottom="8dp"
+      android:onClick="popEndTimePicker"
+      android:text="End Time"
+      app:layout_constraintBottom_toTopOf="@+id/endTimeView"
+      app:layout_constraintStart_toEndOf="@+id/startTimeButton" />
+
+  <Button
+      android:onClick="openDatePicker"
+      android:id="@+id/dateButton"
+      style="?android:spinnerStyle"
+      android:layout_width="140dp"
+      android:layout_height="48dp"
+      android:layout_marginBottom="8dp"
+      android:text="JAN 01 2020"
+      android:textColor="#020202"
+      app:layout_constraintBottom_toTopOf="@+id/textView27"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.304"
+      app:layout_constraintStart_toEndOf="@+id/endTimeButton" />
+
+  <Button
       android:id="@+id/addShiftButton"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginBottom="16dp"
-      android:onClick="popTimePicker"
-      android:text="@string/add_shift"
+      android:text="Add Shift"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.463"
       app:layout_constraintStart_toStartOf="parent" />
+
+  <TextView
+      android:id="@+id/endTimeView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="72dp"
+      android:layout_marginBottom="28dp"
+      android:text="End Time:"
+      app:layout_constraintBottom_toTopOf="@+id/addShiftButton"
+      app:layout_constraintEnd_toStartOf="@+id/textView27" />
+
+  <TextView
+      android:id="@+id/startTimeView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="44dp"
+      android:layout_marginBottom="28dp"
+      android:text="Start Time:"
+      app:layout_constraintBottom_toTopOf="@+id/addShiftButton"
+      app:layout_constraintEnd_toStartOf="@+id/endTimeView" />
+
+  <TextView
+      android:id="@+id/textView27"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="56dp"
+      android:layout_marginBottom="28dp"
+      android:text="Select Date"
+      app:layout_constraintBottom_toTopOf="@+id/addShiftButton"
+      app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

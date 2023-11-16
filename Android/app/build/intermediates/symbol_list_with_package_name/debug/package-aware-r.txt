@@ -2912,6 +2912,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addShift
 id addShiftButton
 id adjust_height
 id adjust_width
@@ -2986,6 +2987,7 @@ id custom
 id customPanel
 id cut
 id dark
+id dateButton
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -3040,6 +3042,8 @@ id edit_query
 id elastic
 id embed
 id end
+id endTimeButton
+id endTimeView
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
@@ -3317,6 +3321,8 @@ id src_over
 id standard
 id start
 id startHorizontal
+id startTimeButton
+id startTimeView
 id startToEnd
 id startVertical
 id staticLayout
@@ -3363,6 +3369,7 @@ id textView23
 id textView24
 id textView25
 id textView26
+id textView27
 id textView3
 id textView4
 id textView5

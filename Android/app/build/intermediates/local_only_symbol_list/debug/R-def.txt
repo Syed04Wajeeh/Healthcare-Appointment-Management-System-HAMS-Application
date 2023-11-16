@@ -9,11 +9,13 @@ id IncomingAppointmentView
 id PastAppointmentView
 id RefreshInbox
 id ScrollHorizontal
+id addShift
 id addShiftButton
 id backButton
 id buttonContainerRej
 id buttonContainerReq
 id comingAppointmentButton
+id dateButton
 id doctorAccountPassword
 id doctorAddress
 id doctorEmailUsername
@@ -31,6 +33,8 @@ id doctorNumber
 id doctorPhoneNumber
 id doctorRegisterButton
 id doctorSpecialty
+id endTimeButton
+id endTimeView
 id homeButton
 id horizontalView
 id horizontalViewRej
@@ -67,6 +71,8 @@ id registerPatient
 id rejectedPopup
 id shiftButton
 id shiftTable
+id startTimeButton
+id startTimeView
 id textView
 id textView10
 id textView11
@@ -83,6 +89,7 @@ id textView23
 id textView24
 id textView25
 id textView26
+id textView27
 id textView3
 id textView4
 id textView5
