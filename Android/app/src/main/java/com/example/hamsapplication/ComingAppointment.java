@@ -158,12 +158,11 @@ public class ComingAppointment extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_past_appointment);
+        setContentView(R.layout.activity_coming_appointment);
 
-        layout  = (TableLayout) findViewById(R.id.PastAppointmentView);
+        layout  = (TableLayout) findViewById(R.id.IncomingAppointmentView);
         back = (Button) findViewById(R.id.backButton);
-
-
+        refresh = (Button)findViewById(R.id.RefreshAppointment);
 
 
         populateArray(); //populate the layouts
@@ -171,8 +170,15 @@ public class ComingAppointment extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener(){ //go back to doctor homepage
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ComingAppointment.this, WelcomeScreenPatient.class);
+                Intent intent = new Intent(ComingAppointment.this, WelcomeScreenDoctor.class);
                 startActivity(intent);
+            }
+        });
+
+        refresh.setOnClickListener(new View.OnClickListener(){//refresh the layouts
+            @Override
+            public void onClick(View view) {
+                populateArray();
             }
         });
     }
