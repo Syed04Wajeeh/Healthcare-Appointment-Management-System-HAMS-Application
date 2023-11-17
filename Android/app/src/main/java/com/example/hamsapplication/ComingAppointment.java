@@ -67,13 +67,6 @@ public class ComingAppointment extends AppCompatActivity {
         //clear both layouts
         layout.removeAllViews();
 
-        //add INBOX and REJECTED text to the layouts
-        TableRow newRow = new TableRow(this);
-        TextView inboxText = new TextView(this);
-        inboxText.setText("INBOX\n");
-        newRow.addView(inboxText);
-        layout.addView(newRow);
-
         for (ArrayList<String> list: masterInformation) {// loop through each obj
             if(list.size() > 1) { //create a string to display all user info
                 //makes sure it doesnt iterate through admin object!
