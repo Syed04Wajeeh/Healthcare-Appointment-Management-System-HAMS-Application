@@ -1,5 +1,7 @@
 package com.example.hamsapplication;
 
+import android.util.Log;
+
 import androidx.annotation.NonNull;
 
 import com.google.firebase.database.DataSnapshot;
@@ -11,6 +13,8 @@ import com.google.firebase.database.ValueEventListener;
 public class Shift {
     public int day, month, year, startHour, startMinute, endHour, endMinute;
     public float calcStartTime, calcEndTime;
+
+    String ID;
 
     public Shift() {
     }
@@ -27,32 +31,11 @@ public class Shift {
         this.calcEndTime = endHour + ((float)endMinute/60);
     }
 
-    public interface OnDataReceivedListener {
-        void onDataReceived(String uniqueID);
+    public void setID(String ID){
+        this.ID = ID;
     }
-    public static void getID(final Shift desiredShift, final CurrentUser.OnDataReceivedListener listener) {
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference rootRef = database.getReference();
 
-        rootRef.child("Users").child("Shifts").addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                String uniqueID = null;
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    Shift tempShift = snapshot.getValue(Shift.class);
-                    if (tempShift.calcStartTime == desiredShift.calcStartTime && tempShift.calcEndTime == desiredShift.calcEndTime && tempShift.day == desiredShift.day && tempShift.month == desiredShift.month && tempShift.year == desiredShift.year) {
-                        uniqueID = snapshot.getKey(); // Get the Firebase ID
-                        break;
-                    }
-                }
-                if (listener != null) {
-                    listener.onDataReceived(uniqueID);
-                }
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                // Handle onCancelled
-            }
-        });
+    public String getID() {
+        return ID;
     }
 }

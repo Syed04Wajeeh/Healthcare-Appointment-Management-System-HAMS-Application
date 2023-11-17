@@ -3243,6 +3243,7 @@ int id progress_horizontal 0x7f080194
 int id radio 0x7f080195
 int id ratio 0x7f080196
 int id rectangles 0x7f080197
+int id refreshButton 0x7f080252
 int id registerDoctor 0x7f080198
 int id registerPatient 0x7f080199
 int id rejectedPopup 0x7f08019a
@@ -3292,6 +3293,7 @@ int id selected 0x7f0801c5
 int id selection_type 0x7f0801c6
 int id sharedValueSet 0x7f0801c7
 int id sharedValueUnset 0x7f0801c8
+int id shiftBackButton 0x7f080253
 int id shiftButton 0x7f0801c9
 int id shiftTable 0x7f0801ca
 int id shortcut 0x7f0801cb

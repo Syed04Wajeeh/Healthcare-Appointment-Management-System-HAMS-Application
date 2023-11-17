@@ -104,9 +104,8 @@
       android:layout_marginBottom="16dp"
       android:text="Add Shift"
       app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.463"
-      app:layout_constraintStart_toStartOf="parent" />
+      app:layout_constraintEnd_toStartOf="@+id/refreshButton"
+      app:layout_constraintStart_toEndOf="@+id/shiftBackButton" />
 
   <TextView
       android:id="@+id/endTimeView"
@@ -137,5 +136,29 @@
       android:text="Select Date"
       app:layout_constraintBottom_toTopOf="@+id/addShiftButton"
       app:layout_constraintEnd_toEndOf="parent" />
+
+  <Button
+      android:id="@+id/refreshButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="28dp"
+      android:layout_marginEnd="36dp"
+      android:layout_marginBottom="16dp"
+      android:text="refresh"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+  <Button
+      android:id="@+id/shiftBackButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginBottom="16dp"
+      android:text="Back"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/startTimeView"
+      app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -67,9 +67,11 @@ id patientHealthCardNumber
 id patientLastName
 id patientPhoneNumber
 id patientRegisterButton
+id refreshButton
 id registerDoctor
 id registerPatient
 id rejectedPopup
+id shiftBackButton
 id shiftButton
 id shiftTable
 id startTimeButton

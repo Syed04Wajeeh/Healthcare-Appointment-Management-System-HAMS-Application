@@ -38,6 +38,8 @@ public class ShiftPage extends AppCompatActivity {
     Button timeEndButton;
     Button dateButton;
     Button addShiftButton;
+    Button refresh;
+    Button back;
     TextView startTime;
     TextView endTime;
     private DatePickerDialog datePickerDialog;
@@ -59,10 +61,13 @@ public class ShiftPage extends AppCompatActivity {
         addShiftButton = (Button) findViewById(R.id.addShiftButton);
         startTime = (TextView) findViewById(R.id.startTimeView);
         endTime = (TextView) findViewById(R.id.endTimeView);
+
+        refresh = (Button) findViewById(R.id.refreshButton);
+        back = (Button) findViewById(R.id.shiftBackButton);
         
         initDatePicker();
         dateButton = (Button) findViewById(R.id.dateButton);
-        dateButton.setText(getTodaysDate());
+        dateButton.setText("JAN 01 2000");
 
         Calendar cal = Calendar.getInstance();
         int thisDay = cal.get(Calendar.DAY_OF_MONTH);
@@ -78,7 +83,9 @@ public class ShiftPage extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         ArrayList<Shift> allShifts = new ArrayList<>();
                         for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                            String ID = snapshot.getKey();
                             Shift tempShift = snapshot.getValue(Shift.class);
+                            tempShift.setID(ID);
                             allShifts.add(tempShift);
                         }
                         populateTable(allShifts, layout, uniqueID);
@@ -93,12 +100,30 @@ public class ShiftPage extends AppCompatActivity {
         });
 
 
+        refresh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ShiftPage.this, ShiftPage.class);
+                startActivity(intent);
+                refresh.setEnabled(false);
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ShiftPage.this, WelcomeScreenDoctor.class);
+                startActivity(intent);
+                refresh.setEnabled(false);
+            }
+        });
         addShiftButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) { //button that checks for shifts
 
                 Shift shift = new Shift(shiftDay, shiftMonth, shiftYear, startHour, startMinute, endHour, endMinute);
+                Log.d("String.valueOf(shift.day)sfsdfgsdwe4r5t634gw3w356e564hbe456ne456hne46hb5e456he456he46h5", "String.valueOf(thisDay)");
                 if (startMinute == 0 || startMinute == 30){
                     if(endMinute == 0 || endMinute == 30){
                         float floatStartMin = startMinute;
@@ -108,7 +133,9 @@ public class ShiftPage extends AppCompatActivity {
                         if (startTimer < endTimer){
                             if(shift.year >= thisYear){
                                 if(shift.month >= thisMonth || shift.year > thisYear){
-                                    if(shift.day >= thisDay - 1 || shift.month > thisMonth){
+                                    Log.d("String.valueOf(shift.day)", "String.valueOf(thisDay)");
+                                    Log.d(String.valueOf(shift.day), String.valueOf(thisDay));
+                                    if(thisDay <= shift.day  || shift.month > thisMonth){
                                         CurrentUser.getID(new CurrentUser.OnDataReceivedListener() {
                                             @Override
                                             public void onDataReceived(String uniqueID) {
@@ -123,20 +150,29 @@ public class ShiftPage extends AppCompatActivity {
                                                         }
                                                         if (allShifts.size() == 0){
                                                             doctorInformation.addShift(shift);
+                                                            Toast.makeText(getApplicationContext(), "Shift added, Refresh page", Toast.LENGTH_SHORT).show();
                                                         }else{
+                                                            boolean send = true;
                                                             for(Shift tempShift : allShifts){
-                                                                if(shift.year != tempShift.year || shift.month != tempShift.month || shift.day != tempShift.day){
-                                                                    doctorInformation.addShift(shift);
-                                                                }else if(shift.calcStartTime < tempShift.calcStartTime && shift.calcEndTime < tempShift.calcStartTime){
-                                                                    doctorInformation.addShift(shift);
-                                                                }else if(shift.calcEndTime > tempShift.calcEndTime && shift.calcStartTime > shift.calcEndTime){
-                                                                    doctorInformation.addShift(shift);
-                                                                }else{
-                                                                    Toast.makeText(getApplicationContext(), "You cannot have overlapping shifts", Toast.LENGTH_SHORT).show();
+                                                                Log.d(String.valueOf(shift.year), String.valueOf(tempShift.year));
+                                                                Log.d(String.valueOf(shift.month), String.valueOf(tempShift.month));
+                                                                Log.d(String.valueOf(shift.day), String.valueOf(tempShift.day));
+                                                                if(shift.year == tempShift.year || shift.month == tempShift.month || shift.day == tempShift.day){
+                                                                    if(shift.calcStartTime <= tempShift.calcStartTime && shift.calcEndTime >= tempShift.calcStartTime){
+                                                                        Toast.makeText(getApplicationContext(), "You cannot have overlapping shifts", Toast.LENGTH_SHORT).show();
+                                                                        send = false;
+                                                                    }else if(shift.calcEndTime >= tempShift.calcEndTime && shift.calcStartTime <= tempShift.calcEndTime){
+                                                                        Toast.makeText(getApplicationContext(), "You cannot have overlapping shifts", Toast.LENGTH_SHORT).show();
+                                                                        send = false;
+                                                                    }
                                                                 }
                                                             }
+                                                            if (send){
+                                                                doctorInformation.addShift(shift);
+                                                                Toast.makeText(getApplicationContext(), "Shift added, Refresh page", Toast.LENGTH_SHORT).show();
+                                                            }
+
                                                         }
-                                                        populateTable(allShifts, layout, uniqueID);
                                                     }
                                                     @Override
                                                     public void onCancelled(@NonNull DatabaseError databaseError) {
@@ -145,14 +181,14 @@ public class ShiftPage extends AppCompatActivity {
                                             }
                                         });
 
-                                        }else{
-                                        Toast.makeText(getApplicationContext(), "You cannot make a shift in the past", Toast.LENGTH_SHORT).show();
+                                    }else{
+                                        Toast.makeText(getApplicationContext(), "You cannot make a shift in the past (day)", Toast.LENGTH_SHORT).show();
                                     }
                                 }else{
-                                    Toast.makeText(getApplicationContext(), "You cannot make a shift in the past", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getApplicationContext(), "You cannot make a shift in the past (month)", Toast.LENGTH_SHORT).show();
                                 }
                             }else{
-                                Toast.makeText(getApplicationContext(), "You cannot make a shift in the past", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "You cannot make a shift in the past (year)", Toast.LENGTH_SHORT).show();
                             }
                         }else{
                             Toast.makeText(getApplicationContext(), "Invalid Times: your end time cannot be before your start time", Toast.LENGTH_SHORT).show();
@@ -193,24 +229,14 @@ public class ShiftPage extends AppCompatActivity {
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Shift.getID(tempShift, new CurrentUser.OnDataReceivedListener() {
-                            @Override
-                            public void onDataReceived(String uniqueID) {
-                                if(uniqueID == null){
-                                    Log.d("UNIQUEID", "BNULLLL");
-                                }
-
-                                DatabaseReference shiftRef = FirebaseDatabase.getInstance().getReference().child("Users").child("Shifts").child(uniqueID);
-                                shiftRef.removeValue();
-                                button.setEnabled(false);
-                                layout.removeView(row);
-                            }
-                        });
+                        Log.d(uniqueID, tempShift.getID());
+                        FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child("Shifts").child(tempShift.getID()).setValue(null);
+                        button.setEnabled(false);
+                        layout.removeView(row);
                     }
                 });
             }
         }
-
     }
     private String getTodaysDate() {
         Calendar cal = Calendar.getInstance();

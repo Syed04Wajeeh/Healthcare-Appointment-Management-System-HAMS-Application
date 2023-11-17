@@ -3244,6 +3244,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id refreshButton
 id registerDoctor
 id registerPatient
 id rejectedPopup
@@ -3293,6 +3294,7 @@ id selected
 id selection_type
 id sharedValueSet
 id sharedValueUnset
+id shiftBackButton
 id shiftButton
 id shiftTable
 id shortcut
