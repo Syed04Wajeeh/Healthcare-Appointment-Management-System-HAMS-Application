@@ -69,6 +69,28 @@ public class ShiftPage extends AppCompatActivity {
         int thisYear = cal.get(Calendar.YEAR);
         int thisMonth = cal.get(Calendar.MONTH) + 1;
 
+        CurrentUser.getID(new CurrentUser.OnDataReceivedListener() {
+            @Override
+            public void onDataReceived(String uniqueID) {
+                FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child("Shifts").addListenerForSingleValueEvent(new ValueEventListener() {
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        ArrayList<Shift> allShifts = new ArrayList<>();
+                        for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                            Shift tempShift = snapshot.getValue(Shift.class);
+                            allShifts.add(tempShift);
+                        }
+                        populateTable(allShifts, layout, uniqueID);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+            }
+        });
 
 
         addShiftButton.setOnClickListener(new View.OnClickListener() {
@@ -114,6 +136,7 @@ public class ShiftPage extends AppCompatActivity {
                                                                 }
                                                             }
                                                         }
+                                                        populateTable(allShifts, layout, uniqueID);
                                                     }
                                                     @Override
                                                     public void onCancelled(@NonNull DatabaseError databaseError) {
@@ -173,7 +196,14 @@ public class ShiftPage extends AppCompatActivity {
                         Shift.getID(tempShift, new CurrentUser.OnDataReceivedListener() {
                             @Override
                             public void onDataReceived(String uniqueID) {
-                                DatabaseReference shiftRef = FirebaseDatabase.getInstance().getReference().child("Users").child("Shifts").child()
+                                if(uniqueID == null){
+                                    Log.d("UNIQUEID", "BNULLLL");
+                                }
+
+                                DatabaseReference shiftRef = FirebaseDatabase.getInstance().getReference().child("Users").child("Shifts").child(uniqueID);
+                                shiftRef.removeValue();
+                                button.setEnabled(false);
+                                layout.removeView(row);
                             }
                         });
                     }
