@@ -2857,6 +2857,7 @@ id ScrollHorizontal
 id TOP_END
 id TOP_START
 id accelerate
+id acceptSwitch
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
 id accessibility_custom_action_1

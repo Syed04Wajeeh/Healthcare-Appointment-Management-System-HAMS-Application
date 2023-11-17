@@ -10,6 +10,7 @@ id PastAppointmentView
 id RefreshAppointment
 id RefreshInbox
 id ScrollHorizontal
+id acceptSwitch
 id addShift
 id addShiftButton
 id backButton

@@ -2856,6 +2856,7 @@ int id ScrollHorizontal 0x7f080011
 int id TOP_END 0x7f080012
 int id TOP_START 0x7f080013
 int id accelerate 0x7f080014
+int id acceptSwitch 0x7f080254
 int id accessibility_action_clickable_span 0x7f080015
 int id accessibility_custom_action_0 0x7f080016
 int id accessibility_custom_action_1 0x7f080017

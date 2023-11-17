@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Switch;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -25,6 +26,7 @@ public class ComingAppointment extends AppCompatActivity {
     Button back;
     Button refresh;
     TableLayout layout;
+    Switch accept;
 
     //this function loads all coming appointments into the layout
     public void populateTable(ArrayList<Appointment> allAppointments, TableLayout layout, String uniqueID){
@@ -92,6 +94,7 @@ public class ComingAppointment extends AppCompatActivity {
         layout  = (TableLayout) findViewById(R.id.IncomingAppointmentView);
         back = (Button) findViewById(R.id.backButton);
         refresh = (Button)findViewById(R.id.RefreshAppointment);
+        accept = (Switch)findViewById(R.id.acceptSwitch);
 
         CurrentUser.getID(new CurrentUser.OnDataReceivedListener() { //get the current user ID
             @Override
@@ -106,7 +109,9 @@ public class ComingAppointment extends AppCompatActivity {
 
                             if (tempAppointment.status == 0 || tempAppointment.status == 1){ // check if current appointment is accepted or not looked at
                                 if(!tempAppointment.isPast()) {//check if appointment is past
-
+                                    if (accept.isChecked()){//if the autoaccept is on, accept all appointment requests
+                                        FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child("Appointment").child(ID).child("status").setValue(1);
+                                    }
                                     //set appointment ID and add to the array of coming appointments
                                     tempAppointment.setID(ID);
                                     allComingAppointments.add(tempAppointment);
