@@ -10,7 +10,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class Shift {
+public class Shift {//class for shifts
     public int day, month, year, startHour, startMinute, endHour, endMinute;
     public float calcStartTime, calcEndTime;
 
