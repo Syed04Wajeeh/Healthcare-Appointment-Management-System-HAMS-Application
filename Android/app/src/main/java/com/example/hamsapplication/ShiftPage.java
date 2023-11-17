@@ -1,20 +1,34 @@
 package com.example.hamsapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TimePicker;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import org.w3c.dom.Text;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Locale;
 
@@ -27,13 +41,18 @@ public class ShiftPage extends AppCompatActivity {
     TextView startTime;
     TextView endTime;
     private DatePickerDialog datePickerDialog;
+    TableLayout layout;
     
 
     int startHour, startMinute, endHour, endMinute, shiftDay, shiftMonth, shiftYear;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shifts);
+
+        layout = (TableLayout) findViewById(R.id.shiftTable);
+
         timeStartButton = (Button) findViewById(R.id.startTimeButton);
         timeEndButton = (Button) findViewById(R.id.endTimeButton);
         
@@ -49,10 +68,14 @@ public class ShiftPage extends AppCompatActivity {
         int thisDay = cal.get(Calendar.DAY_OF_MONTH);
         int thisYear = cal.get(Calendar.YEAR);
         int thisMonth = cal.get(Calendar.MONTH) + 1;
+
+
+
         addShiftButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) { //button that checks for shifts
+
                 Shift shift = new Shift(shiftDay, shiftMonth, shiftYear, startHour, startMinute, endHour, endMinute);
                 if (startMinute == 0 || startMinute == 30){
                     if(endMinute == 0 || endMinute == 30){
@@ -62,18 +85,44 @@ public class ShiftPage extends AppCompatActivity {
                         float endTimer = endHour + (floatEndMin / 60);
                         if (startTimer < endTimer){
                             if(shift.year >= thisYear){
-                                if(shift.month >= thisMonth){
-                                    if(shift.day >= thisDay){
-                                        generalInformation.searchForAccount(CurrentUser.username, new generalInformation.AccountSearchCallback() {
+                                if(shift.month >= thisMonth || shift.year > thisYear){
+                                    if(shift.day >= thisDay - 1 || shift.month > thisMonth){
+                                        CurrentUser.getID(new CurrentUser.OnDataReceivedListener() {
                                             @Override
-                                            public void onAccountSearchResult(generalInformation user) {
-                                                doctorInformation doctor = (doctorInformation) user;
-                                                for (Shift docShift : doctor.shiftArray){
+                                            public void onDataReceived(String uniqueID) {
+                                                FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child("Shifts").addListenerForSingleValueEvent(new ValueEventListener() {
 
-                                                }
+                                                    @Override
+                                                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                                        ArrayList<Shift> allShifts = new ArrayList<>();
+                                                        for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                                                            Shift tempShift = snapshot.getValue(Shift.class);
+                                                            allShifts.add(tempShift);
+                                                        }
+                                                        if (allShifts.size() == 0){
+                                                            doctorInformation.addShift(shift);
+                                                        }else{
+                                                            for(Shift tempShift : allShifts){
+                                                                if(shift.year != tempShift.year || shift.month != tempShift.month || shift.day != tempShift.day){
+                                                                    doctorInformation.addShift(shift);
+                                                                }else if(shift.calcStartTime < tempShift.calcStartTime && shift.calcEndTime < tempShift.calcStartTime){
+                                                                    doctorInformation.addShift(shift);
+                                                                }else if(shift.calcEndTime > tempShift.calcEndTime && shift.calcStartTime > shift.calcEndTime){
+                                                                    doctorInformation.addShift(shift);
+                                                                }else{
+                                                                    Toast.makeText(getApplicationContext(), "You cannot have overlapping shifts", Toast.LENGTH_SHORT).show();
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    @Override
+                                                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                                                    }
+                                                });
                                             }
                                         });
-                                    }else{
+
+                                        }else{
                                         Toast.makeText(getApplicationContext(), "You cannot make a shift in the past", Toast.LENGTH_SHORT).show();
                                     }
                                 }else{
@@ -97,6 +146,42 @@ public class ShiftPage extends AppCompatActivity {
 
     }
 
+    public void populateTable(ArrayList<Shift> allShifts, TableLayout layout, String uniqueID){
+
+        layout.removeAllViews();
+
+        if(allShifts.size() == 0){
+
+        }else{
+            for (Shift tempShift : allShifts){
+                String concat = makeDateString(tempShift.day, tempShift.month, tempShift.year) + "  " + tempShift.startHour + ":" + tempShift.startMinute + "-" + tempShift.endHour + ":" + tempShift.endMinute;
+                TableRow row = new TableRow(this);
+                TextView text = new TextView(this);
+                Button button = new Button(this);
+
+                text.setText(concat);
+                button.setText("CANCEL");
+                button.setBackgroundColor(Color.RED);
+
+                row.addView(button);
+                row.addView(text);
+                layout.addView(row);
+
+                button.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Shift.getID(tempShift, new CurrentUser.OnDataReceivedListener() {
+                            @Override
+                            public void onDataReceived(String uniqueID) {
+                                DatabaseReference shiftRef = FirebaseDatabase.getInstance().getReference().child("Users").child("Shifts").child()
+                            }
+                        });
+                    }
+                });
+            }
+        }
+
+    }
     private String getTodaysDate() {
         Calendar cal = Calendar.getInstance();
         int year = cal.get(Calendar.YEAR);
@@ -167,7 +252,6 @@ public class ShiftPage extends AppCompatActivity {
                 startHour = selectedHour;
                 startMinute = selectedMinute;
                 startTime.setText(String.format(Locale.getDefault(), "%02d:%02d", startHour, startMinute));
-                Log.d("minute is", String.valueOf(startMinute));
 
             }
         };
@@ -184,7 +268,6 @@ public class ShiftPage extends AppCompatActivity {
                 endHour = selectedHour;
                 endMinute = selectedMinute;
                 endTime.setText(String.format(Locale.getDefault(), "%02d:%02d", endHour, endMinute));
-                Log.d("end", String.valueOf(endMinute));
 
             }
         };

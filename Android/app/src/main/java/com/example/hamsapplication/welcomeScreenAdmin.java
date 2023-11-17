@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -16,6 +17,13 @@ public class welcomeScreenAdmin extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_screen_admin); //setting layout for the admin screen
+
+        CurrentUser.getID(new CurrentUser.OnDataReceivedListener() {
+            @Override
+            public void onDataReceived(String uniqueID) {
+                Log.d(uniqueID, uniqueID);
+            }
+        });
 
         logOut = (Button) findViewById(R.id.logOff);
         inbox = (Button) findViewById(R.id.inbox);

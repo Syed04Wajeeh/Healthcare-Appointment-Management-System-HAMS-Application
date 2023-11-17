@@ -18,6 +18,13 @@ public class WelcomeScreenDoctor extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_screen_doctor); //setting layout for the doctor screen
+
+        CurrentUser.getID(new CurrentUser.OnDataReceivedListener() {
+            @Override
+            public void onDataReceived(String uniqueID) {
+                Log.d(uniqueID, uniqueID);
+            }
+        });
         logOut = (Button) findViewById(R.id.logOff);
         shift = (Button) findViewById(R.id.shiftButton);
         pastAppointment = (Button) findViewById(R.id.pastAppointmentButton);
