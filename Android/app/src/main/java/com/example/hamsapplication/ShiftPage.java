@@ -238,7 +238,7 @@ public class ShiftPage extends AppCompatActivity {
             }
         }
     }
-    private String getTodaysDate() {
+    public static String getTodaysDate() {
         Calendar cal = Calendar.getInstance();
         int year = cal.get(Calendar.YEAR);
         int month = cal.get(Calendar.MONTH) + 1;
@@ -268,11 +268,11 @@ public class ShiftPage extends AppCompatActivity {
         datePickerDialog = new DatePickerDialog(this, style, dateSetListener, year, month, day);
     }
 
-    private String makeDateString(int day, int month, int year) {
+    public static String makeDateString(int day, int month, int year) {
         return getMonthFormat(month) + " " + day + " " + year;
     }
 
-    private String getMonthFormat(int month) {
+    public static String getMonthFormat(int month) {
         if (month == 1){
             return "JAN";
         }if (month == 2){

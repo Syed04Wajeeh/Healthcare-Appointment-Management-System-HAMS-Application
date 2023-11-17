@@ -40,7 +40,7 @@ public class doctorInformation extends generalInformation {
         myRef.child(doctorId).setValue(this);
     }
 
-    public static void addShift(Shift shift){
+    public static void addShift(Shift shift){//this function adds a Shift path if not existant in DB, then adds shift object
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference rootRef = database.getReference();
         rootRef.child("Users").addListenerForSingleValueEvent(new ValueEventListener() {
@@ -52,7 +52,7 @@ public class doctorInformation extends generalInformation {
                     if (user.username.equals(CurrentUser.username)){
                         uniqueID = snapshot.getKey(); // Get the Firebase ID
                         DatabaseReference userRef = rootRef.child("Users").child(uniqueID).child("Shifts");
-                        String appointmentId = userRef.push().getKey();
+                        String appointmentId = userRef.push().getKey();//push to DB
                         userRef.child(appointmentId).setValue(shift);
 
                     }
@@ -66,7 +66,7 @@ public class doctorInformation extends generalInformation {
         });
     }
 
-    public static void addAppointment(Appointment appointment){
+    public static void addAppointment(Appointment appointment){//same as above, for appointments
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference rootRef = database.getReference();
         rootRef.child("Users").addListenerForSingleValueEvent(new ValueEventListener() {

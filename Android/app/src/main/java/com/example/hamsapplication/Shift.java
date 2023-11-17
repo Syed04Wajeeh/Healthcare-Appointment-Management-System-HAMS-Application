@@ -14,7 +14,7 @@ public class Shift {
     public int day, month, year, startHour, startMinute, endHour, endMinute;
     public float calcStartTime, calcEndTime;
 
-    String ID;
+    private String ID;
 
     public Shift() {
     }

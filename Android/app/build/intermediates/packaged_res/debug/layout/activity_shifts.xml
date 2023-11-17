@@ -153,9 +153,12 @@
       android:id="@+id/shiftBackButton"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginStart="12dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginBottom="16dp"
       android:text="Back"
+      app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      tools:layout_editor_absoluteY="667dp" />
+      app:layout_constraintTop_toBottomOf="@+id/startTimeView"
+      app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

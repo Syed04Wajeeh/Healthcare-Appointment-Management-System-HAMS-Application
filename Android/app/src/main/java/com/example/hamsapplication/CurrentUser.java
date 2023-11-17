@@ -9,13 +9,14 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+//this class stores the username of the current user logged into the application
 public class CurrentUser {
     public static String username = "";
 
-    public interface OnDataReceivedListener {
+    public interface OnDataReceivedListener {//callback interface
         void onDataReceived(String uniqueID);
     }
-    public static void getID(final OnDataReceivedListener listener) {
+    public static void getID(final OnDataReceivedListener listener) {//this method is a callback for the ID of the username above
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference rootRef = database.getReference();
 
