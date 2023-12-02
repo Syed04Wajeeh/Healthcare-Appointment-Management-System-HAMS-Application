@@ -4,7 +4,8 @@ import java.util.Calendar;
 
 public class Appointment {
     public boolean past;
-    public patientInformation patient;
+    public String patientID;
+    public String doctorID;
     public float startTime;
     public float endTime;
     public int  day, month, year, status, startHour, startMinute, endHour, endMinute; //-1 is rejected, 0 is not looked at, 1 is accepted
@@ -22,7 +23,6 @@ public class Appointment {
     }
 
     public Appointment(patientInformation patient, int day, int month, int year,  int startHour, int startMinute, int endHour, int endMinute) {
-        this.patient = patient;
         this.day = day;
         this.month = month;
         this.year = year;
@@ -35,6 +35,7 @@ public class Appointment {
         this.endTime = endHour + ((float)endMinute/60);
         this.past = isPast();
     }
+
 
     public boolean isPast(){ //checks if this appointment has past or not
         Calendar cal = Calendar.getInstance();

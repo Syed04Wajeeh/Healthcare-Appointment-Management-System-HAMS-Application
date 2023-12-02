@@ -1,7 +1,14 @@
 package com.example.hamsapplication;
 
+import android.util.Log;
+
+import androidx.annotation.NonNull;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 
 public class patientInformation extends generalInformation {
@@ -15,6 +22,15 @@ public class patientInformation extends generalInformation {
         this.healthNumber = healthNumber;
     }
 
+    public static void addAppointmentToPatient(Appointment appointment){//same as above, for appointments
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference rootRef = database.getReference();
+
+        DatabaseReference userRef = rootRef.child("Users").child(appointment.patientID).child("Appointments");
+        String appointmentId = userRef.push().getKey();
+        userRef.child(appointmentId).setValue(appointment);
+
+    }
     @Override
     public void addToCollection() {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
