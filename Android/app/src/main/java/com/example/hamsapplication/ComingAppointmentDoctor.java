@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Switch;
@@ -16,13 +15,12 @@ import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class ComingAppointment extends AppCompatActivity {
+public class ComingAppointmentDoctor extends AppCompatActivity {
     Button back;
     Button refresh;
     TableLayout layout;
@@ -132,7 +130,7 @@ public class ComingAppointment extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener(){ //go back to doctor homepage
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ComingAppointment.this, WelcomeScreenDoctor.class);
+                Intent intent = new Intent(ComingAppointmentDoctor.this, WelcomeScreenDoctor.class);
                 startActivity(intent);
             }
         });
@@ -140,7 +138,7 @@ public class ComingAppointment extends AppCompatActivity {
         refresh.setOnClickListener(new View.OnClickListener(){//refresh the page
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ComingAppointment.this, ComingAppointment.class);
+                Intent intent = new Intent(ComingAppointmentDoctor.this, ComingAppointmentDoctor.class);
                 startActivity(intent);
             }
         });
