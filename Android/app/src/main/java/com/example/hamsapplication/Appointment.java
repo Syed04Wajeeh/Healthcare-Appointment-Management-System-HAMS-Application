@@ -7,8 +7,7 @@ public class Appointment {
     public String patientID;
     public String doctorID;
     public float startTime;
-    public float endTime;
-    public int  day, month, year, status, startHour, startMinute, endHour, endMinute; //-1 is rejected, 0 is not looked at, 1 is accepted
+    public int  day, month, year, status, startHour, startMinute; //-1 is rejected, 0 is not looked at, 1 is accepted
 
     private String ID;
     public Appointment() {
@@ -29,10 +28,7 @@ public class Appointment {
         this.status = 0;
         this.startHour = startHour;
         this.startMinute = startMinute;
-        this.endHour = endHour;
-        this.endMinute = endMinute;
         this.startTime = startHour + ((float)startMinute/60); //holds start and end time with decimal value for minutes
-        this.endTime = endHour + ((float)endMinute/60);
         this.past = isPast();
     }
 
@@ -50,7 +46,7 @@ public class Appointment {
             return true;
         }else if(this.year == currYear && this.month == currMonth && this.day < currDay){
             return true;
-        }else if(this.year == currYear && this.month == currMonth && this.day == currDay && this.endHour < currHour){
+        }else if(this.year == currYear && this.month == currMonth && this.day == currDay && this.startHour < currHour){
             return true;
         }
         return false;

@@ -49,7 +49,7 @@ public class WelcomeScreenDoctor extends AppCompatActivity {
         pastAppointment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { //button that takes you to the past appointments page
-                Intent intent = new Intent(WelcomeScreenDoctor.this, PastAppointment.class);
+                Intent intent = new Intent(WelcomeScreenDoctor.this, PastAppointmentDoctor.class);
                 startActivity(intent);
                 pastAppointment.setEnabled(false);
             }
@@ -57,7 +57,7 @@ public class WelcomeScreenDoctor extends AppCompatActivity {
         comingAppointment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { //button that takes you to the coming appointments page
-                Intent intent = new Intent(WelcomeScreenDoctor.this, ComingAppointment.class);
+                Intent intent = new Intent(WelcomeScreenDoctor.this, ComingAppointmentDoctor.class);
                 startActivity(intent);
                 comingAppointment.setEnabled(false);
             }

@@ -2935,6 +2935,7 @@ id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
 id backButton
+id backButtonSpecialty
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -2972,6 +2973,7 @@ id clockwise
 id closest
 id collapseActionView
 id comingAppointmentButton
+id comingPatientAppointments
 id compress
 id confirm_button
 id constraint
@@ -3057,6 +3059,7 @@ id fill
 id fill_horizontal
 id fill_vertical
 id filled
+id findAppointment
 id fitCenter
 id fitEnd
 id fitStart
@@ -3224,6 +3227,7 @@ id parent_matrix
 id passwordInput
 id password_toggle
 id pastAppointmentButton
+id pastPatientAppointment
 id path
 id pathRelative
 id patientAccountPassword
@@ -3313,6 +3317,7 @@ id snapMargins
 id south
 id spacer
 id special_effects_controller_view_tag
+id specialtyTable
 id spline
 id split_action_bar
 id spread
@@ -3364,6 +3369,7 @@ id textView12
 id textView13
 id textView14
 id textView15
+id textView16
 id textView19
 id textView2
 id textView20
@@ -3540,11 +3546,15 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_book_appointment_patient
+layout activity_book_appointment_patient_row_page
 layout activity_coming_appointment
+layout activity_coming_appointment_patient
 layout activity_created_account
 layout activity_doctor_register
 layout activity_inbox
 layout activity_past_appointment
+layout activity_past_appointment_patient
 layout activity_patient_register
 layout activity_shifts
 layout activity_welcome_screen_admin

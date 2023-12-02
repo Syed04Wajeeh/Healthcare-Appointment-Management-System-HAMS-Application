@@ -2934,6 +2934,7 @@ int id autoComplete 0x7f08005f
 int id autoCompleteToEnd 0x7f080060
 int id autoCompleteToStart 0x7f080061
 int id backButton 0x7f080062
+int id backButtonSpecialty 0x7f080255
 int id barrier 0x7f080063
 int id baseline 0x7f080064
 int id beginOnFirstDraw 0x7f080065
@@ -2971,6 +2972,7 @@ int id clockwise 0x7f080084
 int id closest 0x7f080085
 int id collapseActionView 0x7f080086
 int id comingAppointmentButton 0x7f080087
+int id comingPatientAppointments 0x7f080256
 int id compress 0x7f080088
 int id confirm_button 0x7f080089
 int id constraint 0x7f08008a
@@ -3056,6 +3058,7 @@ int id fill 0x7f0800d9
 int id fill_horizontal 0x7f0800da
 int id fill_vertical 0x7f0800db
 int id filled 0x7f0800dc
+int id findAppointment 0x7f080257
 int id fitCenter 0x7f0800dd
 int id fitEnd 0x7f0800de
 int id fitStart 0x7f0800df
@@ -3223,6 +3226,7 @@ int id parent_matrix 0x7f080180
 int id passwordInput 0x7f080181
 int id password_toggle 0x7f080182
 int id pastAppointmentButton 0x7f080183
+int id pastPatientAppointment 0x7f080258
 int id path 0x7f080184
 int id pathRelative 0x7f080185
 int id patientAccountPassword 0x7f080186
@@ -3312,6 +3316,7 @@ int id snapMargins 0x7f0801d9
 int id south 0x7f0801da
 int id spacer 0x7f0801db
 int id special_effects_controller_view_tag 0x7f0801dc
+int id specialtyTable 0x7f080259
 int id spline 0x7f0801dd
 int id split_action_bar 0x7f0801de
 int id spread 0x7f0801df
@@ -3363,6 +3368,7 @@ int id textView12 0x7f08020c
 int id textView13 0x7f08020d
 int id textView14 0x7f08020e
 int id textView15 0x7f08020f
+int id textView16 0x7f08025a
 int id textView19 0x7f080210
 int id textView2 0x7f080211
 int id textView20 0x7f080212
@@ -3539,11 +3545,15 @@ int layout abc_search_dropdown_item_icons_2line 0x7f0b0018
 int layout abc_search_view 0x7f0b0019
 int layout abc_select_dialog_material 0x7f0b001a
 int layout abc_tooltip 0x7f0b001b
+int layout activity_book_appointment_patient 0x7f0b0074
+int layout activity_book_appointment_patient_row_page 0x7f0b0075
 int layout activity_coming_appointment 0x7f0b001c
+int layout activity_coming_appointment_patient 0x7f0b0076
 int layout activity_created_account 0x7f0b001d
 int layout activity_doctor_register 0x7f0b001e
 int layout activity_inbox 0x7f0b001f
 int layout activity_past_appointment 0x7f0b0020
+int layout activity_past_appointment_patient 0x7f0b0077
 int layout activity_patient_register 0x7f0b0021
 int layout activity_shifts 0x7f0b0022
 int layout activity_welcome_screen_admin 0x7f0b0023
