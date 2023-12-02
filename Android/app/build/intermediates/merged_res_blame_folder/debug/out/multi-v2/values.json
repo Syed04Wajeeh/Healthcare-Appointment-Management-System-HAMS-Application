@@ -23,24 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\wajee\\OneDrive\\Desktop\\SEG\\project-project-group-23\\Android\\app\\src\\main\\res\\values\\colors.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "57,100",
-                        "endColumns": "41,41",
-                        "endOffsets": "94,137"
-                    },
-                    "to": {
-                        "startLines": "619,891",
-                        "startColumns": "4,4",
-                        "startOffsets": "31578,51320",
-                        "endColumns": "41,41",
-                        "endOffsets": "31615,51357"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\wajee\\OneDrive\\Desktop\\SEG\\project-project-group-23\\Android\\app\\src\\main\\res\\values\\strings.xml",
+                    "source": "E:\\SEG\\project-project-group-23\\Android\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
                         "startLines": "2,1",
                         "startColumns": "4,4",
@@ -88,23 +71,6 @@
                         "startOffsets": "110221,118778",
                         "endColumns": "67,166",
                         "endOffsets": "110284,118940"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\wajee\\OneDrive\\Desktop\\SEG\\project-project-group-23\\Android\\app\\build\\generated\\res\\processDebugGoogleServices\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "55,189,271,375,484,604,714",
-                        "endColumns": "133,81,103,108,119,109,86",
-                        "endOffsets": "184,266,370,479,599,709,796"
-                    },
-                    "to": {
-                        "startLines": "1840,1841,1842,1843,1844,1845,1955",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "120699,120833,120915,121019,121128,121248,137544",
-                        "endColumns": "133,81,103,108,119,109,86",
-                        "endOffsets": "120828,120910,121014,121123,121243,121353,137626"
                     }
                 },
                 {
@@ -160,6 +126,23 @@
                         "startOffsets": "106148,106188,107320,107502,107557,109053,109107,109159,109208,109269",
                         "endColumns": "39,46,42,54,46,53,51,48,60,49",
                         "endOffsets": "106183,106230,107358,107552,107599,109102,109154,109203,109264,109314"
+                    }
+                },
+                {
+                    "source": "E:\\SEG\\project-project-group-23\\Android\\app\\build\\generated\\res\\processDebugGoogleServices\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,189,271,375,484,604,714",
+                        "endColumns": "133,81,103,108,119,109,86",
+                        "endOffsets": "184,266,370,479,599,709,796"
+                    },
+                    "to": {
+                        "startLines": "1840,1841,1842,1843,1844,1845,1955",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "120699,120833,120915,121019,121128,121248,137544",
+                        "endColumns": "133,81,103,108,119,109,86",
+                        "endOffsets": "120828,120910,121014,121123,121243,121353,137626"
                     }
                 },
                 {
@@ -292,25 +275,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\wajee\\OneDrive\\Desktop\\SEG\\project-project-group-23\\Android\\app\\src\\main\\res\\values\\themes.xml",
-                    "from": {
-                        "startLines": "2,7",
-                        "startColumns": "4,4",
-                        "startOffsets": "102,337",
-                        "endLines": "5,7",
-                        "endColumns": "12,78",
-                        "endOffsets": "329,411"
-                    },
-                    "to": {
-                        "startLines": "2310,6107",
-                        "startColumns": "4,4",
-                        "startOffsets": "160613,422638",
-                        "endLines": "2313,6107",
-                        "endColumns": "12,77",
-                        "endOffsets": "160731,422711"
-                    }
-                },
-                {
                     "source": "C:\\Users\\wajee\\.gradle\\caches\\transforms-3\\b85d069fa0a3f80250b057840c3489b5\\transformed\\savedstate-1.2.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
@@ -364,6 +328,23 @@
                     }
                 },
                 {
+                    "source": "E:\\SEG\\project-project-group-23\\Android\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "57,100",
+                        "endColumns": "41,41",
+                        "endOffsets": "94,137"
+                    },
+                    "to": {
+                        "startLines": "619,891",
+                        "startColumns": "4,4",
+                        "startOffsets": "31578,51320",
+                        "endColumns": "41,41",
+                        "endOffsets": "31615,51357"
+                    }
+                },
+                {
                     "source": "C:\\Users\\wajee\\.gradle\\caches\\transforms-3\\50786544954b7496b0a92ded292da342\\transformed\\cardview-1.0.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,35,36,37,38,45,47,50,7",
@@ -380,6 +361,25 @@
                         "endLines": "35,628,629,630,631,974,975,976,2013,5248,5251,5254,9690",
                         "endColumns": "51,60,61,61,63,58,56,53,12,12,12,12,24",
                         "endOffsets": "1687,32317,32379,32441,32505,56930,56987,57041,142013,365390,365516,365644,631758"
+                    }
+                },
+                {
+                    "source": "E:\\SEG\\project-project-group-23\\Android\\app\\src\\main\\res\\values\\themes.xml",
+                    "from": {
+                        "startLines": "2,7",
+                        "startColumns": "4,4",
+                        "startOffsets": "102,337",
+                        "endLines": "5,7",
+                        "endColumns": "12,78",
+                        "endOffsets": "329,411"
+                    },
+                    "to": {
+                        "startLines": "2310,6107",
+                        "startColumns": "4,4",
+                        "startOffsets": "160613,422638",
+                        "endLines": "2313,6107",
+                        "endColumns": "12,77",
+                        "endOffsets": "160731,422711"
                     }
                 },
                 {

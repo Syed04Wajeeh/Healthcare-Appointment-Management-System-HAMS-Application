@@ -66,29 +66,13 @@ public class doctorInformation extends generalInformation {
         });
     }
 
-    public static void addAppointment(Appointment appointment){//same as above, for appointments
+    public static void addAppointmentToDoctor(Appointment appointment) {//same as above, for appointments
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference rootRef = database.getReference();
-        rootRef.child("Users").addListenerForSingleValueEvent(new ValueEventListener() {
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                String uniqueID;
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    generalInformation user = snapshot.getValue(generalInformation.class);
-                    if (user.username.equals(CurrentUser.username)){
-                        uniqueID = snapshot.getKey(); // Get the Firebase ID
-                        Log.d(uniqueID, uniqueID);
-                        DatabaseReference userRef = rootRef.child("Users").child(uniqueID).child("Appointments");
-                        String appointmentId = userRef.push().getKey();
-                        userRef.child(appointmentId).setValue(appointment);
 
-                    }
-                }
-            }
+        DatabaseReference userRef = rootRef.child("Users").child(appointment.doctorID).child("Appointments");
+        String appointmentId = userRef.push().getKey();
+        userRef.child(appointmentId).setValue(appointment);
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                //asd
-            }
-        });
     }
 }

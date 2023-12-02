@@ -29,103 +29,103 @@
 20-->[androidx.core:core:1.9.0] C:\Users\wajee\.gradle\caches\transforms-3\45dba061abe1e5d647d9f295032bd2d4\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 21
 22    <application
-22-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:5:5-54:19
+22-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:5:5-54:19
 23        android:allowBackup="true"
-23-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:6:9-35
+23-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:6:9-35
 24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 24-->[androidx.core:core:1.9.0] C:\Users\wajee\.gradle\caches\transforms-3\45dba061abe1e5d647d9f295032bd2d4\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 25        android:dataExtractionRules="@xml/data_extraction_rules"
-25-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:7:9-65
+25-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:7:9-65
 26        android:debuggable="true"
 27        android:extractNativeLibs="false"
 28        android:fullBackupContent="@xml/backup_rules"
-28-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:8:9-54
+28-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:8:9-54
 29        android:icon="@mipmap/ic_launcher"
-29-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:9:9-43
+29-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:9:9-43
 30        android:label="@string/app_name"
-30-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:10:9-41
+30-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:10:9-41
 31        android:roundIcon="@mipmap/ic_launcher_round"
-31-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:11:9-54
+31-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:11:9-54
 32        android:supportsRtl="true"
-32-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:12:9-35
+32-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:12:9-35
 33        android:testOnly="true"
 34        android:theme="@style/Theme.HAMSApplication" >
-34-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:13:9-53
+34-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:13:9-53
 35        <activity
-35-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:15:9-17:40
+35-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:15:9-17:40
 36            android:name="com.example.hamsapplication.ComingAppointment"
-36-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:16:13-46
+36-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:16:13-46
 37            android:exported="false" />
-37-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:17:13-37
+37-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:17:13-37
 38        <activity
-38-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:18:9-20:40
+38-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:18:9-20:40
 39            android:name="com.example.hamsapplication.PastAppointment"
-39-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:19:13-44
+39-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:19:13-44
 40            android:exported="false" />
-40-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:20:13-37
+40-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:20:13-37
 41        <activity
-41-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:21:9-23:40
+41-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:21:9-23:40
 42            android:name="com.example.hamsapplication.ShiftPage"
-42-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:22:13-38
+42-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:22:13-38
 43            android:exported="false" />
-43-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:23:13-37
+43-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:23:13-37
 44        <activity
-44-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:24:9-26:40
+44-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:24:9-26:40
 45            android:name="com.example.hamsapplication.Inbox"
-45-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:25:13-34
+45-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:25:13-34
 46            android:exported="false" />
-46-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:26:13-37
+46-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:26:13-37
 47        <activity
-47-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:27:9-29:40
+47-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:27:9-29:40
 48            android:name="com.example.hamsapplication.WelcomeScreenPatient"
-48-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:28:13-49
+48-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:28:13-49
 49            android:exported="false" />
-49-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:29:13-37
+49-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:29:13-37
 50        <activity
-50-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:30:9-32:40
+50-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:30:9-32:40
 51            android:name="com.example.hamsapplication.WelcomeScreenDoctor"
-51-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:31:13-48
+51-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:31:13-48
 52            android:exported="false" />
-52-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:32:13-37
+52-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:32:13-37
 53        <activity
-53-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:33:9-35:40
+53-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:33:9-35:40
 54            android:name="com.example.hamsapplication.welcomeScreenAdmin"
-54-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:34:13-47
+54-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:34:13-47
 55            android:exported="false" />
-55-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:35:13-37
+55-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:35:13-37
 56        <activity
-56-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:36:9-38:40
+56-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:36:9-38:40
 57            android:name="com.example.hamsapplication.createdAccount"
-57-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:37:13-43
+57-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:37:13-43
 58            android:exported="false" />
-58-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:38:13-37
+58-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:38:13-37
 59        <activity
-59-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:39:9-41:40
+59-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:39:9-41:40
 60            android:name="com.example.hamsapplication.doctorRegister"
-60-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:40:13-43
+60-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:40:13-43
 61            android:exported="false" />
-61-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:41:13-37
+61-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:41:13-37
 62        <activity
-62-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:42:9-44:40
+62-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:42:9-44:40
 63            android:name="com.example.hamsapplication.patientRegister"
-63-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:43:13-44
+63-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:43:13-44
 64            android:exported="false" />
-64-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:44:13-37
+64-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:44:13-37
 65        <activity
-65-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:45:9-53:20
+65-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:45:9-53:20
 66            android:name="com.example.hamsapplication.login"
-66-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:46:13-34
+66-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:46:13-34
 67            android:exported="true" >
-67-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:47:13-36
+67-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:47:13-36
 68            <intent-filter>
-68-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:48:13-52:29
+68-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:48:13-52:29
 69                <action android:name="android.intent.action.MAIN" />
-69-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:49:17-69
-69-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:49:25-66
+69-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:49:17-69
+69-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:49:25-66
 70
 71                <category android:name="android.intent.category.LAUNCHER" />
-71-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:51:17-77
-71-->C:\Users\wajee\OneDrive\Desktop\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:51:27-74
+71-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:51:17-77
+71-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:51:27-74
 72            </intent-filter>
 73        </activity>
 74
