@@ -66,13 +66,17 @@ public class doctorInformation extends generalInformation {
         });
     }
 
-    public static void addAppointmentToDoctor(Appointment appointment) {//same as above, for appointments
+    public static void addAppointmentToDoctor(Appointment appointment, String shiftID) {//same as above, for appointments
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference rootRef = database.getReference();
 
         DatabaseReference userRef = rootRef.child("Users").child(appointment.doctorID).child("Appointments");
         String appointmentId = userRef.push().getKey();
         userRef.child(appointmentId).setValue(appointment);
+
+        DatabaseReference userRef2 = rootRef.child("Users").child(appointment.doctorID).child("Shifts").child(shiftID).child("Appointments");
+        appointmentId = userRef2.push().getKey();
+        userRef2.child(appointmentId).setValue(appointment);
 
     }
 }

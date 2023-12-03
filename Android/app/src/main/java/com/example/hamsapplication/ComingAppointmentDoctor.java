@@ -62,7 +62,7 @@ public class ComingAppointmentDoctor extends AppCompatActivity {
                                 button.setOnClickListener(new View.OnClickListener() { //this is the reject button for all appointments, including accepted ones
                                     @Override
                                     public void onClick(View view) {
-                                        FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child("Appointment").child(tempAppointment.getID()).child("status").setValue(-1);
+                                        FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child("Appointment").child(tempAppointment.ID).child("status").setValue(-1);
                                         button.setEnabled(false);
                                         layout.removeView(newRow);
                                     }
@@ -77,7 +77,7 @@ public class ComingAppointmentDoctor extends AppCompatActivity {
                                     button1.setOnClickListener(new View.OnClickListener() { //button created to accept appointment
                                         @Override
                                         public void onClick(View view) {
-                                            FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child("Appointment").child(tempAppointment.getID()).child("status").setValue(1);
+                                            FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child("Appointment").child(tempAppointment.ID).child("status").setValue(1);
                                             button1.setEnabled(false);
                                         }
                                     });
@@ -130,7 +130,7 @@ public class ComingAppointmentDoctor extends AppCompatActivity {
                                         FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child("Appointment").child(ID).child("status").setValue(1);
                                     }
                                     //set appointment ID and add to the array of coming appointments
-                                    tempAppointment.setID(ID);
+                                    tempAppointment.ID = (ID);
                                     allComingAppointments.add(tempAppointment);
                                 }
                             }

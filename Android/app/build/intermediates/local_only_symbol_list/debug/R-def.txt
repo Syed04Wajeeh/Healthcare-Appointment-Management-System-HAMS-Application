@@ -14,6 +14,7 @@ id acceptSwitch
 id addShift
 id addShiftButton
 id backButton
+id backButtonBookPage
 id backButtonSpecialty
 id buttonContainerRej
 id buttonContainerReq
@@ -79,6 +80,7 @@ id rejectedPopup
 id shiftBackButton
 id shiftButton
 id shiftTable
+id shiftsAvailTable
 id specialtyTable
 id startTimeButton
 id startTimeView
@@ -90,6 +92,7 @@ id textView13
 id textView14
 id textView15
 id textView16
+id textView17
 id textView19
 id textView2
 id textView20

@@ -13,7 +13,7 @@ import com.google.firebase.database.ValueEventListener;
 public class Shift {//class for shifts
     public int day, month, year, startHour, startMinute, endHour, endMinute;
     public float calcStartTime, calcEndTime;
-    private String ID;
+    public String ID;
 
     public Shift() {
     }
@@ -30,11 +30,4 @@ public class Shift {//class for shifts
         this.calcEndTime = endHour + ((float)endMinute/60);
     }
 
-    public void setID(String ID){
-        this.ID = ID;
-    }
-
-    public String getID() {
-        return ID;
-    }
 }

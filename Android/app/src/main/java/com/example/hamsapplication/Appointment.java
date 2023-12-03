@@ -9,19 +9,13 @@ public class Appointment {
     public float startTime;
     public int  day, month, year, status, startHour, startMinute; //-1 is rejected, 0 is not looked at, 1 is accepted
 
-    private String ID;
+    public String ID;
     public Appointment() {
     }
 
-    public String getID() {
-        return ID;
-    }
-
-    public void setID(String ID) {
-        this.ID = ID;
-    }
-
-    public Appointment(patientInformation patient, int day, int month, int year,  int startHour, int startMinute, int endHour, int endMinute) {
+    public Appointment(String patientID, String doctorID, int day, int month, int year,  int startHour, int startMinute) {
+        this.patientID = patientID;
+        this.doctorID = doctorID;
         this.day = day;
         this.month = month;
         this.year = year;

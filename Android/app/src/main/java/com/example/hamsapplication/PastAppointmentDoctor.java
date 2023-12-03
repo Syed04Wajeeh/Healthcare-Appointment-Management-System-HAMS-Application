@@ -85,7 +85,7 @@ public class PastAppointmentDoctor extends AppCompatActivity {
                             String ID = snapshot.getKey();
                             Appointment tempAppointment = snapshot.getValue(Appointment.class);
                             if (tempAppointment.past){//if the appointment is past, add it to the array
-                                tempAppointment.setID(ID);
+                                tempAppointment.ID = (ID);
                                 allPastAppointments.add(tempAppointment);
                             }
 

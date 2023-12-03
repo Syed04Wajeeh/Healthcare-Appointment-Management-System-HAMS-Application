@@ -2934,6 +2934,7 @@ int id autoComplete 0x7f08005f
 int id autoCompleteToEnd 0x7f080060
 int id autoCompleteToStart 0x7f080061
 int id backButton 0x7f080062
+int id backButtonBookPage 0x7f08025b
 int id backButtonSpecialty 0x7f080255
 int id barrier 0x7f080063
 int id baseline 0x7f080064
@@ -3301,6 +3302,7 @@ int id sharedValueUnset 0x7f0801ca
 int id shiftBackButton 0x7f0801cb
 int id shiftButton 0x7f0801cc
 int id shiftTable 0x7f0801cd
+int id shiftsAvailTable 0x7f08025c
 int id shortcut 0x7f0801ce
 int id showCustom 0x7f0801cf
 int id showHome 0x7f0801d0
@@ -3369,6 +3371,7 @@ int id textView13 0x7f08020d
 int id textView14 0x7f08020e
 int id textView15 0x7f08020f
 int id textView16 0x7f08025a
+int id textView17 0x7f08025d
 int id textView19 0x7f080210
 int id textView2 0x7f080211
 int id textView20 0x7f080212

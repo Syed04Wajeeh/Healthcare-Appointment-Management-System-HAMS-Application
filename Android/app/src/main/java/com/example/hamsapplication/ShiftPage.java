@@ -86,7 +86,7 @@ public class ShiftPage extends AppCompatActivity {
                         for (DataSnapshot snapshot : dataSnapshot.getChildren()) {//loop through all shifts in the current user object
                             String ID = snapshot.getKey();
                             Shift tempShift = snapshot.getValue(Shift.class);
-                            tempShift.setID(ID);
+                            tempShift.ID = (ID);
                             allShifts.add(tempShift);//add all shifts to array
                         }
                         populateTable(allShifts, layout, uniqueID);//load all elements on display
@@ -231,9 +231,8 @@ public class ShiftPage extends AppCompatActivity {
                 button.setOnClickListener(new View.OnClickListener() {//button to delete shift
                     @Override
                     public void onClick(View view) {
-                        Log.d(uniqueID, tempShift.getID());
                         if (FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child("Appointment").equals(null)){
-                            FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child("Shifts").child(tempShift.getID()).setValue(null);
+                            FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child("Shifts").child(tempShift.ID).setValue(null);
                             button.setEnabled(false);
                             layout.removeView(row);
                         }else{
