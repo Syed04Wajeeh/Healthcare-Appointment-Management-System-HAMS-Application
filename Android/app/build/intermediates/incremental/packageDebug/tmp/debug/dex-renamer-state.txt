@@ -1,7 +1,7 @@
-#Sat Dec 02 18:16:39 EST 2023
-base.0=E\:\\SEG\\project-project-group-23\\Android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=E\:\\SEG\\project-project-group-23\\Android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.2=E\:\\SEG\\project-project-group-23\\Android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
+#Sat Dec 02 20:47:40 EST 2023
+base.0=C\:\\Users\\jaack\\OneDrive - University of Ottawa\\SEG 2105\\project-project-group-23\\Android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=C\:\\Users\\jaack\\OneDrive - University of Ottawa\\SEG 2105\\project-project-group-23\\Android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=C\:\\Users\\jaack\\OneDrive - University of Ottawa\\SEG 2105\\project-project-group-23\\Android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=13/classes.dex
