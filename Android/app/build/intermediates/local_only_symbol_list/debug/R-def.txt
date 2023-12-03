@@ -14,9 +14,11 @@ id acceptSwitch
 id addShift
 id addShiftButton
 id backButton
+id backButtonSpecialty
 id buttonContainerRej
 id buttonContainerReq
 id comingAppointmentButton
+id comingPatientAppointments
 id dateButton
 id doctorAccountPassword
 id doctorAddress
@@ -37,6 +39,7 @@ id doctorRegisterButton
 id doctorSpecialty
 id endTimeButton
 id endTimeView
+id findAppointment
 id homeButton
 id horizontalView
 id horizontalViewRej
@@ -60,6 +63,7 @@ id logOff2
 id loginButton
 id passwordInput
 id pastAppointmentButton
+id pastPatientAppointment
 id patientAccountPassword
 id patientAddress
 id patientEmailUsername
@@ -75,6 +79,7 @@ id rejectedPopup
 id shiftBackButton
 id shiftButton
 id shiftTable
+id specialtyTable
 id startTimeButton
 id startTimeView
 id textView
@@ -84,6 +89,7 @@ id textView12
 id textView13
 id textView14
 id textView15
+id textView16
 id textView19
 id textView2
 id textView20
@@ -104,11 +110,15 @@ id textView9
 id usernameInput
 id youAreText
 id youAreText2
+layout activity_book_appointment_patient
+layout activity_book_appointment_patient_row_page
 layout activity_coming_appointment
+layout activity_coming_appointment_patient
 layout activity_created_account
 layout activity_doctor_register
 layout activity_inbox
 layout activity_past_appointment
+layout activity_past_appointment_patient
 layout activity_patient_register
 layout activity_shifts
 layout activity_welcome_screen_admin

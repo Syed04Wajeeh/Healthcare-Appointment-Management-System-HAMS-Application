@@ -3,6 +3,7 @@ package com.example.hamsapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -17,11 +18,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class PastAppointmentDoctor extends AppCompatActivity {
     Button back;
     TableLayout layout;
-
+    Context context;
 
 
     public void populateTable(ArrayList<Appointment> allAppointments, TableLayout layout){// populates the layout with past appointments
@@ -32,18 +34,33 @@ public class PastAppointmentDoctor extends AppCompatActivity {
         }else {
             for(Appointment tempAppointment : allAppointments){ //loops through all past appointments
 
-                //concatenate all information to be displayed
-                patientInformation tempPatient = tempAppointment.patient;
-                String patientConcat = tempPatient.firstName + " " + tempPatient.lastName + ", " + tempPatient.username + ", " + tempPatient.address + ", " + tempPatient.phoneNumber + ", " + tempPatient.healthNumber;
-                String appointmentConcat = ShiftPage.makeDateString(tempAppointment.day, tempAppointment.month, tempAppointment.year) + ", " + tempAppointment.startHour + ":" + tempAppointment.startMinute + "-" + tempAppointment.endHour + ":" + tempAppointment.endMinute;
-                String concat = appointmentConcat + "   " + patientConcat;
+                FirebaseDatabase.getInstance().getReference().child("Users").addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
 
-                //add views to the layout
-                TableRow newRow = new TableRow(this);
-                TextView inboxText = new TextView(this);
-                inboxText.setText(concat);
-                newRow.addView(inboxText);
-                layout.addView(newRow);
+                            if(Objects.equals(snapshot.getKey(), tempAppointment.patientID)){
+                                patientInformation tempPatient = snapshot.getValue(patientInformation.class);
+
+                                //concatenate all information to be displayed
+                                String patientConcat = tempPatient.firstName + " " + tempPatient.lastName + ", " + tempPatient.username + ", " + tempPatient.address + ", " + tempPatient.phoneNumber + ", " + tempPatient.healthNumber;
+                                String appointmentConcat = ShiftPage.makeDateString(tempAppointment.day, tempAppointment.month, tempAppointment.year) + ", " + tempAppointment.startHour + ":" + tempAppointment.startMinute;
+                                String concat = appointmentConcat + "   " + patientConcat;
+
+                                //add views to the layout
+                                TableRow newRow = new TableRow(context);
+                                TextView inboxText = new TextView(context);
+                                inboxText.setText(concat);
+                                newRow.addView(inboxText);
+                                layout.addView(newRow);
+                            }
+                        }
+                    }
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                    }
+                });
+
             }
         }
     }
@@ -53,6 +70,7 @@ public class PastAppointmentDoctor extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_past_appointment);
 
+        context = this;
         layout  = (TableLayout) findViewById(R.id.PastAppointmentView);
         back = (Button) findViewById(R.id.backButton);
 
