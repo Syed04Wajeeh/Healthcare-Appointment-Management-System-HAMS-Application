@@ -22,10 +22,13 @@
             android:name=".ComingAppointmentPatient"
             android:exported="false" />
         <activity
-            android:name=".ComingAppointment"
+            android:name=".ComingAppointmentDoctor"
             android:exported="false" />
         <activity
-            android:name=".PastAppointment"
+            android:name=".PastAppointmentDoctor"
+            android:exported="false" />
+        <activity
+            android:name=".PastAppointmentPatient"
             android:exported="false" />
         <activity
             android:name=".ShiftPage"

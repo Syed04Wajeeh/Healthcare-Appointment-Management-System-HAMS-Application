@@ -55,7 +55,7 @@ public class WelcomeScreenPatient extends AppCompatActivity {
 
         pastAppointment.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) { //logout button that takes you to the login page
+            public void onClick(View view) {
                 Intent intent = new Intent(WelcomeScreenPatient.this, PastAppointmentPatient.class);
                 startActivity(intent);
                 pastAppointment.setEnabled(false);

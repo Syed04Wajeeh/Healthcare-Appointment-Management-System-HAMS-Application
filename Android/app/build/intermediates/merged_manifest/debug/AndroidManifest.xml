@@ -42,10 +42,13 @@
             android:name="com.example.hamsapplication.ComingAppointmentPatient"
             android:exported="false" />
         <activity
-            android:name="com.example.hamsapplication.ComingAppointment"
+            android:name="com.example.hamsapplication.ComingAppointmentDoctor"
             android:exported="false" />
         <activity
-            android:name="com.example.hamsapplication.PastAppointment"
+            android:name="com.example.hamsapplication.PastAppointmentDoctor"
+            android:exported="false" />
+        <activity
+            android:name="com.example.hamsapplication.PastAppointmentPatient"
             android:exported="false" />
         <activity
             android:name="com.example.hamsapplication.ShiftPage"
