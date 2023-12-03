@@ -232,7 +232,7 @@ public class ShiftPage extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         Log.d(uniqueID, tempShift.getID());
-                        if (FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child("Appointment").equals(null)){
+                        if (FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child("Shifts").child("Appointment") == null){
                             FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child("Shifts").child(tempShift.getID()).setValue(null);
                             button.setEnabled(false);
                             layout.removeView(row);
