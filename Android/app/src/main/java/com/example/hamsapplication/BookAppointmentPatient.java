@@ -68,13 +68,15 @@ public class BookAppointmentPatient extends AppCompatActivity {
             Button button = new Button(this);
 
             //set text and button properties
-            text.setText(specialty);
+            text.setText(specialty + "     ");
             button.setText("View Available Shifts");
             button.setBackgroundColor(Color.GREEN);
 
             //add to layout
-            row.addView(button);
+
             row.addView(text);
+            row.addView(button);
+
             layout.addView(row);
 
             button.setOnClickListener(new View.OnClickListener() {//button to delete shift

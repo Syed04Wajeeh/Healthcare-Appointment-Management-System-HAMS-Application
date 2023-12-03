@@ -234,11 +234,11 @@ public class ShiftPage extends AppCompatActivity {
                         Log.d(uniqueID, tempShift.getID());
                         if (FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child("Appointment").equals(null)){
                             FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child("Shifts").child(tempShift.getID()).setValue(null);
+                            button.setEnabled(false);
+                            layout.removeView(row);
                         }else{
                             Toast.makeText(getApplicationContext(),"You cannot delete your shift, you have appointments outstanding!",Toast.LENGTH_SHORT).show();
                         }
-                        button.setEnabled(false);
-                        layout.removeView(row);
                     }
                 });
             }
