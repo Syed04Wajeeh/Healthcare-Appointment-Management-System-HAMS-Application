@@ -2,10 +2,8 @@ package com.example.hamsapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TableLayout;
@@ -19,9 +17,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 
-import org.w3c.dom.Text;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Inbox extends AppCompatActivity {
@@ -43,13 +38,13 @@ public class Inbox extends AppCompatActivity {
                 int i = 0; //outer list index
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     String uniqueID = snapshot.getKey(); // Get the Firebase ID
-                    generalInformation user = snapshot.getValue(generalInformation.class);
+                    GeneralInformation user = snapshot.getValue(GeneralInformation.class);
 
                     allInformation.add(new ArrayList<String>());
                     allInformation.get(i).add(0, uniqueID); //add unique firebase id to the first elem in Arraylist
 
                     if (user.accountType == 3) { //if the current obj is of type doctor
-                        doctorInformation docUser = snapshot.getValue((doctorInformation.class));
+                        DoctorInformation docUser = snapshot.getValue((DoctorInformation.class));
                         allInformation.get(i).add(String.valueOf(docUser.registrationStatus)); //index [i][1]
                         allInformation.get(i).add(String.valueOf(docUser.accountType)); // index [i][2]
                         allInformation.get(i).add(docUser.username);
@@ -61,7 +56,7 @@ public class Inbox extends AppCompatActivity {
                         allInformation.get(i).add(docUser.specialties);
 
                     } else if (user.accountType == 2) { //type patient
-                        patientInformation patUser = snapshot.getValue((patientInformation.class));
+                        PatientInformation patUser = snapshot.getValue((PatientInformation.class));
                         allInformation.get(i).add(String.valueOf(patUser.registrationStatus));//index [i][1]
                         allInformation.get(i).add(String.valueOf(patUser.accountType));// index [i][2]
                         allInformation.get(i).add(patUser.username);

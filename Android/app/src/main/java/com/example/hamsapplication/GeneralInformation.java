@@ -1,16 +1,11 @@
 package com.example.hamsapplication;
-import android.util.Log;
-
-import androidx.annotation.NonNull;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.ArrayList;
-public class generalInformation {
+public class GeneralInformation {
 
     //nested interface callback to ensure asynchronous data retrieval from database was completed
     //this nested interface is used to check if an account exists
@@ -21,7 +16,7 @@ public class generalInformation {
     //nested interface callback to ensure asynchronous data retrieval from database was completed
     //this nested interface is used to return the generalinformation object stored in the database with the correlating username
     public interface AccountSearchCallback {
-        void onAccountSearchResult(generalInformation user);
+        void onAccountSearchResult(GeneralInformation user);
     }
 
     public String username;
@@ -32,10 +27,10 @@ public class generalInformation {
     public String address;
     public int registrationStatus; //0(not looked at), 1(accepted), 2(denied)
     public int accountType;
-    public  generalInformation(){ //empty constructor
+    public GeneralInformation(){ //empty constructor
     }
 
-    public generalInformation(String username, String password, String firstName, String lastName, String phoneNumber, String address, int registrationStatus, int accountType){
+    public GeneralInformation(String username, String password, String firstName, String lastName, String phoneNumber, String address, int registrationStatus, int accountType){
         this.username = username.toLowerCase();
         this.password = password;
         this.firstName = firstName;
@@ -53,7 +48,7 @@ public class generalInformation {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) { // looping through database
                         for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                            generalInformation user = snapshot.getValue(generalInformation.class);
+                            GeneralInformation user = snapshot.getValue(GeneralInformation.class);
                             if (user != null && user.username.equals(desiredUsername)) {
                                 // Username exists in the database
                                 accountExists[0] = true;
@@ -78,7 +73,7 @@ public class generalInformation {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    generalInformation user = snapshot.getValue(generalInformation.class);
+                    GeneralInformation user = snapshot.getValue(GeneralInformation.class);
                     if (user != null && user.username.equals(desiredUsername)) {
                         // Username was found
                         callback.onAccountSearchResult(user);

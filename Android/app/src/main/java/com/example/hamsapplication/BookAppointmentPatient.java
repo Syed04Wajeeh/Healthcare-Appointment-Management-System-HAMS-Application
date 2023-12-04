@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TableLayout;
@@ -16,8 +15,6 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
-import java.util.ArrayList;
 
 public class BookAppointmentPatient extends AppCompatActivity {
 
@@ -49,10 +46,10 @@ public class BookAppointmentPatient extends AppCompatActivity {
                     public void onDataReceived(String patID) {
                         for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
 
-                            generalInformation user = snapshot.getValue(generalInformation.class);
+                            GeneralInformation user = snapshot.getValue(GeneralInformation.class);
 
                             if (user.accountType == 3) { //if the current obj is of type doctor
-                                doctorInformation docUser = snapshot.getValue((doctorInformation.class));
+                                DoctorInformation docUser = snapshot.getValue((DoctorInformation.class));
                                 String docID = snapshot.getKey(); // Get the Firebase ID
                                 String specialty = docUser.specialties;
                                 addToTableSpecialties(specialty, docID, patID, specialtyTable);

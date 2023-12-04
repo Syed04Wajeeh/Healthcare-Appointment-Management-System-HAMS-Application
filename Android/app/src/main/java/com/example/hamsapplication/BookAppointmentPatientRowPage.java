@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,9 +19,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import org.w3c.dom.Text;
-
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -75,8 +71,10 @@ public class BookAppointmentPatientRowPage extends AppCompatActivity {
                                 Appointment tempAppointment = snapshot.getValue(Appointment.class);
                                 if (tempAppointment.day == tempShift.day && tempAppointment.month == tempShift.month && tempAppointment.year == tempShift.year){
                                     tempAppointment.ID = ID;
+                                    if (tempAppointment.status == 1 || tempAppointment.status == 0){
+                                        allAppointments.add(tempAppointment);//add all appt to array
+                                    }
 
-                                    allAppointments.add(tempAppointment);//add all appt to array
                                 }
 
                             }
@@ -138,8 +136,8 @@ public class BookAppointmentPatientRowPage extends AppCompatActivity {
                                         @Override
                                         public void onClick(View view) {
                                             Appointment appointment = new Appointment(patID, docID, tempShift.day, tempShift.month, tempShift.year, (int) Math.floor(time), (int)((time - Math.floor(time)) * 60));
-                                            patientInformation.addAppointmentToPatient(appointment);
-                                            doctorInformation.addAppointmentToDoctor(appointment, tempShift.ID);
+                                            PatientInformation.addAppointmentToPatient(appointment);
+                                            DoctorInformation.addAppointmentToDoctor(appointment, tempShift.ID);
                                             Toast.makeText(getApplicationContext(), "You have successfully booked this timeslot", Toast.LENGTH_SHORT).show();
                                             finish();
                                         }

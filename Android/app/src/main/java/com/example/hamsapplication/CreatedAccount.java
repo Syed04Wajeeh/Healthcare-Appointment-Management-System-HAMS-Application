@@ -1,13 +1,11 @@
 package com.example.hamsapplication;
-import android.util.Log;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-public class createdAccount extends AppCompatActivity {
+
+public class CreatedAccount extends AppCompatActivity {
     Button homeButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +19,7 @@ public class createdAccount extends AppCompatActivity {
         homeButton.setOnClickListener(new View.OnClickListener(){ // button to go back to login
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(createdAccount.this, login.class);
+                Intent intent = new Intent(CreatedAccount.this, login.class);
                 startActivity(intent);
                 finish();
             }

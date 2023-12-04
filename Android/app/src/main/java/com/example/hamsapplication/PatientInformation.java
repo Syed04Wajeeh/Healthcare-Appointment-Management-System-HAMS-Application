@@ -1,23 +1,16 @@
 package com.example.hamsapplication;
 
-import android.util.Log;
-
-import androidx.annotation.NonNull;
-
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 
-public class patientInformation extends generalInformation {
+public class PatientInformation extends GeneralInformation {
     public String healthNumber;
-    protected patientInformation(){
+    protected PatientInformation(){
     }
 
     //setter method
-    protected patientInformation(String username, String password, String firstName, String lastName, String phoneNumber, String address, String healthNumber, int registrationStatus, int accountType) {
+    protected PatientInformation(String username, String password, String firstName, String lastName, String phoneNumber, String address, String healthNumber, int registrationStatus, int accountType) {
         super(username, password, firstName, lastName, phoneNumber, address, registrationStatus, accountType);
         this.healthNumber = healthNumber;
     }

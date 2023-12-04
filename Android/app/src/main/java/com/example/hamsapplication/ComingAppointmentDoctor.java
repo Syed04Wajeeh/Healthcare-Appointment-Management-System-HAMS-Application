@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Switch;
@@ -34,8 +35,12 @@ public class ComingAppointmentDoctor extends AppCompatActivity {
         layout.removeAllViews(); //remove all old elements
 
         if(allAppointments.size() == 0){
+            Log.d("Array size", "0");
         }else {
             for(Appointment tempAppointment : allAppointments){ //loop through coming appointments
+
+                Log.d(tempAppointment.ID, tempAppointment.patientID);
+
 
                 //concatenate all information to be displayed
                 FirebaseDatabase.getInstance().getReference().child("Users").addListenerForSingleValueEvent(new ValueEventListener() {
@@ -43,12 +48,12 @@ public class ComingAppointmentDoctor extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
 
-                            if(snapshot.getKey() == tempAppointment.patientID){
-                                patientInformation tempPatient = snapshot.getValue(patientInformation.class);
+                            if(snapshot.getKey().equals(tempAppointment.patientID) ){
+                                PatientInformation tempPatient = snapshot.getValue(PatientInformation.class);
                                 String patientConcat = tempPatient.firstName + " " + tempPatient.lastName + ", " + tempPatient.username + ", " + tempPatient.address + ", " + tempPatient.phoneNumber + ", " + tempPatient.healthNumber;
                                 String appointmentConcat = ShiftPage.makeDateString(tempAppointment.day, tempAppointment.month, tempAppointment.year) + ", " + tempAppointment.startHour + ":" + tempAppointment.startMinute;
                                 String concat = appointmentConcat + "   " + patientConcat;
-
+                                Log.d(concat, tempAppointment.patientID);
                                 //create all elements
                                 TableRow newRow = new TableRow(context);
                                 TextView inboxText = new TextView(context);
@@ -62,9 +67,30 @@ public class ComingAppointmentDoctor extends AppCompatActivity {
                                 button.setOnClickListener(new View.OnClickListener() { //this is the reject button for all appointments, including accepted ones
                                     @Override
                                     public void onClick(View view) {
-                                        FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child("Appointment").child(tempAppointment.ID).child("status").setValue(-1);
+                                        FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child("Appointments").child(tempAppointment.ID).child("status").setValue(-1);
                                         button.setEnabled(false);
                                         layout.removeView(newRow);
+                                        FirebaseDatabase.getInstance().getReference().child("Users").child(tempAppointment.patientID).child("Appointments").addListenerForSingleValueEvent(new ValueEventListener() {
+                                            @Override
+                                            public void onDataChange(@NonNull DataSnapshot dataSnapshots) {
+                                                for (DataSnapshot snapshots : dataSnapshots.getChildren()) {
+                                                    String IDT = snapshots.getKey();
+                                                    Appointment temporAppointment  = snapshots.getValue(Appointment.class);
+                                                    temporAppointment.ID = IDT;
+                                                    if (temporAppointment.doctorID.equals(tempAppointment.doctorID) && temporAppointment.patientID.equals(tempAppointment.patientID)
+                                                    && temporAppointment.startTime == tempAppointment.startTime && temporAppointment.day == tempAppointment.day && temporAppointment.month == tempAppointment.month
+                                                    && temporAppointment.year == tempAppointment.year){
+                                                        FirebaseDatabase.getInstance().getReference().child("Users").child(tempAppointment.patientID).child("Appointments").child(temporAppointment.ID).child("status").setValue(-1);
+                                                    }
+                                                }
+                                            }
+
+                                            @Override
+                                            public void onCancelled(@NonNull DatabaseError error) {
+
+                                            }
+                                        });
+
                                     }
                                 });
 
@@ -77,8 +103,28 @@ public class ComingAppointmentDoctor extends AppCompatActivity {
                                     button1.setOnClickListener(new View.OnClickListener() { //button created to accept appointment
                                         @Override
                                         public void onClick(View view) {
-                                            FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child("Appointment").child(tempAppointment.ID).child("status").setValue(1);
+                                            FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child("Appointments").child(tempAppointment.ID).child("status").setValue(1);
                                             button1.setEnabled(false);
+                                            FirebaseDatabase.getInstance().getReference().child("Users").child(tempAppointment.patientID).child("Appointments").addListenerForSingleValueEvent(new ValueEventListener() {
+                                                @Override
+                                                public void onDataChange(@NonNull DataSnapshot dataSnapshots) {
+                                                    for (DataSnapshot snapshots : dataSnapshots.getChildren()) {
+                                                        String IDT = snapshots.getKey();
+                                                        Appointment temporAppointment  = snapshots.getValue(Appointment.class);
+                                                        temporAppointment.ID = IDT;
+                                                        if (temporAppointment.doctorID.equals(tempAppointment.doctorID) && temporAppointment.patientID.equals(tempAppointment.patientID)
+                                                                && temporAppointment.startTime == tempAppointment.startTime && temporAppointment.day == tempAppointment.day && temporAppointment.month == tempAppointment.month
+                                                                && temporAppointment.year == tempAppointment.year){
+                                                            FirebaseDatabase.getInstance().getReference().child("Users").child(tempAppointment.patientID).child("Appointments").child(temporAppointment.ID).child("status").setValue(1);
+                                                        }
+                                                    }
+                                                }
+
+                                                @Override
+                                                public void onCancelled(@NonNull DatabaseError error) {
+
+                                                }
+                                            });
                                         }
                                     });
                                 }
@@ -107,7 +153,7 @@ public class ComingAppointmentDoctor extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coming_appointment);
 
-        layout  = (TableLayout) findViewById(R.id.IncomingAppointmentView);
+        layout  = (TableLayout) findViewById(R.id.docComingAppt);
         back = (Button) findViewById(R.id.backButton);
         refresh = (Button)findViewById(R.id.RefreshAppointment);
         accept = (Switch)findViewById(R.id.acceptSwitch);
@@ -122,20 +168,23 @@ public class ComingAppointmentDoctor extends AppCompatActivity {
                         ArrayList<Appointment> allComingAppointments = new ArrayList<>();
                         for (DataSnapshot snapshot : dataSnapshot.getChildren()) { //Loop through all appointments stored in this doctor
                             String ID = snapshot.getKey();
+
                             Appointment tempAppointment = snapshot.getValue(Appointment.class);
 
                             if (tempAppointment.status == 0 || tempAppointment.status == 1){ // check if current appointment is accepted or not looked at
                                 if(!tempAppointment.isPast()) {//check if appointment is past
                                     if (accept.isChecked()){//if the autoaccept is on, accept all appointment requests
-                                        FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child("Appointment").child(ID).child("status").setValue(1);
+                                        FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child("Appointments").child(ID).child("status").setValue(1);
                                     }
                                     //set appointment ID and add to the array of coming appointments
                                     tempAppointment.ID = (ID);
+
                                     allComingAppointments.add(tempAppointment);
                                 }
                             }
 
                         }
+
                         populateTable(allComingAppointments, layout, uniqueID); //populate the layout with this array
                     }
 
@@ -149,8 +198,7 @@ public class ComingAppointmentDoctor extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener(){ //go back to doctor homepage
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ComingAppointmentDoctor.this, WelcomeScreenDoctor.class);
-                startActivity(intent);
+                onBackPressed();
             }
         });
 
@@ -159,6 +207,7 @@ public class ComingAppointmentDoctor extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(ComingAppointmentDoctor.this, ComingAppointmentDoctor.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

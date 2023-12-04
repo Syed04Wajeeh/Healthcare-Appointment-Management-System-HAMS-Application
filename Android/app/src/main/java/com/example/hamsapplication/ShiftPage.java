@@ -21,13 +21,9 @@ import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import org.w3c.dom.Text;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Locale;
@@ -146,7 +142,7 @@ public class ShiftPage extends AppCompatActivity {
                                                             allShifts.add(tempShift);
                                                         }
                                                         if (allShifts.size() == 0){//if there are no current shifts, no problem, simply add this shift
-                                                            doctorInformation.addShift(shift);
+                                                            DoctorInformation.addShift(shift);
                                                             Toast.makeText(getApplicationContext(), "Shift added, Refresh page", Toast.LENGTH_SHORT).show();
                                                         }else{
                                                             boolean send = true;
@@ -162,7 +158,7 @@ public class ShiftPage extends AppCompatActivity {
                                                                 }
                                                             }
                                                             if (send){
-                                                                doctorInformation.addShift(shift);//if shift passed all checks, add
+                                                                DoctorInformation.addShift(shift);//if shift passed all checks, add
                                                                 Toast.makeText(getApplicationContext(), "Shift added, Refresh page", Toast.LENGTH_SHORT).show();
                                                             }
 

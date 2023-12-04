@@ -43,16 +43,16 @@
             android:name=".WelcomeScreenDoctor"
             android:exported="false" />
         <activity
-            android:name=".welcomeScreenAdmin"
+            android:name=".WelcomeScreenAdmin"
             android:exported="false" />
         <activity
-            android:name=".createdAccount"
+            android:name=".CreatedAccount"
             android:exported="false" />
         <activity
-            android:name=".doctorRegister"
+            android:name=".DoctorRegister"
             android:exported="false" />
         <activity
-            android:name=".patientRegister"
+            android:name=".PatientRegister"
             android:exported="false" />
         <activity
             android:name=".login"

@@ -113,25 +113,25 @@
 64-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:44:13-37
 65        <activity
 65-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:45:9-47:40
-66            android:name="com.example.hamsapplication.welcomeScreenAdmin"
+66            android:name="com.example.hamsapplication.WelcomeScreenAdmin"
 66-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:46:13-47
 67            android:exported="false" />
 67-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:47:13-37
 68        <activity
 68-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:48:9-50:40
-69            android:name="com.example.hamsapplication.createdAccount"
+69            android:name="com.example.hamsapplication.CreatedAccount"
 69-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:49:13-43
 70            android:exported="false" />
 70-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:50:13-37
 71        <activity
 71-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:51:9-53:40
-72            android:name="com.example.hamsapplication.doctorRegister"
+72            android:name="com.example.hamsapplication.DoctorRegister"
 72-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:52:13-43
 73            android:exported="false" />
 73-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:53:13-37
 74        <activity
 74-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:54:9-56:40
-75            android:name="com.example.hamsapplication.patientRegister"
+75            android:name="com.example.hamsapplication.PatientRegister"
 75-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:55:13-44
 76            android:exported="false" />
 76-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:56:13-37

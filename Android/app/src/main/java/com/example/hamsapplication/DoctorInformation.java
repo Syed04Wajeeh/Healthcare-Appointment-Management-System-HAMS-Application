@@ -1,7 +1,5 @@
 package com.example.hamsapplication;
 
-import android.util.Log;
-
 import androidx.annotation.NonNull;
 
 import com.google.firebase.database.DataSnapshot;
@@ -10,16 +8,14 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.ArrayList;
-
-public class doctorInformation extends generalInformation {
+public class DoctorInformation extends GeneralInformation {
     public String employeeNumber;
     public String specialties;
 
-    protected doctorInformation(){
+    protected DoctorInformation(){
 
     }
-    public doctorInformation(String username, String password, String firstName, String lastName, String phoneNumber, String address, String employeeNumber, String specialties, int registrationStatus, int accountType) {
+    public DoctorInformation(String username, String password, String firstName, String lastName, String phoneNumber, String address, String employeeNumber, String specialties, int registrationStatus, int accountType) {
         super(username, password, firstName, lastName, phoneNumber, address, registrationStatus, accountType);
         this.employeeNumber = employeeNumber;
         this.specialties = specialties;
@@ -48,7 +44,7 @@ public class doctorInformation extends generalInformation {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String uniqueID;
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    generalInformation user = snapshot.getValue(generalInformation.class);
+                    GeneralInformation user = snapshot.getValue(GeneralInformation.class);
                     if (user.username.equals(CurrentUser.username)){
                         uniqueID = snapshot.getKey(); // Get the Firebase ID
                         DatabaseReference userRef = rootRef.child("Users").child(uniqueID).child("Shifts");

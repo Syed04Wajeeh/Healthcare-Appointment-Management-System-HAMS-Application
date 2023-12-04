@@ -13,7 +13,7 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class doctorRegister extends AppCompatActivity{
+public class DoctorRegister extends AppCompatActivity{
 
     private EditText firstName, lastName, email, password, phoneNumber, address, employeeNumber, specialties;
     private Button registerButton;
@@ -55,7 +55,7 @@ public class doctorRegister extends AppCompatActivity{
                     Toast.makeText(getApplicationContext(), "Please complete all fields", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                generalInformation.hasAccount(userEmail, new generalInformation.AccountCheckCallback() {//checks if an account already exists with username
+                GeneralInformation.hasAccount(userEmail, new GeneralInformation.AccountCheckCallback() {//checks if an account already exists with username
                     @Override
                     public void onAccountCheckResult(boolean accountExists) {
                         if (accountExists){
@@ -63,9 +63,9 @@ public class doctorRegister extends AppCompatActivity{
                             Toast.makeText(getApplicationContext(), "This email is already in use", Toast.LENGTH_SHORT).show();
                         } else { //if account does not exist, create and send to database
                             Log.d("Account does not exist", "false");
-                            doctorInformation doctor = new doctorInformation(userEmail, userPassword, userFirstName, userLastName, userPhoneNumber, userAddress, userEmployeeNumber, userSpecialties, 0, 3);
+                            DoctorInformation doctor = new DoctorInformation(userEmail, userPassword, userFirstName, userLastName, userPhoneNumber, userAddress, userEmployeeNumber, userSpecialties, 0, 3);
                             doctor.addToCollection();
-                            Intent intent = new Intent(doctorRegister.this, createdAccount.class);
+                            Intent intent = new Intent(DoctorRegister.this, CreatedAccount.class);
                             startActivity(intent);
                             finish();
                         }

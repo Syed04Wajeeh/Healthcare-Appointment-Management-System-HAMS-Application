@@ -36,11 +36,11 @@ public class login extends AppCompatActivity{
         patientRegister = (Button)findViewById(R.id.patientRegisterButton);
         doctorRegister = (Button) findViewById(R.id.doctorRegisterButton);
 
-        generalInformation.hasAccount(adminUser, new generalInformation.AccountCheckCallback() {
+        GeneralInformation.hasAccount(adminUser, new GeneralInformation.AccountCheckCallback() {
             @Override
             public void onAccountCheckResult(boolean accountExists) { //creating the admin account immediately if there isnt one that exists in the database
                 if (!accountExists){
-                    adminInformation admin = new adminInformation(adminUser, adminPass, null, null, null, null, 1, 1);
+                    AdminInformation admin = new AdminInformation(adminUser, adminPass, null, null, null, null, 1, 1);
 
                     admin.addToCollection();
                 }
@@ -60,13 +60,13 @@ public class login extends AppCompatActivity{
                 }
 
                 //checking if the account exists or not
-                generalInformation.hasAccount(usernameField, new generalInformation.AccountCheckCallback() {
+                GeneralInformation.hasAccount(usernameField, new GeneralInformation.AccountCheckCallback() {
                     @Override
                     public void onAccountCheckResult(boolean accountExists) {
                         if (accountExists){
-                            generalInformation.searchForAccount(usernameField, new generalInformation.AccountSearchCallback() {
+                            GeneralInformation.searchForAccount(usernameField, new GeneralInformation.AccountSearchCallback() {
                                 @Override
-                                public void onAccountSearchResult(generalInformation user) {
+                                public void onAccountSearchResult(GeneralInformation user) {
                                     //checking if the user field is empty
                                     if (user != null) {
                                         //checking the username and the decrypted password matches with anything in the database
@@ -85,7 +85,7 @@ public class login extends AppCompatActivity{
                                                 if (user.accountType == 1) {
                                                     CurrentUser.username = (user.username);
                                                     Log.d("admin", CurrentUser.username);
-                                                    Intent intent = new Intent(login.this, welcomeScreenAdmin.class);
+                                                    Intent intent = new Intent(login.this, WelcomeScreenAdmin.class);
                                                     startActivity(intent);
                                                     //setting the account as an patient account
                                                 } else if (user.accountType == 2) {
@@ -123,14 +123,14 @@ public class login extends AppCompatActivity{
         patientRegister.setOnClickListener(new View.OnClickListener(){ //taking the user to the doctor patient page
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(login.this, patientRegister.class);
+                Intent intent = new Intent(login.this, PatientRegister.class);
                 startActivity(intent);
             }
         });
         doctorRegister.setOnClickListener(new View.OnClickListener(){ //taking the user to the doctor register page
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(login.this, doctorRegister.class);
+                Intent intent = new Intent(login.this, DoctorRegister.class);
                 startActivity(intent);
             }
         });

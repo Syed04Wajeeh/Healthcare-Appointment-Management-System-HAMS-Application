@@ -16,7 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 
 
-public class patientRegister extends AppCompatActivity{
+public class PatientRegister extends AppCompatActivity{
 
     public EditText firstName;
     public EditText lastName;
@@ -65,7 +65,7 @@ public class patientRegister extends AppCompatActivity{
                     return;
                 }
 
-                generalInformation.hasAccount(userEmail, new generalInformation.AccountCheckCallback() { //checking if an accounts exists with the email/username
+                GeneralInformation.hasAccount(userEmail, new GeneralInformation.AccountCheckCallback() { //checking if an accounts exists with the email/username
                     @Override
                     public void onAccountCheckResult(boolean accountExists) {
                         if (accountExists){ //letting the user know the account is in use
@@ -73,9 +73,9 @@ public class patientRegister extends AppCompatActivity{
                             Toast.makeText(getApplicationContext(), "This email is already in use", Toast.LENGTH_SHORT).show();
                         } else { //creating the account
                             Log.d("Account does not exist", "false");
-                            patientInformation patient = new patientInformation(userEmail, userPassword, userFirstName, userLastName, userPhoneNumber, userAddress, userHealthCardNumber, 0, 2);
+                            PatientInformation patient = new PatientInformation(userEmail, userPassword, userFirstName, userLastName, userPhoneNumber, userAddress, userHealthCardNumber, 0, 2);
                             patient.addToCollection();
-                            Intent intent = new Intent(patientRegister.this, createdAccount.class);
+                            Intent intent = new Intent(PatientRegister.this, CreatedAccount.class);
                             startActivity(intent);
                             finish();
                         }

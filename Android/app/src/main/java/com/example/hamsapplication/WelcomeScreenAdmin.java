@@ -7,9 +7,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
-public class welcomeScreenAdmin extends AppCompatActivity{
+public class WelcomeScreenAdmin extends AppCompatActivity{
 
     Button logOut;
     Button inbox;
@@ -30,7 +29,7 @@ public class welcomeScreenAdmin extends AppCompatActivity{
         logOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { //logout button that takes you to the login page
-                Intent intent = new Intent(welcomeScreenAdmin.this, login.class);
+                Intent intent = new Intent(WelcomeScreenAdmin.this, login.class);
                 startActivity(intent);
                 logOut.setEnabled(false);
             }
@@ -38,7 +37,7 @@ public class welcomeScreenAdmin extends AppCompatActivity{
         inbox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { //inbox button that takes you to the inbox page
-                Intent intent = new Intent(welcomeScreenAdmin.this, Inbox.class);
+                Intent intent = new Intent(WelcomeScreenAdmin.this, Inbox.class);
                 startActivity(intent);
             }
         });

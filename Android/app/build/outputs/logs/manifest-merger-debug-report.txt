@@ -179,25 +179,25 @@ ADDED from E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.
 		ADDED from E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:44:13-37
 	android:name
 		ADDED from E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:43:13-48
-activity#com.example.hamsapplication.welcomeScreenAdmin
+activity#com.example.hamsapplication.WelcomeScreenAdmin
 ADDED from E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:45:9-47:40
 	android:exported
 		ADDED from E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:47:13-37
 	android:name
 		ADDED from E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:46:13-47
-activity#com.example.hamsapplication.createdAccount
+activity#com.example.hamsapplication.CreatedAccount
 ADDED from E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:48:9-50:40
 	android:exported
 		ADDED from E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:50:13-37
 	android:name
 		ADDED from E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:49:13-43
-activity#com.example.hamsapplication.doctorRegister
+activity#com.example.hamsapplication.DoctorRegister
 ADDED from E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:51:9-53:40
 	android:exported
 		ADDED from E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:53:13-37
 	android:name
 		ADDED from E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:52:13-43
-activity#com.example.hamsapplication.patientRegister
+activity#com.example.hamsapplication.PatientRegister
 ADDED from E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:54:9-56:40
 	android:exported
 		ADDED from E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:56:13-37

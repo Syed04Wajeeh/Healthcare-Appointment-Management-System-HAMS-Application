@@ -2,7 +2,6 @@ package com.example.hamsapplication;
 
 import androidx.annotation.NonNull;
 
-import com.example.hamsapplication.generalInformation;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -25,7 +24,7 @@ public class CurrentUser {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String uniqueID = null;
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    generalInformation user = snapshot.getValue(generalInformation.class);
+                    GeneralInformation user = snapshot.getValue(GeneralInformation.class);
                     if (user.username.equals(CurrentUser.username)) {
                         uniqueID = snapshot.getKey(); // Get the Firebase ID
                         break;

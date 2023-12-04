@@ -2842,7 +2842,6 @@ id BOTTOM_START
 id CTRL
 id FUNCTION
 id GetStarted
-id IncomingAppointmentView
 id META
 id NO_DEBUG
 id PastAppointmentView
@@ -2936,6 +2935,7 @@ id autoCompleteToEnd
 id autoCompleteToStart
 id backButton
 id backButtonBookPage
+id backButtonComingPatient
 id backButtonSpecialty
 id barrier
 id baseline
@@ -3013,6 +3013,7 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
+id docComingAppt
 id doctorAccountPassword
 id doctorAddress
 id doctorEmailUsername
@@ -3229,6 +3230,7 @@ id passwordInput
 id password_toggle
 id pastAppointmentButton
 id pastPatientAppointment
+id patComingAppt
 id path
 id pathRelative
 id patientAccountPassword
@@ -3373,6 +3375,7 @@ id textView14
 id textView15
 id textView16
 id textView17
+id textView18
 id textView19
 id textView2
 id textView20

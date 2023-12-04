@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -40,7 +39,7 @@ public class PastAppointmentDoctor extends AppCompatActivity {
                         for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
 
                             if(Objects.equals(snapshot.getKey(), tempAppointment.patientID)){
-                                patientInformation tempPatient = snapshot.getValue(patientInformation.class);
+                                PatientInformation tempPatient = snapshot.getValue(PatientInformation.class);
 
                                 //concatenate all information to be displayed
                                 String patientConcat = tempPatient.firstName + " " + tempPatient.lastName + ", " + tempPatient.username + ", " + tempPatient.address + ", " + tempPatient.phoneNumber + ", " + tempPatient.healthNumber;
@@ -85,8 +84,11 @@ public class PastAppointmentDoctor extends AppCompatActivity {
                             String ID = snapshot.getKey();
                             Appointment tempAppointment = snapshot.getValue(Appointment.class);
                             if (tempAppointment.past){//if the appointment is past, add it to the array
-                                tempAppointment.ID = (ID);
-                                allPastAppointments.add(tempAppointment);
+                                if(tempAppointment.status == 1){
+                                    tempAppointment.ID = (ID);
+                                    allPastAppointments.add(tempAppointment);
+                                }
+
                             }
 
                         }

@@ -63,16 +63,16 @@
             android:name="com.example.hamsapplication.WelcomeScreenDoctor"
             android:exported="false" />
         <activity
-            android:name="com.example.hamsapplication.welcomeScreenAdmin"
+            android:name="com.example.hamsapplication.WelcomeScreenAdmin"
             android:exported="false" />
         <activity
-            android:name="com.example.hamsapplication.createdAccount"
+            android:name="com.example.hamsapplication.CreatedAccount"
             android:exported="false" />
         <activity
-            android:name="com.example.hamsapplication.doctorRegister"
+            android:name="com.example.hamsapplication.DoctorRegister"
             android:exported="false" />
         <activity
-            android:name="com.example.hamsapplication.patientRegister"
+            android:name="com.example.hamsapplication.PatientRegister"
             android:exported="false" />
         <activity
             android:name="com.example.hamsapplication.login"

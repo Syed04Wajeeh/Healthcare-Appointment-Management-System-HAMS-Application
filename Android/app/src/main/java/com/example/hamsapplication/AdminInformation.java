@@ -3,10 +3,10 @@ package com.example.hamsapplication;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class adminInformation extends generalInformation {
+public class AdminInformation extends GeneralInformation {
 
 
-    protected adminInformation(String username, String password, String firstName, String lastName, String phoneNumber, String address, int registrationStatus, int accountType) {
+    protected AdminInformation(String username, String password, String firstName, String lastName, String phoneNumber, String address, int registrationStatus, int accountType) {
         super(username, password, firstName, lastName, phoneNumber, address, registrationStatus, accountType);
     }
 

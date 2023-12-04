@@ -24,8 +24,16 @@
         "source": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-main-34:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
+        "merged": "com.example.hamsapplication.app-merged_res-32:/layout_activity_coming_appointment_patient.xml.flat",
+        "source": "com.example.hamsapplication.app-main-34:/layout/activity_coming_appointment_patient.xml"
+    },
+    {
         "merged": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-merged_res-32:\\layout_activity_welcome_screen_admin.xml.flat",
         "source": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-main-34:\\layout\\activity_welcome_screen_admin.xml"
+    },
+    {
+        "merged": "com.example.hamsapplication.app-merged_res-32:/layout_activity_coming_appointment.xml.flat",
+        "source": "com.example.hamsapplication.app-main-34:/layout/activity_coming_appointment.xml"
     },
     {
         "merged": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-merged_res-32:\\mipmap-xhdpi_ic_launcher.webp.flat",
@@ -38,10 +46,6 @@
     {
         "merged": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-merged_res-32:\\layout_activity_doctor_register.xml.flat",
         "source": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-main-34:\\layout\\activity_doctor_register.xml"
-    },
-    {
-        "merged": "com.example.hamsapplication.app-merged_res-32:/layout_activity_book_appointment_patient.xml.flat",
-        "source": "com.example.hamsapplication.app-main-34:/layout/activity_book_appointment_patient.xml"
     },
     {
         "merged": "C:\\Users\\wajee\\.gradle\\daemon\\8.0\\com.example.hamsapplication.app-merged_res-32:\\layout_activity_inbox.xml.flat",
