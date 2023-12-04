@@ -127,7 +127,6 @@ public class ShiftPage extends AppCompatActivity {
                         if (startTimer < endTimer){ //verify the shift ends after it starts
                             if(shift.year >= thisYear){//verify year is not in past
                                 if(shift.month >= thisMonth || shift.year > thisYear){//verify month is not in past
-                                    Log.d(String.valueOf(shift.day), String.valueOf(thisDay));//verify day is not in past
                                     if(thisDay <= shift.day  || shift.month > thisMonth){//verify day is not in past
                                         CurrentUser.getID(new CurrentUser.OnDataReceivedListener() {//get current user ID
                                             @Override
@@ -139,6 +138,8 @@ public class ShiftPage extends AppCompatActivity {
                                                         ArrayList<Shift> allShifts = new ArrayList<>();
                                                         for (DataSnapshot snapshot : dataSnapshot.getChildren()) {//add all shifts to array
                                                             Shift tempShift = snapshot.getValue(Shift.class);
+                                                            String ID = snapshot.getKey();
+                                                            tempShift.ID = ID;
                                                             allShifts.add(tempShift);
                                                         }
                                                         if (allShifts.size() == 0){//if there are no current shifts, no problem, simply add this shift
@@ -147,7 +148,7 @@ public class ShiftPage extends AppCompatActivity {
                                                         }else{
                                                             boolean send = true;
                                                             for(Shift tempShift : allShifts){
-                                                                if(shift.year == tempShift.year || shift.month == tempShift.month || shift.day == tempShift.day){//if the shift we are trying to add is on same day as another shift
+                                                                if(shift.year == tempShift.year && shift.month == tempShift.month && shift.day == tempShift.day){//if the shift we are trying to add is on same day as another shift
                                                                     if(shift.calcStartTime <= tempShift.calcStartTime && shift.calcEndTime >= tempShift.calcStartTime){//and it overlaps with said shift
                                                                         Toast.makeText(getApplicationContext(), "You cannot have overlapping shifts", Toast.LENGTH_SHORT).show();
                                                                         send = false;//do not allow the shift to be added
@@ -225,13 +226,68 @@ public class ShiftPage extends AppCompatActivity {
                 button.setOnClickListener(new View.OnClickListener() {//button to delete shift
                     @Override
                     public void onClick(View view) {
-                        if (FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child("Appointment").equals(null)){
-                            FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child("Shifts").child(tempShift.ID).setValue(null);
-                            button.setEnabled(false);
-                            layout.removeView(row);
-                        }else{
-                            Toast.makeText(getApplicationContext(),"You cannot delete your shift, you have appointments outstanding!",Toast.LENGTH_SHORT).show();
-                        }
+
+                        FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child("Shifts").child(tempShift.ID).child("Appointments").addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                Log.d("1", "1");
+                                if (!dataSnapshot.getChildren().iterator().hasNext()){
+                                    FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child("Shifts").child(tempShift.ID).setValue(null);
+                                    button.setEnabled(false);
+                                    layout.removeView(row);
+                                }
+                                for (DataSnapshot snapshot : dataSnapshot.getChildren()) { //Loop through all appointments stored in this doctor
+                                    String ID = snapshot.getKey();
+                                    Log.d("2", "2");
+
+                                    Appointment tempAppointment = snapshot.getValue(Appointment.class);
+                                    FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child("Appointments").addListenerForSingleValueEvent(new ValueEventListener() {
+                                        @Override
+                                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                            Log.d("got here", "");
+                                            boolean delete = true;
+                                            for (DataSnapshot snapshots : dataSnapshot.getChildren()) {
+                                                String IDT = snapshots.getKey();
+
+
+                                                Appointment temporAppointment  = snapshots.getValue(Appointment.class);
+                                                temporAppointment.ID = IDT;
+                                                String concet = temporAppointment.doctorID + tempAppointment.doctorID+temporAppointment.patientID+tempAppointment.patientID
+                                                        +temporAppointment.startTime+tempAppointment.startTime+temporAppointment.day+tempAppointment.day+temporAppointment.month+tempAppointment.month
+                                                        +temporAppointment.year+tempAppointment.year;
+                                                Log.d("tagh", concet);
+
+                                                if (temporAppointment.doctorID.equals(tempAppointment.doctorID)
+                                                        && temporAppointment.startTime == tempAppointment.startTime && temporAppointment.day == tempAppointment.day && temporAppointment.month == tempAppointment.month
+                                                        && temporAppointment.year == tempAppointment.year){
+                                                    if(temporAppointment.status == 0 || temporAppointment.status == 1){
+                                                        delete = false;
+                                                            Toast.makeText(getApplicationContext(),"You cannot delete your shift, you have appointments outstanding!",Toast.LENGTH_SHORT).show();
+                                                    }
+                                                }
+                                            }
+                                            if(delete){
+                                                FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child("Shifts").child(tempShift.ID).setValue(null);
+                                                button.setEnabled(false);
+                                                layout.removeView(row);
+                                            }
+                                        }
+
+                                        @Override
+                                        public void onCancelled(@NonNull DatabaseError error) {
+                                            Log.d("errorrrrrr", "eror");
+
+                                        }
+                                    });
+
+                                }
+
+                            }
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+                                Log.d("errorrrrrr", "eror");
+                            }
+                        });
                     }
                 });
             }

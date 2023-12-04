@@ -2844,7 +2844,6 @@ id FUNCTION
 id GetStarted
 id META
 id NO_DEBUG
-id PastAppointmentView
 id RefreshAppointment
 id RefreshInbox
 id SHIFT
@@ -2852,7 +2851,6 @@ id SHOW_ALL
 id SHOW_PATH
 id SHOW_PROGRESS
 id SYM
-id ScrollHorizontal
 id TOP_END
 id TOP_START
 id accelerate
@@ -3123,9 +3121,7 @@ id linearLayout
 id linearLayout10
 id linearLayout11
 id linearLayout12
-id linearLayout13
 id linearLayout2
-id linearLayout4
 id linearLayout5
 id linearLayout6
 id linearLayout7
@@ -3229,6 +3225,7 @@ id parent_matrix
 id passwordInput
 id password_toggle
 id pastAppointmentButton
+id pastAppointmentTable
 id pastPatientAppointment
 id patComingAppt
 id path
@@ -3386,6 +3383,7 @@ id textView24
 id textView25
 id textView26
 id textView27
+id textView28
 id textView3
 id textView4
 id textView5

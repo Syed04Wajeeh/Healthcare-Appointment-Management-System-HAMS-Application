@@ -5,10 +5,8 @@ color white
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 id GetStarted
-id PastAppointmentView
 id RefreshAppointment
 id RefreshInbox
-id ScrollHorizontal
 id acceptSwitch
 id addShift
 id addShiftButton
@@ -52,9 +50,7 @@ id linearLayout
 id linearLayout10
 id linearLayout11
 id linearLayout12
-id linearLayout13
 id linearLayout2
-id linearLayout4
 id linearLayout5
 id linearLayout6
 id linearLayout7
@@ -65,6 +61,7 @@ id logOff2
 id loginButton
 id passwordInput
 id pastAppointmentButton
+id pastAppointmentTable
 id pastPatientAppointment
 id patComingAppt
 id patientAccountPassword
@@ -106,6 +103,7 @@ id textView24
 id textView25
 id textView26
 id textView27
+id textView28
 id textView3
 id textView4
 id textView5

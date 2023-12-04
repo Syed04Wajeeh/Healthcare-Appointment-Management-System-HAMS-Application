@@ -35,12 +35,16 @@ public class Appointment {
         int currHour = cal.get(Calendar.HOUR_OF_DAY);
 
         if(this.year < currYear){
+            this.past = true;
             return true;
         }else if((this.year == currYear) && (this.month < currMonth)){
+            this.past = true;
             return true;
         }else if(this.year == currYear && this.month == currMonth && this.day < currDay){
+            this.past = true;
             return true;
         }else if(this.year == currYear && this.month == currMonth && this.day == currDay && this.startHour < currHour){
+            this.past = true;
             return true;
         }
         return false;

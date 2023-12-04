@@ -170,16 +170,18 @@ public class ComingAppointmentDoctor extends AppCompatActivity {
                             String ID = snapshot.getKey();
 
                             Appointment tempAppointment = snapshot.getValue(Appointment.class);
+                            tempAppointment.ID = (ID);
 
                             if (tempAppointment.status == 0 || tempAppointment.status == 1){ // check if current appointment is accepted or not looked at
+                                Log.d("ID", "ID");
                                 if(!tempAppointment.isPast()) {//check if appointment is past
-                                    if (accept.isChecked()){//if the autoaccept is on, accept all appointment requests
-                                        FirebaseDatabase.getInstance().getReference().child("Users").child(uniqueID).child("Appointments").child(ID).child("status").setValue(1);
-                                    }
+                                    Log.d("JMMMMMM", "HMMMM");
                                     //set appointment ID and add to the array of coming appointments
-                                    tempAppointment.ID = (ID);
+
 
                                     allComingAppointments.add(tempAppointment);
+                                    Log.d("MEOWWWWWWWWw", "HMMMM");
+
                                 }
                             }
 

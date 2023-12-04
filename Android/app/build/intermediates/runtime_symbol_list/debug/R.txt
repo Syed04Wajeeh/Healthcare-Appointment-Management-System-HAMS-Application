@@ -2843,7 +2843,6 @@ int id FUNCTION 0x7f080004
 int id GetStarted 0x7f080005
 int id META 0x7f080007
 int id NO_DEBUG 0x7f080008
-int id PastAppointmentView 0x7f080009
 int id RefreshAppointment 0x7f08000a
 int id RefreshInbox 0x7f08000b
 int id SHIFT 0x7f08000c
@@ -2851,7 +2850,6 @@ int id SHOW_ALL 0x7f08000d
 int id SHOW_PATH 0x7f08000e
 int id SHOW_PROGRESS 0x7f08000f
 int id SYM 0x7f080010
-int id ScrollHorizontal 0x7f080011
 int id TOP_END 0x7f080012
 int id TOP_START 0x7f080013
 int id accelerate 0x7f080014
@@ -3122,9 +3120,7 @@ int id linearLayout 0x7f08011a
 int id linearLayout10 0x7f08011b
 int id linearLayout11 0x7f08011c
 int id linearLayout12 0x7f08011d
-int id linearLayout13 0x7f08011e
 int id linearLayout2 0x7f08011f
-int id linearLayout4 0x7f080120
 int id linearLayout5 0x7f080121
 int id linearLayout6 0x7f080122
 int id linearLayout7 0x7f080123
@@ -3228,6 +3224,7 @@ int id parent_matrix 0x7f080184
 int id passwordInput 0x7f080185
 int id password_toggle 0x7f080186
 int id pastAppointmentButton 0x7f080187
+int id pastAppointmentTable 0x7f080262
 int id pastPatientAppointment 0x7f080188
 int id patComingAppt 0x7f080260
 int id path 0x7f080189
@@ -3385,6 +3382,7 @@ int id textView24 0x7f08021f
 int id textView25 0x7f080220
 int id textView26 0x7f080221
 int id textView27 0x7f080222
+int id textView28 0x7f080263
 int id textView3 0x7f080223
 int id textView4 0x7f080224
 int id textView5 0x7f080225

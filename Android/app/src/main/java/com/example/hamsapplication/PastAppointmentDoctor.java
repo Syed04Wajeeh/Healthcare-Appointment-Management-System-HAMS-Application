@@ -70,7 +70,7 @@ public class PastAppointmentDoctor extends AppCompatActivity {
         setContentView(R.layout.activity_past_appointment);
 
         context = this;
-        layout  = (TableLayout) findViewById(R.id.PastAppointmentView);
+        layout  = (TableLayout) findViewById(R.id.pastAppointmentTable);
         back = (Button) findViewById(R.id.backButton);
 
         CurrentUser.getID(new CurrentUser.OnDataReceivedListener() {//obtain the current user's ID
@@ -83,7 +83,7 @@ public class PastAppointmentDoctor extends AppCompatActivity {
                         for (DataSnapshot snapshot : dataSnapshot.getChildren()) {//Loop through all appointments
                             String ID = snapshot.getKey();
                             Appointment tempAppointment = snapshot.getValue(Appointment.class);
-                            if (tempAppointment.past){//if the appointment is past, add it to the array
+                            if (tempAppointment.isPast()){//if the appointment is past, add it to the array
                                 if(tempAppointment.status == 1){
                                     tempAppointment.ID = (ID);
                                     allPastAppointments.add(tempAppointment);
