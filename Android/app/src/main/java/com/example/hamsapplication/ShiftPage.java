@@ -106,16 +106,14 @@ public class ShiftPage extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(ShiftPage.this, ShiftPage.class);
                 startActivity(intent);
-                refresh.setEnabled(false);
+                finish();
             }
         });
 
         back.setOnClickListener(new View.OnClickListener() {//go back to welcome screen
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ShiftPage.this, WelcomeScreenDoctor.class);
-                startActivity(intent);
-                refresh.setEnabled(false);
+                onBackPressed();
             }
         });
         addShiftButton.setOnClickListener(new View.OnClickListener() {//button to add a shift, uses start time, end time, and date fields from other buttons

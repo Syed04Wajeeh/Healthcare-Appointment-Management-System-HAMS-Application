@@ -31,6 +31,14 @@ public class BookAppointmentPatient extends AppCompatActivity {
         back = (Button) findViewById(R.id.backButtonSpecialty);
         specialtyTable = (TableLayout)  findViewById(R.id.specialtyTable);
 
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
         //ArrayList<String> allSpecialties = new ArrayList<>();
         FirebaseDatabase.getInstance().getReference().child("Users").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -69,7 +77,7 @@ public class BookAppointmentPatient extends AppCompatActivity {
 
             //set text and button properties
             text.setText( "     " + specialty );
-            button.setText("View Available Shifts");
+            button.setText("View Available Appointments");
             button.setBackgroundColor(Color.GREEN);
 
             //add to layout
@@ -87,7 +95,7 @@ public class BookAppointmentPatient extends AppCompatActivity {
                     intent.putExtra("pat",patID);
                     intent.putExtra("specialty",specialty);
                     startActivity(intent);
-
+                    finish();
                 }
             });
     }

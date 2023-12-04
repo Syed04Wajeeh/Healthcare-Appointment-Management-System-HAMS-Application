@@ -23,7 +23,7 @@ public class createdAccount extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(createdAccount.this, login.class);
                 startActivity(intent);
-                homeButton.setEnabled(false);
+                finish();
             }
         });
     }

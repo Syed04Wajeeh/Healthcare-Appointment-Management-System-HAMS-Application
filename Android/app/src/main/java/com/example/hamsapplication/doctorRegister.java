@@ -67,6 +67,7 @@ public class doctorRegister extends AppCompatActivity{
                             doctor.addToCollection();
                             Intent intent = new Intent(doctorRegister.this, createdAccount.class);
                             startActivity(intent);
+                            finish();
                         }
                     }
                 });

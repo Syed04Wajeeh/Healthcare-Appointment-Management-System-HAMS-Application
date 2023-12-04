@@ -29,12 +29,12 @@ public class WelcomeScreenDoctor extends AppCompatActivity {
         shift = (Button) findViewById(R.id.shiftButton);
         pastAppointment = (Button) findViewById(R.id.pastAppointmentButton);
         comingAppointment = (Button) findViewById(R.id.comingAppointmentButton);
+
         logOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { //logout button that takes you to the login page
                 Intent intent = new Intent(WelcomeScreenDoctor.this, login.class);
                 startActivity(intent);
-                logOut.setEnabled(false);
             }
         });
 
@@ -43,7 +43,6 @@ public class WelcomeScreenDoctor extends AppCompatActivity {
             public void onClick(View view) { //button that takes you to the shifts page
                 Intent intent = new Intent(WelcomeScreenDoctor.this, ShiftPage.class);
                 startActivity(intent);
-                shift.setEnabled(false);
             }
         });
         pastAppointment.setOnClickListener(new View.OnClickListener() {
@@ -51,7 +50,6 @@ public class WelcomeScreenDoctor extends AppCompatActivity {
             public void onClick(View view) { //button that takes you to the past appointments page
                 Intent intent = new Intent(WelcomeScreenDoctor.this, PastAppointmentDoctor.class);
                 startActivity(intent);
-                pastAppointment.setEnabled(false);
             }
         });
         comingAppointment.setOnClickListener(new View.OnClickListener() {
@@ -59,7 +57,6 @@ public class WelcomeScreenDoctor extends AppCompatActivity {
             public void onClick(View view) { //button that takes you to the coming appointments page
                 Intent intent = new Intent(WelcomeScreenDoctor.this, ComingAppointmentDoctor.class);
                 startActivity(intent);
-                comingAppointment.setEnabled(false);
             }
         });
     }

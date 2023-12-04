@@ -125,7 +125,6 @@ public class login extends AppCompatActivity{
             public void onClick(View view) {
                 Intent intent = new Intent(login.this, patientRegister.class);
                 startActivity(intent);
-                patientRegister.setEnabled(false);
             }
         });
         doctorRegister.setOnClickListener(new View.OnClickListener(){ //taking the user to the doctor register page
@@ -133,7 +132,6 @@ public class login extends AppCompatActivity{
             public void onClick(View view) {
                 Intent intent = new Intent(login.this, doctorRegister.class);
                 startActivity(intent);
-                doctorRegister.setEnabled(false);
             }
         });
 

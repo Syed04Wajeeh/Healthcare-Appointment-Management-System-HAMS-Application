@@ -40,7 +40,6 @@ public class welcomeScreenAdmin extends AppCompatActivity{
             public void onClick(View view) { //inbox button that takes you to the inbox page
                 Intent intent = new Intent(welcomeScreenAdmin.this, Inbox.class);
                 startActivity(intent);
-                inbox.setEnabled(false);
             }
         });
     }

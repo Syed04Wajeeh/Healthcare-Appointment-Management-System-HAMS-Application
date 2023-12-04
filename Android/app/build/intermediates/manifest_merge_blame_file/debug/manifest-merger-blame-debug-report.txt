@@ -11,295 +11,125 @@
 11    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
 12    <!-- <uses-sdk android:minSdkVersion="14"/> -->
 13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-13-->[com.google.firebase:firebase-database:20.3.0] C:\Users\jaack\.gradle\caches\transforms-3\73c90495d2ae38a10237f955e2b7f1f9\transformed\firebase-database-20.3.0\AndroidManifest.xml:22:5-79
-13-->[com.google.firebase:firebase-database:20.3.0] C:\Users\jaack\.gradle\caches\transforms-3\73c90495d2ae38a10237f955e2b7f1f9\transformed\firebase-database-20.3.0\AndroidManifest.xml:22:22-76
+13-->[com.google.firebase:firebase-database:20.3.0] C:\Users\wajee\.gradle\caches\transforms-3\73c90495d2ae38a10237f955e2b7f1f9\transformed\firebase-database-20.3.0\AndroidManifest.xml:22:5-79
+13-->[com.google.firebase:firebase-database:20.3.0] C:\Users\wajee\.gradle\caches\transforms-3\73c90495d2ae38a10237f955e2b7f1f9\transformed\firebase-database-20.3.0\AndroidManifest.xml:22:22-76
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->[com.google.firebase:firebase-database:20.3.0] C:\Users\jaack\.gradle\caches\transforms-3\73c90495d2ae38a10237f955e2b7f1f9\transformed\firebase-database-20.3.0\AndroidManifest.xml:23:5-67
-14-->[com.google.firebase:firebase-database:20.3.0] C:\Users\jaack\.gradle\caches\transforms-3\73c90495d2ae38a10237f955e2b7f1f9\transformed\firebase-database-20.3.0\AndroidManifest.xml:23:22-64
+14-->[com.google.firebase:firebase-database:20.3.0] C:\Users\wajee\.gradle\caches\transforms-3\73c90495d2ae38a10237f955e2b7f1f9\transformed\firebase-database-20.3.0\AndroidManifest.xml:23:5-67
+14-->[com.google.firebase:firebase-database:20.3.0] C:\Users\wajee\.gradle\caches\transforms-3\73c90495d2ae38a10237f955e2b7f1f9\transformed\firebase-database-20.3.0\AndroidManifest.xml:23:22-64
 15
 16    <permission
-16-->[androidx.core:core:1.9.0] C:\Users\jaack\.gradle\caches\transforms-3\45dba061abe1e5d647d9f295032bd2d4\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+16-->[androidx.core:core:1.9.0] C:\Users\wajee\.gradle\caches\transforms-3\45dba061abe1e5d647d9f295032bd2d4\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
 17        android:name="com.example.hamsapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-17-->[androidx.core:core:1.9.0] C:\Users\jaack\.gradle\caches\transforms-3\45dba061abe1e5d647d9f295032bd2d4\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+17-->[androidx.core:core:1.9.0] C:\Users\wajee\.gradle\caches\transforms-3\45dba061abe1e5d647d9f295032bd2d4\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
 18        android:protectionLevel="signature" />
-18-->[androidx.core:core:1.9.0] C:\Users\jaack\.gradle\caches\transforms-3\45dba061abe1e5d647d9f295032bd2d4\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+18-->[androidx.core:core:1.9.0] C:\Users\wajee\.gradle\caches\transforms-3\45dba061abe1e5d647d9f295032bd2d4\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
 19
 20    <uses-permission android:name="com.example.hamsapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-20-->[androidx.core:core:1.9.0] C:\Users\jaack\.gradle\caches\transforms-3\45dba061abe1e5d647d9f295032bd2d4\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
-20-->[androidx.core:core:1.9.0] C:\Users\jaack\.gradle\caches\transforms-3\45dba061abe1e5d647d9f295032bd2d4\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+20-->[androidx.core:core:1.9.0] C:\Users\wajee\.gradle\caches\transforms-3\45dba061abe1e5d647d9f295032bd2d4\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+20-->[androidx.core:core:1.9.0] C:\Users\wajee\.gradle\caches\transforms-3\45dba061abe1e5d647d9f295032bd2d4\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 21
 22    <application
-<<<<<<< HEAD
-22-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:5:5-63:19
-=======
 22-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:5:5-66:19
->>>>>>> 3150d8e8a8604f93d57d970a9dbc05cd1e60ee91
 23        android:allowBackup="true"
-23-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:6:9-35
+23-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:6:9-35
 24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-24-->[androidx.core:core:1.9.0] C:\Users\jaack\.gradle\caches\transforms-3\45dba061abe1e5d647d9f295032bd2d4\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+24-->[androidx.core:core:1.9.0] C:\Users\wajee\.gradle\caches\transforms-3\45dba061abe1e5d647d9f295032bd2d4\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 25        android:dataExtractionRules="@xml/data_extraction_rules"
-25-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:7:9-65
+25-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:7:9-65
 26        android:debuggable="true"
 27        android:extractNativeLibs="false"
 28        android:fullBackupContent="@xml/backup_rules"
-28-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:8:9-54
+28-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:8:9-54
 29        android:icon="@mipmap/ic_launcher"
-29-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:9:9-43
+29-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:9:9-43
 30        android:label="@string/app_name"
-30-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:10:9-41
+30-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:10:9-41
 31        android:roundIcon="@mipmap/ic_launcher_round"
-31-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:11:9-54
+31-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:11:9-54
 32        android:supportsRtl="true"
-32-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:12:9-35
+32-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:12:9-35
 33        android:testOnly="true"
 34        android:theme="@style/Theme.HAMSApplication" >
-34-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:13:9-53
+34-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:13:9-53
 35        <activity
-35-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:15:9-17:40
+35-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:15:9-17:40
 36            android:name="com.example.hamsapplication.BookAppointmentPatientRowPage"
-36-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:16:13-58
+36-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:16:13-58
 37            android:exported="false" />
-37-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:17:13-37
+37-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:17:13-37
 38        <activity
-38-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:18:9-20:40
+38-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:18:9-20:40
 39            android:name="com.example.hamsapplication.BookAppointmentPatient"
-39-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:19:13-51
+39-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:19:13-51
 40            android:exported="false" />
-40-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:20:13-37
+40-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:20:13-37
 41        <activity
-41-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:21:9-23:40
+41-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:21:9-23:40
 42            android:name="com.example.hamsapplication.ComingAppointmentPatient"
-42-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:22:13-53
+42-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:22:13-53
 43            android:exported="false" />
-43-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:23:13-37
+43-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:23:13-37
 44        <activity
-<<<<<<< HEAD
-44-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:24:9-26:40
-45            android:name="com.example.hamsapplication.ComingAppointment"
-45-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:25:13-46
-=======
 44-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:24:9-26:40
 45            android:name="com.example.hamsapplication.ComingAppointmentDoctor"
 45-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:25:13-52
->>>>>>> 3150d8e8a8604f93d57d970a9dbc05cd1e60ee91
 46            android:exported="false" />
-46-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:26:13-37
+46-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:26:13-37
 47        <activity
-<<<<<<< HEAD
-47-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:27:9-29:40
-48            android:name="com.example.hamsapplication.PastAppointment"
-48-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:28:13-44
-=======
 47-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:27:9-29:40
 48            android:name="com.example.hamsapplication.PastAppointmentDoctor"
 48-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:28:13-50
->>>>>>> 3150d8e8a8604f93d57d970a9dbc05cd1e60ee91
 49            android:exported="false" />
-49-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:29:13-37
+49-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:29:13-37
 50        <activity
-<<<<<<< HEAD
-50-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:30:9-32:40
-51            android:name="com.example.hamsapplication.ShiftPage"
-51-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:31:13-38
-=======
 50-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:30:9-32:40
 51            android:name="com.example.hamsapplication.PastAppointmentPatient"
 51-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:31:13-51
->>>>>>> 3150d8e8a8604f93d57d970a9dbc05cd1e60ee91
 52            android:exported="false" />
-52-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:32:13-37
+52-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:32:13-37
 53        <activity
-<<<<<<< HEAD
-53-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:33:9-35:40
-54            android:name="com.example.hamsapplication.Inbox"
-54-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:34:13-34
-=======
 53-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:33:9-35:40
 54            android:name="com.example.hamsapplication.ShiftPage"
 54-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:34:13-38
->>>>>>> 3150d8e8a8604f93d57d970a9dbc05cd1e60ee91
 55            android:exported="false" />
-55-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:35:13-37
+55-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:35:13-37
 56        <activity
-<<<<<<< HEAD
-56-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:36:9-38:40
-57            android:name="com.example.hamsapplication.WelcomeScreenPatient"
-57-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:37:13-49
-=======
 56-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:36:9-38:40
 57            android:name="com.example.hamsapplication.Inbox"
 57-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:37:13-34
->>>>>>> 3150d8e8a8604f93d57d970a9dbc05cd1e60ee91
 58            android:exported="false" />
-58-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:38:13-37
+58-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:38:13-37
 59        <activity
-<<<<<<< HEAD
-59-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:39:9-41:40
-60            android:name="com.example.hamsapplication.WelcomeScreenDoctor"
-60-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:40:13-48
-=======
 59-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:39:9-41:40
 60            android:name="com.example.hamsapplication.WelcomeScreenPatient"
 60-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:40:13-49
->>>>>>> 3150d8e8a8604f93d57d970a9dbc05cd1e60ee91
 61            android:exported="false" />
-61-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:41:13-37
+61-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:41:13-37
 62        <activity
-<<<<<<< HEAD
-62-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:42:9-44:40
-63            android:name="com.example.hamsapplication.welcomeScreenAdmin"
-63-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:43:13-47
-=======
 62-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:42:9-44:40
 63            android:name="com.example.hamsapplication.WelcomeScreenDoctor"
 63-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:43:13-48
->>>>>>> 3150d8e8a8604f93d57d970a9dbc05cd1e60ee91
 64            android:exported="false" />
-64-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:44:13-37
+64-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:44:13-37
 65        <activity
-<<<<<<< HEAD
-65-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:45:9-47:40
-66            android:name="com.example.hamsapplication.createdAccount"
-66-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:46:13-43
-=======
 65-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:45:9-47:40
 66            android:name="com.example.hamsapplication.welcomeScreenAdmin"
 66-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:46:13-47
->>>>>>> 3150d8e8a8604f93d57d970a9dbc05cd1e60ee91
 67            android:exported="false" />
-67-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:47:13-37
+67-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:47:13-37
 68        <activity
-<<<<<<< HEAD
-68-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:48:9-50:40
-69            android:name="com.example.hamsapplication.doctorRegister"
-69-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:49:13-43
-=======
 68-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:48:9-50:40
 69            android:name="com.example.hamsapplication.createdAccount"
 69-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:49:13-43
->>>>>>> 3150d8e8a8604f93d57d970a9dbc05cd1e60ee91
 70            android:exported="false" />
-70-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:50:13-37
+70-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:50:13-37
 71        <activity
-<<<<<<< HEAD
-71-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:51:9-53:40
-72            android:name="com.example.hamsapplication.patientRegister"
-72-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:52:13-44
-=======
 71-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:51:9-53:40
 72            android:name="com.example.hamsapplication.doctorRegister"
 72-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:52:13-43
->>>>>>> 3150d8e8a8604f93d57d970a9dbc05cd1e60ee91
 73            android:exported="false" />
-73-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:53:13-37
+73-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:53:13-37
 74        <activity
-<<<<<<< HEAD
-74-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:54:9-62:20
-75            android:name="com.example.hamsapplication.login"
-75-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:55:13-34
-76            android:exported="true" >
-76-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:56:13-36
-77            <intent-filter>
-77-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:57:13-61:29
-78                <action android:name="android.intent.action.MAIN" />
-78-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:58:17-69
-78-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:58:25-66
-79
-80                <category android:name="android.intent.category.LAUNCHER" />
-80-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:60:17-77
-80-->C:\Users\jaack\OneDrive - University of Ottawa\SEG 2105\project-project-group-23\Android\app\src\main\AndroidManifest.xml:60:27-74
-81            </intent-filter>
-82        </activity>
-83
-84        <service
-84-->[com.google.firebase:firebase-database:20.3.0] C:\Users\jaack\.gradle\caches\transforms-3\73c90495d2ae38a10237f955e2b7f1f9\transformed\firebase-database-20.3.0\AndroidManifest.xml:26:9-35:19
-85            android:name="com.google.firebase.components.ComponentDiscoveryService"
-85-->[com.google.firebase:firebase-database:20.3.0] C:\Users\jaack\.gradle\caches\transforms-3\73c90495d2ae38a10237f955e2b7f1f9\transformed\firebase-database-20.3.0\AndroidManifest.xml:27:13-84
-86            android:directBootAware="true"
-86-->[com.google.firebase:firebase-common:20.4.2] C:\Users\jaack\.gradle\caches\transforms-3\51eb42b334691e771d1e321cb2b4384a\transformed\firebase-common-20.4.2\AndroidManifest.xml:32:13-43
-87            android:exported="false" >
-87-->[com.google.firebase:firebase-database:20.3.0] C:\Users\jaack\.gradle\caches\transforms-3\73c90495d2ae38a10237f955e2b7f1f9\transformed\firebase-database-20.3.0\AndroidManifest.xml:28:13-37
-88            <meta-data
-88-->[com.google.firebase:firebase-database:20.3.0] C:\Users\jaack\.gradle\caches\transforms-3\73c90495d2ae38a10237f955e2b7f1f9\transformed\firebase-database-20.3.0\AndroidManifest.xml:29:13-31:85
-89                android:name="com.google.firebase.components:com.google.firebase.database.FirebaseDatabaseKtxRegistrar"
-89-->[com.google.firebase:firebase-database:20.3.0] C:\Users\jaack\.gradle\caches\transforms-3\73c90495d2ae38a10237f955e2b7f1f9\transformed\firebase-database-20.3.0\AndroidManifest.xml:30:17-120
-90                android:value="com.google.firebase.components.ComponentRegistrar" />
-90-->[com.google.firebase:firebase-database:20.3.0] C:\Users\jaack\.gradle\caches\transforms-3\73c90495d2ae38a10237f955e2b7f1f9\transformed\firebase-database-20.3.0\AndroidManifest.xml:31:17-82
-91            <meta-data
-91-->[com.google.firebase:firebase-database:20.3.0] C:\Users\jaack\.gradle\caches\transforms-3\73c90495d2ae38a10237f955e2b7f1f9\transformed\firebase-database-20.3.0\AndroidManifest.xml:32:13-34:85
-92                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-92-->[com.google.firebase:firebase-database:20.3.0] C:\Users\jaack\.gradle\caches\transforms-3\73c90495d2ae38a10237f955e2b7f1f9\transformed\firebase-database-20.3.0\AndroidManifest.xml:33:17-109
-93                android:value="com.google.firebase.components.ComponentRegistrar" />
-93-->[com.google.firebase:firebase-database:20.3.0] C:\Users\jaack\.gradle\caches\transforms-3\73c90495d2ae38a10237f955e2b7f1f9\transformed\firebase-database-20.3.0\AndroidManifest.xml:34:17-82
-94            <meta-data
-94-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\jaack\.gradle\caches\transforms-3\853631cffb0dfb84a35792d241b74847\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:12:13-14:85
-95                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
-95-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\jaack\.gradle\caches\transforms-3\853631cffb0dfb84a35792d241b74847\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:13:17-116
-96                android:value="com.google.firebase.components.ComponentRegistrar" />
-96-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\jaack\.gradle\caches\transforms-3\853631cffb0dfb84a35792d241b74847\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:14:17-82
-97            <meta-data
-97-->[com.google.firebase:firebase-common:20.4.2] C:\Users\jaack\.gradle\caches\transforms-3\51eb42b334691e771d1e321cb2b4384a\transformed\firebase-common-20.4.2\AndroidManifest.xml:35:13-37:85
-98                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
-98-->[com.google.firebase:firebase-common:20.4.2] C:\Users\jaack\.gradle\caches\transforms-3\51eb42b334691e771d1e321cb2b4384a\transformed\firebase-common-20.4.2\AndroidManifest.xml:36:17-109
-99                android:value="com.google.firebase.components.ComponentRegistrar" />
-99-->[com.google.firebase:firebase-common:20.4.2] C:\Users\jaack\.gradle\caches\transforms-3\51eb42b334691e771d1e321cb2b4384a\transformed\firebase-common-20.4.2\AndroidManifest.xml:37:17-82
-100        </service>
-101
-102        <activity
-102-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\jaack\.gradle\caches\transforms-3\ea1d2155169063a3e7b8f244bebaf5b6\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
-103            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-103-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\jaack\.gradle\caches\transforms-3\ea1d2155169063a3e7b8f244bebaf5b6\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:19-85
-104            android:exported="false"
-104-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\jaack\.gradle\caches\transforms-3\ea1d2155169063a3e7b8f244bebaf5b6\transformed\play-services-base-18.1.0\AndroidManifest.xml:22:19-43
-105            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-105-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\jaack\.gradle\caches\transforms-3\ea1d2155169063a3e7b8f244bebaf5b6\transformed\play-services-base-18.1.0\AndroidManifest.xml:21:19-78
-106
-107        <provider
-107-->[com.google.firebase:firebase-common:20.4.2] C:\Users\jaack\.gradle\caches\transforms-3\51eb42b334691e771d1e321cb2b4384a\transformed\firebase-common-20.4.2\AndroidManifest.xml:23:9-28:39
-108            android:name="com.google.firebase.provider.FirebaseInitProvider"
-108-->[com.google.firebase:firebase-common:20.4.2] C:\Users\jaack\.gradle\caches\transforms-3\51eb42b334691e771d1e321cb2b4384a\transformed\firebase-common-20.4.2\AndroidManifest.xml:24:13-77
-109            android:authorities="com.example.hamsapplication.firebaseinitprovider"
-109-->[com.google.firebase:firebase-common:20.4.2] C:\Users\jaack\.gradle\caches\transforms-3\51eb42b334691e771d1e321cb2b4384a\transformed\firebase-common-20.4.2\AndroidManifest.xml:25:13-72
-110            android:directBootAware="true"
-110-->[com.google.firebase:firebase-common:20.4.2] C:\Users\jaack\.gradle\caches\transforms-3\51eb42b334691e771d1e321cb2b4384a\transformed\firebase-common-20.4.2\AndroidManifest.xml:26:13-43
-111            android:exported="false"
-111-->[com.google.firebase:firebase-common:20.4.2] C:\Users\jaack\.gradle\caches\transforms-3\51eb42b334691e771d1e321cb2b4384a\transformed\firebase-common-20.4.2\AndroidManifest.xml:27:13-37
-112            android:initOrder="100" />
-112-->[com.google.firebase:firebase-common:20.4.2] C:\Users\jaack\.gradle\caches\transforms-3\51eb42b334691e771d1e321cb2b4384a\transformed\firebase-common-20.4.2\AndroidManifest.xml:28:13-36
-113
-114        <meta-data
-114-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\jaack\.gradle\caches\transforms-3\e69ddfd2048d62e013e1c084a9c6ef14\transformed\play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
-115            android:name="com.google.android.gms.version"
-115-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\jaack\.gradle\caches\transforms-3\e69ddfd2048d62e013e1c084a9c6ef14\transformed\play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
-116            android:value="@integer/google_play_services_version" />
-116-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\jaack\.gradle\caches\transforms-3\e69ddfd2048d62e013e1c084a9c6ef14\transformed\play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
-117
-118        <provider
-118-->[androidx.emoji2:emoji2:1.2.0] C:\Users\jaack\.gradle\caches\transforms-3\cda509cc96bd5991df7deaeed19a12fa\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-119            android:name="androidx.startup.InitializationProvider"
-119-->[androidx.emoji2:emoji2:1.2.0] C:\Users\jaack\.gradle\caches\transforms-3\cda509cc96bd5991df7deaeed19a12fa\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-120            android:authorities="com.example.hamsapplication.androidx-startup"
-120-->[androidx.emoji2:emoji2:1.2.0] C:\Users\jaack\.gradle\caches\transforms-3\cda509cc96bd5991df7deaeed19a12fa\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-121            android:exported="false" >
-121-->[androidx.emoji2:emoji2:1.2.0] C:\Users\jaack\.gradle\caches\transforms-3\cda509cc96bd5991df7deaeed19a12fa\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
-122            <meta-data
-122-->[androidx.emoji2:emoji2:1.2.0] C:\Users\jaack\.gradle\caches\transforms-3\cda509cc96bd5991df7deaeed19a12fa\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-123                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-123-->[androidx.emoji2:emoji2:1.2.0] C:\Users\jaack\.gradle\caches\transforms-3\cda509cc96bd5991df7deaeed19a12fa\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-124                android:value="androidx.startup" />
-124-->[androidx.emoji2:emoji2:1.2.0] C:\Users\jaack\.gradle\caches\transforms-3\cda509cc96bd5991df7deaeed19a12fa\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
-125            <meta-data
-125-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\jaack\.gradle\caches\transforms-3\bd7f4f3b79a25f5f5137cb231240dbd2\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-126                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-126-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\jaack\.gradle\caches\transforms-3\bd7f4f3b79a25f5f5137cb231240dbd2\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-127                android:value="androidx.startup" />
-127-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\jaack\.gradle\caches\transforms-3\bd7f4f3b79a25f5f5137cb231240dbd2\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-128        </provider>
-129    </application>
-130
-131</manifest>
-=======
 74-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:54:9-56:40
 75            android:name="com.example.hamsapplication.patientRegister"
 75-->E:\SEG\project-project-group-23\Android\app\src\main\AndroidManifest.xml:55:13-44
@@ -410,4 +240,3 @@
 132    </application>
 133
 134</manifest>
->>>>>>> 3150d8e8a8604f93d57d970a9dbc05cd1e60ee91

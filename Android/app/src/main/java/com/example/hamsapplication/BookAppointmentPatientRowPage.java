@@ -24,6 +24,7 @@ import org.w3c.dom.Text;
 
 import java.sql.Array;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 
 public class BookAppointmentPatientRowPage extends AppCompatActivity {
@@ -34,6 +35,8 @@ public class BookAppointmentPatientRowPage extends AppCompatActivity {
     Button back;
     TextView text;
     TableLayout layout;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,48 +59,50 @@ public class BookAppointmentPatientRowPage extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 ArrayList<Shift> allShifts = new ArrayList<>();
-                Log.d("1", "22");
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {//loop through all shifts in the current user object
-                    Log.d("1", "333");
                     String ID = snapshot.getKey();
                     Shift tempShift = snapshot.getValue(Shift.class);
                     tempShift.ID = ID;
                     allShifts.add(tempShift);//add all shifts to array
-                    FirebaseDatabase.getInstance().getReference().child("Users").child(docID).child("Shifts").child("Appointments").addListenerForSingleValueEvent(new ValueEventListener() {
+                    FirebaseDatabase.getInstance().getReference().child("Users").child(docID).child("Shifts").child(tempShift.ID).child("Appointments").addListenerForSingleValueEvent(new ValueEventListener() {
 
                         @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshots) {
-                            Log.d("1", "1444444");
+                        public void onDataChange(@NonNull DataSnapshot snapShots) {
                             ArrayList<Appointment> allAppointments = new ArrayList<>();
-                            for (DataSnapshot snapshot : dataSnapshot.getChildren()) {//loop through all appt in the current user object
-                                Log.d("4", "555555555");
+
+                            for (DataSnapshot snapshot : snapShots.getChildren()) {//loop through all appt in the current user object
                                 String ID = snapshot.getKey();
                                 Appointment tempAppointment = snapshot.getValue(Appointment.class);
                                 if (tempAppointment.day == tempShift.day && tempAppointment.month == tempShift.month && tempAppointment.year == tempShift.year){
                                     tempAppointment.ID = ID;
+
                                     allAppointments.add(tempAppointment);//add all appt to array
                                 }
 
                             }
 
-                                Log.d("1", "6656666");
+                            Log.d("here", "here");
                                 double currentTime = (double) tempShift.calcStartTime;
                                 ArrayList<Double> timeSlots = new ArrayList<>();
                                 while(currentTime != tempShift.calcEndTime) {
-                                    Log.d("1", "77777777777");
+                                    Log.d("time", "slot");
+
                                     timeSlots.add(currentTime);
                                     currentTime = currentTime + (Double) 0.50;
                                 }
-                                for(Appointment appt: allAppointments){
-                                    Log.d("1", "888888888888888");
 
-                                    for (Double time: timeSlots){
-                                        Log.d("1", "9999999999999999999999");
-                                        if (appt.startTime == time){
-                                            timeSlots.remove(time);
-                                        }
+                            for(Appointment appt: allAppointments){
+                                Log.d("appt", "appt");
+
+                                Iterator<Double> itr = timeSlots.iterator();
+                                while (itr.hasNext()){
+                                    Log.d("error", "error");
+
+                                    if (appt.startTime == itr.next()){
+                                        itr.remove();
                                     }
                                 }
+                            }
 
                                 if(timeSlots.size() == 0){
                                     text.setText("No Appointments Available");
@@ -106,15 +111,17 @@ public class BookAppointmentPatientRowPage extends AppCompatActivity {
 
                                 }
                                 for (Double time:timeSlots){
-                                    Log.d("1", "1000000000001010101010101010101");
                                     TableRow row = new TableRow(context);
                                     TextView text = new TextView(context);
                                     Button button = new Button(context);
 
                                     //set text and button properties
-                                    String start = (String.valueOf(Math.floor(time)) + ":" + String.valueOf((Double)(time -  Math.floor(time)) * 60));
+
+
+                                    String start = (String.valueOf((int) Math.floor(time)) + ":" + String.valueOf((int)((Double)(time -  Math.floor(time)) * 60)));
                                     Double endTime = time + .5;
-                                    String end = (String.valueOf(Math.floor(endTime)) + ":" + String.valueOf((Double)(endTime -  Math.floor(endTime)) * 60));
+                                    String end = (String.valueOf((int) Math.floor(endTime)) + ":" + String.valueOf((int)((Double)(endTime -  Math.floor(endTime)) * 60)));
+                                    Log.d(start, end);
                                     String date = ShiftPage.makeDateString(tempShift.day, tempShift.month, tempShift.year);
                                     text.setText( "  " + date + ", " + start + "-" + end);
                                     button.setText("Book Appointment");
@@ -130,10 +137,10 @@ public class BookAppointmentPatientRowPage extends AppCompatActivity {
                                     button.setOnClickListener(new View.OnClickListener() {
                                         @Override
                                         public void onClick(View view) {
-                                            Appointment appointment = new Appointment(patID, docID, tempShift.day, tempShift.month, tempShift.year, (int) Math.floor(time), (int)(time - Math.floor(time)));
+                                            Appointment appointment = new Appointment(patID, docID, tempShift.day, tempShift.month, tempShift.year, (int) Math.floor(time), (int)((time - Math.floor(time)) * 60));
                                             patientInformation.addAppointmentToPatient(appointment);
                                             doctorInformation.addAppointmentToDoctor(appointment, tempShift.ID);
-                                            Toast.makeText(getApplicationContext(), "You have sucessfully booked this timeslot", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(getApplicationContext(), "You have successfully booked this timeslot", Toast.LENGTH_SHORT).show();
                                             finish();
                                         }
                                     });
@@ -155,6 +162,13 @@ public class BookAppointmentPatientRowPage extends AppCompatActivity {
 
                 }
 
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
         });
     }
 }

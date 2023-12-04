@@ -49,7 +49,6 @@ public class WelcomeScreenPatient extends AppCompatActivity {
             public void onClick(View view) { //logout button that takes you to the login page
                 Intent intent = new Intent(WelcomeScreenPatient.this, ComingAppointmentPatient.class);
                 startActivity(intent);
-                comingAppointment.setEnabled(false);
             }
         });
 
@@ -58,7 +57,6 @@ public class WelcomeScreenPatient extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(WelcomeScreenPatient.this, PastAppointmentPatient.class);
                 startActivity(intent);
-                pastAppointment.setEnabled(false);
             }
         });
 
@@ -67,7 +65,6 @@ public class WelcomeScreenPatient extends AppCompatActivity {
             public void onClick(View view) { //logout button that takes you to the login page
                 Intent intent = new Intent(WelcomeScreenPatient.this, BookAppointmentPatient.class);
                 startActivity(intent);
-                bookAppointment.setEnabled(false);
             }
         });
     }

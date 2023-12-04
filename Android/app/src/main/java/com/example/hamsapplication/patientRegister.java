@@ -77,6 +77,7 @@ public class patientRegister extends AppCompatActivity{
                             patient.addToCollection();
                             Intent intent = new Intent(patientRegister.this, createdAccount.class);
                             startActivity(intent);
+                            finish();
                         }
                     }
                 });

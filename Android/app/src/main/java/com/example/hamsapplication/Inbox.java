@@ -207,8 +207,7 @@ public class Inbox extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener(){ //go back to admin homepage
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Inbox.this, welcomeScreenAdmin.class);
-                startActivity(intent);
+                onBackPressed();
             }
         });
 

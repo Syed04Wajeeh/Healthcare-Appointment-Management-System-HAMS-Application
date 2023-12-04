@@ -104,8 +104,7 @@ public class PastAppointmentDoctor extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener(){//button to go back to welcome screen
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PastAppointmentDoctor.this, WelcomeScreenDoctor.class);
-                startActivity(intent);
+                onBackPressed();
             }
         });
     }

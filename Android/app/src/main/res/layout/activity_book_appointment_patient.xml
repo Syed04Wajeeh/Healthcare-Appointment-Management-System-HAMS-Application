@@ -46,7 +46,7 @@
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Doctor Specialties Available"
+        android:text="Doctor Specialties"
         android:textSize="26sp"
         app:layout_constraintBottom_toTopOf="@+id/layout"
         app:layout_constraintEnd_toEndOf="parent"
