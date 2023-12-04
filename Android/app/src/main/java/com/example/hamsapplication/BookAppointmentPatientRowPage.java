@@ -102,12 +102,8 @@ public class BookAppointmentPatientRowPage extends AppCompatActivity {
                                 }
                             }
 
-                                if(timeSlots.size() == 0){
-                                    text.setText("No Appointments Available");
-                                }else{
-                                    text.setText("Available Appointments");
+                            text.setText("Available Time Slots: ");
 
-                                }
                                 for (Double time:timeSlots){
                                     TableRow row = new TableRow(context);
                                     TextView text = new TextView(context);
