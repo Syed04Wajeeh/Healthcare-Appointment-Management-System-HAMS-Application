@@ -2934,6 +2934,7 @@ id autoCompleteToStart
 id backButton
 id backButtonBookPage
 id backButtonComingPatient
+id backButtonPastPatient
 id backButtonSpecialty
 id barrier
 id baseline
@@ -3226,6 +3227,7 @@ id passwordInput
 id password_toggle
 id pastAppointmentButton
 id pastAppointmentTable
+id pastAppointmentTablePatient
 id pastPatientAppointment
 id patComingAppt
 id path

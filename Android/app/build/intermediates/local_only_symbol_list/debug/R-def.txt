@@ -13,6 +13,7 @@ id addShiftButton
 id backButton
 id backButtonBookPage
 id backButtonComingPatient
+id backButtonPastPatient
 id backButtonSpecialty
 id buttonContainerRej
 id buttonContainerReq
@@ -62,6 +63,7 @@ id loginButton
 id passwordInput
 id pastAppointmentButton
 id pastAppointmentTable
+id pastAppointmentTablePatient
 id pastPatientAppointment
 id patComingAppt
 id patientAccountPassword

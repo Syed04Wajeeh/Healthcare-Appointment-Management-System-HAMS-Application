@@ -10,6 +10,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.Calendar;
+
 public class login extends AppCompatActivity{
 
 
@@ -52,6 +55,7 @@ public class login extends AppCompatActivity{
 
                 String usernameField = username.getText().toString();
                 String passwordField = password.getText().toString();
+                Calendar cal = Calendar.getInstance();
 
                 //checking the username and the password is blank
                 if (usernameField.equals("") || passwordField.equals("")){

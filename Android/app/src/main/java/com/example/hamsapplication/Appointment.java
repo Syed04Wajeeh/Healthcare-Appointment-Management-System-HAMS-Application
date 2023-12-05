@@ -1,5 +1,7 @@
 package com.example.hamsapplication;
 
+import android.util.Log;
+
 import java.util.Calendar;
 
 public class Appointment {
@@ -33,6 +35,7 @@ public class Appointment {
         int currMonth = cal.get(Calendar.MONTH) + 1;
         int currDay = cal.get(Calendar.DAY_OF_MONTH);
         int currHour = cal.get(Calendar.HOUR_OF_DAY);
+        Log.d(String.valueOf(currHour), String.valueOf(currDay));
 
         if(this.year < currYear){
             this.past = true;
@@ -43,7 +46,7 @@ public class Appointment {
         }else if(this.year == currYear && this.month == currMonth && this.day < currDay){
             this.past = true;
             return true;
-        }else if(this.year == currYear && this.month == currMonth && this.day == currDay && this.startHour < currHour){
+        }else if(this.year == currYear && this.month == currMonth && this.day == currDay && this.startHour <= currHour){
             this.past = true;
             return true;
         }

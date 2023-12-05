@@ -2933,6 +2933,7 @@ int id autoCompleteToStart 0x7f080061
 int id backButton 0x7f080062
 int id backButtonBookPage 0x7f080063
 int id backButtonComingPatient 0x7f08025f
+int id backButtonPastPatient 0x7f080264
 int id backButtonSpecialty 0x7f080064
 int id barrier 0x7f080065
 int id baseline 0x7f080066
@@ -3225,6 +3226,7 @@ int id passwordInput 0x7f080185
 int id password_toggle 0x7f080186
 int id pastAppointmentButton 0x7f080187
 int id pastAppointmentTable 0x7f080262
+int id pastAppointmentTablePatient 0x7f080265
 int id pastPatientAppointment 0x7f080188
 int id patComingAppt 0x7f080260
 int id path 0x7f080189

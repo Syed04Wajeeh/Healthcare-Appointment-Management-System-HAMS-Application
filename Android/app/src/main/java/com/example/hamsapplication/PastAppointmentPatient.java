@@ -3,6 +3,7 @@ package com.example.hamsapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActionBar;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
@@ -51,6 +53,7 @@ public class PastAppointmentPatient extends AppCompatActivity {
 
                                 //add views to the layout
                                 TableRow newRow = new TableRow(context);
+
                                 TextView inboxText = new TextView(context);
                                 RatingBar ratingbar = new RatingBar(context);
                                 Button button = new Button(context);
@@ -61,6 +64,7 @@ public class PastAppointmentPatient extends AppCompatActivity {
                                 inboxText.setText(concat);
                                 newRow.addView(inboxText);
                                 newRow.addView(ratingbar);
+                                ratingbar.setRating(5);
                                 newRow.addView(button);
                                 layout.addView(newRow);
 
@@ -69,7 +73,10 @@ public class PastAppointmentPatient extends AppCompatActivity {
                                     public void onClick(View v) {
                                         float getRating = ratingbar.getRating();
                                         button.setEnabled(false);
-                                        ratingbar.setEnabled();
+                                        ratingbar.setEnabled(false);
+                                        DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("Users").child(tempAppointment.doctorID).child("Ratings");
+                                        String ratingId = userRef.push().getKey();
+                                        userRef.child(ratingId).setValue(getRating);
                                     }
                                 });
 

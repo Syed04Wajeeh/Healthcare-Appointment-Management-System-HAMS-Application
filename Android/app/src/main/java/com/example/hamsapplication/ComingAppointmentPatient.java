@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -90,39 +91,50 @@ public class ComingAppointmentPatient extends AppCompatActivity {
                             newRow.addView(button);
                             newRow.addView(text);
 
-                            if(appt.status == 1){
-                                Button button1 = new Button(context);
-                                button1.setText("CANCEL");
-                                button1.setBackgroundColor(Color.RED);
-                                button1.setOnClickListener(new View.OnClickListener(){
-                                    @Override
-                                    public void onClick(View view) {
-                                        FirebaseDatabase.getInstance().getReference().child("Users").child(patientID).child("Appointments").child(appt.ID).child("status").setValue(-2);
-                                        button.setEnabled(false);
-                                        layout.removeView(newRow);
-                                        FirebaseDatabase.getInstance().getReference().child("Users").child(appt.doctorID).child("Appointments").addListenerForSingleValueEvent(new ValueEventListener() {
-                                            @Override
-                                            public void onDataChange(@NonNull DataSnapshot dataSnapshots) {
-                                                for (DataSnapshot snapshots : dataSnapshots.getChildren()) {
-                                                    String IDT = snapshots.getKey();
-                                                    Appointment temporAppointment  = snapshots.getValue(Appointment.class);
-                                                    temporAppointment.ID = IDT;
-                                                    if (temporAppointment.doctorID.equals(appt.doctorID) && temporAppointment.patientID.equals(appt.patientID)
-                                                            && temporAppointment.startTime == appt.startTime && temporAppointment.day == appt.day && temporAppointment.month == appt.month
-                                                            && temporAppointment.year == appt.year){
-                                                        FirebaseDatabase.getInstance().getReference().child("Users").child(appt.doctorID).child("Appointments").child(temporAppointment.ID).child("status").setValue(-2);
+                            if(appt.status == 1 || appt.status == 0){
+
+
+                                    Button button1 = new Button(context);
+                                    button1.setText("CANCEL");
+                                    button1.setBackgroundColor(Color.RED);
+                                    button1.setOnClickListener(new View.OnClickListener(){
+                                        @Override
+                                        public void onClick(View view) {
+                                            Appointment testAppt = appt;
+                                            testAppt.startHour = testAppt.startHour - 1;
+                                            if(!testAppt.isPast()){
+                                                FirebaseDatabase.getInstance().getReference().child("Users").child(patientID).child("Appointments").child(appt.ID).child("status").setValue(-2);
+                                                button.setEnabled(false);
+                                                layout.removeView(newRow);
+                                                FirebaseDatabase.getInstance().getReference().child("Users").child(appt.doctorID).child("Appointments").addListenerForSingleValueEvent(new ValueEventListener() {
+                                                    @Override
+                                                    public void onDataChange(@NonNull DataSnapshot dataSnapshots) {
+                                                        for (DataSnapshot snapshots : dataSnapshots.getChildren()) {
+                                                            String IDT = snapshots.getKey();
+                                                            Appointment temporAppointment  = snapshots.getValue(Appointment.class);
+                                                            temporAppointment.ID = IDT;
+                                                            if (temporAppointment.doctorID.equals(appt.doctorID) && temporAppointment.patientID.equals(appt.patientID)
+                                                                    && temporAppointment.startTime == appt.startTime && temporAppointment.day == appt.day && temporAppointment.month == appt.month
+                                                                    && temporAppointment.year == appt.year){
+                                                                FirebaseDatabase.getInstance().getReference().child("Users").child(appt.doctorID).child("Appointments").child(temporAppointment.ID).child("status").setValue(-2);
+                                                            }
+                                                        }
                                                     }
-                                                }
+
+                                                    @Override
+                                                    public void onCancelled(@NonNull DatabaseError error) {
+
+                                                    }
+                                                });
+                                            }else{
+                                                Toast.makeText(getApplicationContext(), "You cannot cancel within an hour of the appointment", Toast.LENGTH_SHORT).show();
+                                                button.setEnabled(false);
                                             }
 
-                                            @Override
-                                            public void onCancelled(@NonNull DatabaseError error) {
+                                        }
+                                    });
+                                    newRow.addView(button1);
 
-                                            }
-                                        });
-                                    }
-                                });
-                                newRow.addView(button1);
 
 
                             }
